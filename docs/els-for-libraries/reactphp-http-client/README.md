@@ -1,10 +1,10 @@
-# Zend HTTP
+# ReactPHP HttpClient
 
-Endless Lifecycle Support (ELS) for Zend HTTP from TuxCare provides security fixes for Zend HTTP library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for ReactPHP HttpClient from TuxCare provides security fixes for ReactPHP HttpClient (an asynchronous HTTP client for ReactPHP) versions that have reached their end of life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **Zend HTTP** 2.5.6
+* **ReactPHP HttpClient** 0.4.14
 
 Other versions upon request.
 
@@ -23,7 +23,7 @@ Other versions upon request.
 
    Composer reads credentials from a per-user `auth.json`. Create or edit the file at:
 
-   * **Linux/macOS**:
+   * **Linux/macOS**: 
      
      ```
      ~/.composer/auth.json
@@ -55,13 +55,13 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Zend HTTP
+4. Install ReactPHP HttpClient
 
-   Install the TuxCare-maintained Zend HTTP release that matches your project:
+   Install the TuxCare-maintained ReactPHP HttpClient release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require zendframework/zend-http:2.5.6-p1+tuxcare` },
-     { title: 'composer.json', content: zendhttpjson }
+     { title: 'Composer CLI', content: `composer require react/http-client:v0.4.14-p1+tuxcare` },
+     { title: 'composer.json', content: pkgjson }
    ]" />
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -108,9 +108,9 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=zendframework%2Fzend-http) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=zendframework%2Fzend-http) — Released fixes
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/zendframework/zend-http/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=react%2Fhttp-client) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=react%2Fhttp-client) — Patched versions and changelogs
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/react/http-client/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
@@ -145,10 +145,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const zendhttpjson =
+const pkgjson =
 `{
     "require": {
-        "zendframework/zend-http": "2.5.6-p1+tuxcare"
+        "react/http-client": "v0.4.14-p1+tuxcare"
     }
 }`
 

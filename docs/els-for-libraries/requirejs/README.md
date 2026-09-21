@@ -2,13 +2,17 @@
 
 Endless Lifecycle Support (ELS) for RequireJS from TuxCare provides security fixes for RequireJS versions that have reached their end of life. This allows you to continue running RequireJS applications without vulnerability concerns, even after official support has ended.
 
-## Supported RequireJS Versions
+## Supported Versions
 
 * RequireJS 2.1.22, 2.3.6
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
+
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
 
 <ELSPrerequisites>
 
@@ -149,7 +153,7 @@ Endless Lifecycle Support (ELS) for RequireJS from TuxCare provides security fix
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=requirejs) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=requirejs) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/requirejs/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:requirejs) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

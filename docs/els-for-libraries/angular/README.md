@@ -2,13 +2,17 @@
 
 Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes for Angular versions that have reached their end of life. This allows you to continue running Angular applications without vulnerability concerns, even after official support has ended.
 
-## Supported Angular Versions
+## Supported Versions
 
 Angular versions from 4 to 19 are supported.
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
+
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
 
 <ELSPrerequisites>
 
@@ -74,11 +78,11 @@ Angular versions from 4 to 19 are supported.
       :::tip
       If you use any of the following **non-default Angular modules**, update their versions as shown below:
 
-      * "@angular/animations": "npm:@els-angular/angular-animations@>=19.2.21-tuxcare.1",
-      * "@angular/language-service": "npm:@els-angular/angular-language-service@>=19.2.21-tuxcare.1",
-      * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=19.2.21-tuxcare.1",
-      * "@angular/elements": "npm:@els-angular/angular-elements@>=19.2.21-tuxcare.1",
-      * "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=19.2.21-tuxcare.1",
+      * "@angular/animations": "npm:@els-angular/angular-animations@>=19.2.23-tuxcare.1",
+      * "@angular/language-service": "npm:@els-angular/angular-language-service@>=19.2.23-tuxcare.1",
+      * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=19.2.23-tuxcare.1",
+      * "@angular/elements": "npm:@els-angular/angular-elements@>=19.2.23-tuxcare.1",
+      * "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=19.2.23-tuxcare.1",
 
       After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
       :::
@@ -884,7 +888,7 @@ Angular versions from 4 to 19 are supported.
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Angular) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Angular) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:angular) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>
@@ -892,63 +896,63 @@ Angular versions from 4 to 19 are supported.
 <script setup>
 const Angular19WithSSR =
 `"dependencies": {
-  "@angular/common": "npm:@els-angular/angular-common@>=19.2.21-tuxcare.1",
-  "@angular/compiler": "npm:@els-angular/angular-compiler@>=19.2.21-tuxcare.1",
-  "@angular/core": "npm:@els-angular/angular-core@>=19.2.21-tuxcare.1",
-  "@angular/forms": "npm:@els-angular/angular-forms@>=19.2.21-tuxcare.1",
-  "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=19.2.21-tuxcare.1",
-  "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.21-tuxcare.1",
-  "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=19.2.21-tuxcare.1",
-  "@angular/router": "npm:@els-angular/angular-router@>=19.2.21-tuxcare.1",
+  "@angular/common": "npm:@els-angular/angular-common@>=19.2.23-tuxcare.1",
+  "@angular/compiler": "npm:@els-angular/angular-compiler@>=19.2.23-tuxcare.1",
+  "@angular/core": "npm:@els-angular/angular-core@>=19.2.23-tuxcare.1",
+  "@angular/forms": "npm:@els-angular/angular-forms@>=19.2.23-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=19.2.23-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.23-tuxcare.1",
+  "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=19.2.23-tuxcare.1",
+  "@angular/router": "npm:@els-angular/angular-router@>=19.2.23-tuxcare.1",
   "@angular/ssr": "npm:@els-angular/angular-ssr@>=19.2.25-tuxcare.1"
 },
 "devDependencies": {
-  "@angular-devkit/build-angular": "19.2.21",
+  "@angular-devkit/build-angular": "19.2.23",
   "@angular/cli": "npm:@els-angular/angular-cli@>=19.2.25-tuxcare.1",
-  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.21-tuxcare.1"
+  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.23-tuxcare.1"
 },
 "overrides": {
-  "@angular/common": "npm:@els-angular/angular-common@>=19.2.21-tuxcare.1",
-  "@angular/compiler": "npm:@els-angular/angular-compiler@>=19.2.21-tuxcare.1",
-  "@angular/core": "npm:@els-angular/angular-core@>=19.2.21-tuxcare.1",
-  "@angular/forms": "npm:@els-angular/angular-forms@>=19.2.21-tuxcare.1",
-  "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=19.2.21-tuxcare.1",
-  "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.21-tuxcare.1",
-  "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=19.2.21-tuxcare.1",
-  "@angular/router": "npm:@els-angular/angular-router@>=19.2.21-tuxcare.1",
-  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.21-tuxcare.1",
-  "@angular/localize": "npm:@els-angular/angular-localize@>=19.2.21-tuxcare.1",
-  "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=19.2.21-tuxcare.1",
+  "@angular/common": "npm:@els-angular/angular-common@>=19.2.23-tuxcare.1",
+  "@angular/compiler": "npm:@els-angular/angular-compiler@>=19.2.23-tuxcare.1",
+  "@angular/core": "npm:@els-angular/angular-core@>=19.2.23-tuxcare.1",
+  "@angular/forms": "npm:@els-angular/angular-forms@>=19.2.23-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=19.2.23-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.23-tuxcare.1",
+  "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=19.2.23-tuxcare.1",
+  "@angular/router": "npm:@els-angular/angular-router@>=19.2.23-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.23-tuxcare.1",
+  "@angular/localize": "npm:@els-angular/angular-localize@>=19.2.23-tuxcare.1",
+  "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=19.2.23-tuxcare.1",
   "@angular/ssr": "npm:@els-angular/angular-ssr@>=19.2.25-tuxcare.1",
   "@angular/cli": "npm:@els-angular/angular-cli@>=19.2.25-tuxcare.1"
 }`
 
 const Angular19WithoutSSR =
 `"dependencies": {
-  "@angular/common": "npm:@els-angular/angular-common@>=19.2.21-tuxcare.1",
-  "@angular/compiler": "npm:@els-angular/angular-compiler@>=19.2.21-tuxcare.1",
-  "@angular/core": "npm:@els-angular/angular-core@>=19.2.21-tuxcare.1",
-  "@angular/forms": "npm:@els-angular/angular-forms@>=19.2.21-tuxcare.1",
-  "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=19.2.21-tuxcare.1",
-  "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.21-tuxcare.1",
-  "@angular/router": "npm:@els-angular/angular-router@>=19.2.21-tuxcare.1"
+  "@angular/common": "npm:@els-angular/angular-common@>=19.2.23-tuxcare.1",
+  "@angular/compiler": "npm:@els-angular/angular-compiler@>=19.2.23-tuxcare.1",
+  "@angular/core": "npm:@els-angular/angular-core@>=19.2.23-tuxcare.1",
+  "@angular/forms": "npm:@els-angular/angular-forms@>=19.2.23-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=19.2.23-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.23-tuxcare.1",
+  "@angular/router": "npm:@els-angular/angular-router@>=19.2.23-tuxcare.1"
 },
 "devDependencies": {
-  "@angular-devkit/build-angular": "19.2.21",
+  "@angular-devkit/build-angular": "19.2.23",
   "@angular/cli": "npm:@els-angular/angular-cli@>=19.2.25-tuxcare.1",
-  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.21-tuxcare.1"
+  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.23-tuxcare.1"
 },
 "overrides": {
-  "@angular/common": "npm:@els-angular/angular-common@>=19.2.21-tuxcare.1",
-  "@angular/compiler": "npm:@els-angular/angular-compiler@>=19.2.21-tuxcare.1",
-  "@angular/core": "npm:@els-angular/angular-core@>=19.2.21-tuxcare.1",
-  "@angular/forms": "npm:@els-angular/angular-forms@>=19.2.21-tuxcare.1",
-  "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=19.2.21-tuxcare.1",
-  "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.21-tuxcare.1",
-  "@angular/router": "npm:@els-angular/angular-router@>=19.2.21-tuxcare.1",
-  "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=19.2.21-tuxcare.1",
-  "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=19.2.21-tuxcare.1",
-  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.21-tuxcare.1",
+  "@angular/common": "npm:@els-angular/angular-common@>=19.2.23-tuxcare.1",
+  "@angular/compiler": "npm:@els-angular/angular-compiler@>=19.2.23-tuxcare.1",
+  "@angular/core": "npm:@els-angular/angular-core@>=19.2.23-tuxcare.1",
+  "@angular/forms": "npm:@els-angular/angular-forms@>=19.2.23-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=19.2.23-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.23-tuxcare.1",
+  "@angular/router": "npm:@els-angular/angular-router@>=19.2.23-tuxcare.1",
+  "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=19.2.23-tuxcare.1",
+  "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=19.2.23-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.23-tuxcare.1",
   "@angular/cli": "npm:@els-angular/angular-cli@>=19.2.25-tuxcare.1"
 }`
 

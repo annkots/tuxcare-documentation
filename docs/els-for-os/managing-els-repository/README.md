@@ -1,6 +1,6 @@
 # Managing the ELS repository
 
-This page provides instructions for updating packages, setting up a local mirror, and removing the Endless Lifecycle Support (ELS) repository.
+This page provides instructions for updating packages and removing the Endless Lifecycle Support (ELS) repository.
 
 ## Updating packages
 
@@ -28,7 +28,7 @@ yum update kernel*
 
 <template #DEB-based_(APT)>
 
-**Applies to:** Debian 10, Ubuntu 16.04, Ubuntu 18.04
+**Applies to:** Debian 10, Debian 11, Ubuntu 16.04, Ubuntu 18.04
 
 Update the package index and upgrade all packages:
 
@@ -62,13 +62,6 @@ For example (packages in the 3rd rollout slot):
 yum update kernel* --enablerepo=centos7els-rollout-3-bypass
 ```
 
-## Local mirror
-
-TuxCare provides the ability to create local mirrors of ELS repositories using `rsync`. This is useful for environments with restricted internet access or for reducing external bandwidth usage.
-
-To obtain access to the local mirroring facility, provide your external IP address to your Account Manager or contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-
-
 ## Removing the ELS repository
 
 <TableTabs label="Choose your system: ">
@@ -77,43 +70,24 @@ To obtain access to the local mirroring facility, provide your external IP addre
 
 **Applies to:** Amazon Linux 2, CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8
 
-**For Amazon Linux 2 and Red Hat Enterprise Linux 8**, the repository can be removed by running the installation script with the `--delete` flag. For example:
+For all RPM-based systems, the repository can be removed by running the installation script with the `--delete` flag. For example:
 
 ```
 sh install-amazonlinux2-els-repo.sh --delete
 ```
 
-**For other RPM-based systems:**
-
-1. List the ELS repository file (ending with `-els.repo`) in the repository folder:
-
-   ```
-   ls -l /etc/yum.repos.d/*-els.repo
-   ```
-
-2. Remove the file to disable the ELS repository. For example, for CentOS 7:
-
-   ```
-   rm /etc/yum.repos.d/centos7-els.repo
-   ```
-
-3. Uninstall the `els-define` package:
-
-   ```
-   yum remove els-define
-   ```
-
 </template>
 
 <template #DEB-based_(APT)>
 
-**Applies to:** Debian 10, Ubuntu 16.04, Ubuntu 18.04, Ubuntu 20.04
+**Applies to:** Debian 10, Debian 11, Ubuntu 16.04, Ubuntu 18.04, Ubuntu 20.04
 
-**For Debian 10**, the repository can be removed by running the installation script with the `--delete` flag:
+**For Debian 10 / 11**, the repository can be removed by running the installation script with the `--delete` flag:
 
-```
-bash install-debian10-els-repo.sh --delete
-```
+<CodeTabs :tabs="[
+   { title: 'Debian 10', content: `bash install-debian10-els-repo.sh --delete` },
+   { title: 'Debian 11', content: `bash install-debian11-els-repo.sh --delete` }
+]" />
 
 **For Ubuntu 20.04**, the repository can be removed by running the installation script with the `--delete` flag:
 

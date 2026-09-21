@@ -2,13 +2,17 @@
 
 Endless Lifecycle Support (ELS) for node-fetch from TuxCare provides security fixes for node-fetch versions that have reached their end of life. This allows you to continue running node-fetch applications without vulnerability concerns, even after official support has ended.
 
-## Supported node-fetch Versions
+## Supported Versions
 
 * node-fetch 1.6.3, 1.7.3, 2.6.1
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
+
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
 
 <ELSPrerequisites>
 
@@ -162,7 +166,7 @@ Endless Lifecycle Support (ELS) for node-fetch from TuxCare provides security fi
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=node-fetch) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=node-fetch) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/node-fetch/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:node-fetch) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

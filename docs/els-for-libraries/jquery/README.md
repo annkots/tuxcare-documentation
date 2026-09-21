@@ -2,13 +2,17 @@
 
 Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes for jQuery versions that have reached their end of life. This allows you to continue running jQuery applications without vulnerability concerns, even after official support has ended.
 
-## Supported jQuery Versions
+## Supported Versions
 
-* jQuery 1.8.2, 1.12.4, 2.2.4, 3.4.1
+* jQuery 1.3.2, 1.4.1, 1.4.2, 1.4.3, 1.8.2, 1.8.3, 1.11.3, 1.12.4, 2.1.3, 2.2.4, 3.1.1, 3.2.1, 3.3.1, 3.4.1, 3.6.0
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
+
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
 
 <ELSPrerequisites>
 
@@ -99,6 +103,32 @@ Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes 
 
       </template>
 
+      <template #jQuery_1.8.3>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@>=1.8.3-tuxcare.1"
+      },
+      "overrides": {
+        "jquery@1.8.3": "npm:@els-js/jquery@>=1.8.3-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #jQuery_1.11.3>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@>=1.11.3-tuxcare.1"
+      },
+      "overrides": {
+        "jquery@1.11.3": "npm:@els-js/jquery@>=1.11.3-tuxcare.1"
+      }
+      ```
+
+      </template>
+
       <template #jQuery_1.12.4>
 
       ```text
@@ -107,6 +137,19 @@ Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes 
       },
       "overrides": {
         "jquery@1.12.4": "npm:@els-js/jquery@>=1.12.4-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #jQuery_2.1.3>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@>=2.1.3-tuxcare.1"
+      },
+      "overrides": {
+        "jquery@2.1.3": "npm:@els-js/jquery@>=2.1.3-tuxcare.1"
       }
       ```
 
@@ -125,6 +168,45 @@ Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes 
 
       </template>
 
+      <template #jQuery_3.1.1>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@>=3.1.1-tuxcare.1"
+      },
+      "overrides": {
+        "jquery@3.1.1": "npm:@els-js/jquery@>=3.1.1-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #jQuery_3.2.1>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@>=3.2.1-tuxcare.1"
+      },
+      "overrides": {
+        "jquery@3.2.1": "npm:@els-js/jquery@>=3.2.1-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #jQuery_3.3.1>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@>=3.3.1-tuxcare.1"
+      },
+      "overrides": {
+        "jquery@3.3.1": "npm:@els-js/jquery@>=3.3.1-tuxcare.1"
+      }
+      ```
+
+      </template>
+
       <template #jQuery_3.4.1>
 
       ```text
@@ -133,6 +215,19 @@ Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes 
       },
       "overrides": {
         "jquery@3.4.1": "npm:@els-js/jquery@>=3.4.1-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #jQuery_3.6.0>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@>=3.6.0-tuxcare.1"
+      },
+      "overrides": {
+        "jquery@3.6.0": "npm:@els-js/jquery@>=3.6.0-tuxcare.1"
       }
       ```
 
@@ -176,7 +271,7 @@ Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes 
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=jQuery) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=jQuery) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:jquery) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

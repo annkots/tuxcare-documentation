@@ -1,10 +1,16 @@
 # Drupal
 
-Endless Lifecycle Support (ELS) for Drupal from TuxCare provides security fixes for Drupal core versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Drupal from TuxCare provides security fixes for Drupal core and contributed modules that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
-## Supported Versions and Components
+## Supported Versions
 
-* **drupal/core** 9.5.x
+* **drupal/core** 8.9.x, 9.5.x
+* **drupal/bootstrap_site_alert** 7.1.6
+* **drupal/colorbox** 2.1.2, 7.2.19
+* **drupal/gdpr** 3.1.0, 7.1.0
+* **drupal/link** 7.1.13
+* **drupal/openid_connect** 7.1.3
+* **drupal/spamspan** 3.2.0, 7.1.4
 
 Other versions upon request.
 
@@ -60,7 +66,7 @@ Other versions upon request.
    Install the TuxCare-maintained Drupal core release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require drupal/core:9.5.11-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require drupal/core:9.5.11-p6+tuxcare` },
      { title: 'composer.json', content: packagejson }
    ]" />
 
@@ -108,7 +114,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 ### For legacy-project customers
 
-No special steps are needed. The `^9.5` range matches `9.5.11-p1+tuxcare` directly:
+No special steps are needed. The `^9.5` range matches `9.5.11-p6+tuxcare` directly:
 
 ```
 {
@@ -127,7 +133,7 @@ composer update drupal/core --with-all-dependencies
 
 ### For recommended-project customers (needs an alias)
 
-Because `drupal/core-recommended:9.5.11` requires exactly `drupal/core:9.5.11`, customers need a Composer inline alias to tell Composer that `9.5.11-p1+tuxcare` should be treated as `9.5.11`:
+Because `drupal/core-recommended:9.5.11` requires exactly `drupal/core:9.5.11`, customers need a Composer inline alias to tell Composer that `9.5.11-p6+tuxcare` should be treated as `9.5.11`:
 
 ```
 {
@@ -136,7 +142,7 @@ Because `drupal/core-recommended:9.5.11` requires exactly `drupal/core:9.5.11`, 
         {"type": "composer", "url": "https://packages.drupal.org/8"}
     ],
     "require": {
-        "drupal/core": "9.5.11-p1+tuxcare as 9.5.11",
+        "drupal/core": "9.5.11-p6+tuxcare as 9.5.11",
         "drupal/core-recommended": "^9.5"
     }
 }
@@ -148,31 +154,16 @@ Then run:
 composer update "drupal/core-*" drupal/core --with-all-dependencies
 ```
 
-The `"9.5.11-p1+tuxcare as 9.5.11"` alias is the key — it tells Composer to install the Satis version but pretend it's `9.5.11` for dependency resolution, satisfying `core-recommended`'s exact version constraint.
-
-## Resolved CVEs in Drupal
-
-| CVE ID              | Vulnerable versions                                                                        | Fixed in version    |
-|---------------------|--------------------------------------------------------------------------------------------|---------------------|
-| CVE-2024-45440      | >=8.0.0, <=11.0.4                                                                         | 9.5.11-p1+tuxcare   |
-| CVE-2024-55634      | >=8.0.0, <10.2.11 \|\| >=10.3.0, <10.3.9 \|\| >=11.0.0, <11.0.8                          | 9.5.11-p1+tuxcare   |
-| CVE-2024-55636      | >=8.0.0, <10.2.11 \|\| >=10.3.0, <10.3.9 \|\| >=11.0.0, <11.0.8                          | 9.5.11-p1+tuxcare   |
-| CVE-2024-55637      | >=8.0.0, <10.2.11 \|\| >=10.3.0, <10.3.9 \|\| >=11.0.0, <11.0.8                          | 9.5.11-p1+tuxcare   |
-| CVE-2024-55638      | >=7.0 < 7.102 \|\| >= 8.0.0 < 10.2.11 \|\| >= 10.3.0 < 10.3. 9                               | 9.5.11-p1+tuxcare   |
-| GHSA-6ccv-8fgf-cjpw | >=8.0.0, <10.1.8 \|\| >=10.2.0, <10.2.2                                                   | 9.5.11-p1+tuxcare   |
-| CVE-2024-12393      | >=8.8.0, <10.2.11 \|\| >=10.3.0, <10.3.9 \|\| >=11.0.0, <11.0.8                          | 9.5.11-p1+tuxcare   |
-| CVE-2025-3057       | >=8.0.0, <10.3.13 \|\| >=10.4.0, <10.4.3 \|\| >=11.0.0, <11.0.12 \|\| >=11.1.0, <11.1.3 | 9.5.11-p1+tuxcare   |
-| CVE-2025-31675      | >=8.0.0, <10.3.14 \|\| >=10.4.0, <10.4.5 \|\| >=11.0.0, <11.0.13 \|\| >=11.1.0, <11.1.5 | 9.5.11-p1+tuxcare   |
-| CVE-2025-31673      | >=8.0.0, <10.3.13 \|\| >=10.4.0, <10.4.3 \|\| >=11.0.0, <11.0.12 \|\| >=11.1.0, <11.1.3 | 9.5.11-p1+tuxcare   |
-| CVE-2025-31674      | >=8.0.0, <10.3.13 \|\| >=10.4.0, <10.4.3 \|\| >=11.0.0, <11.0.12 \|\| >=11.1.0, <11.1.3 | 9.5.11-p1+tuxcare   |
+The `"9.5.11-p6+tuxcare as 9.5.11"` alias is the key — it tells Composer to install the Satis version but pretend it's `9.5.11` for dependency resolution, satisfying `core-recommended`'s exact version constraint.
 
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=drupal%2Fcore) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=drupal%2Fcore) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/drupal/core/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 
@@ -209,7 +200,7 @@ const cli =
 const packagejson =
 `{
     "require": {
-        "drupal/core": "9.5.11-p1+tuxcare"
+        "drupal/core": "9.5.11-p6+tuxcare"
     }
 }`
 

@@ -2,13 +2,17 @@
 
 Endless Lifecycle Support (ELS) for Bootstrap from TuxCare provides security fixes for Bootstrap versions that have reached their end of life. This allows you to continue running Bootstrap applications without vulnerability concerns, even after official support has ended.
 
-## Supported Bootstrap Versions
+## Supported Versions
 
-* Bootstrap 3.2.0, 3.3.6, 3.3.7, 3.4.1, 4.1.1, 4.1.3, 4.6.2
+* Bootstrap 3.0.0, 3.2.0, 3.3.1, 3.3.2, 3.3.5, 3.3.6, 3.3.7, 3.4.1, 4.1.1, 4.1.3, 4.6.2
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
+
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
 
 <ELSPrerequisites>
 
@@ -176,7 +180,7 @@ Endless Lifecycle Support (ELS) for Bootstrap from TuxCare provides security fix
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Bootstrap) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Bootstrap) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/bootstrap/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:bootstrap) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

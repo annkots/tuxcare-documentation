@@ -2,13 +2,17 @@
 
 Endless Lifecycle Support (ELS) for Mongoose from TuxCare provides security fixes for Mongoose versions that have reached their end of life. This allows you to continue running Mongoose applications without vulnerability concerns, even after official support has ended.
 
-## Supported Mongoose Versions
+## Supported Versions
 
-* Mongoose 5.13.23, 6.12.2, 7.8.8
+* Mongoose 5.13.23, 6.12.2, 7.8.8, 9.6.2
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
+
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
 
 <ELSPrerequisites>
 
@@ -97,6 +101,19 @@ Endless Lifecycle Support (ELS) for Mongoose from TuxCare provides security fixe
 
       </template>
 
+      <template #Mongoose_9.6.2>
+
+      ```text
+      "dependencies": {
+        "mongoose": "npm:@els-js/mongoose@>=9.6.2-tuxcare.1"
+      },
+      "overrides": {
+        "mongoose@9.6.2": "npm:@els-js/mongoose@>=9.6.2-tuxcare.1"
+      }
+      ```
+
+      </template>
+
      </TableTabs>
 
    * **Option 2: TuxCare Patcher (Automated)**
@@ -162,7 +179,7 @@ Endless Lifecycle Support (ELS) for Mongoose from TuxCare provides security fixe
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=mongoose) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=mongoose) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/mongoose/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:mongoose) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

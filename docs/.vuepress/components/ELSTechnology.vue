@@ -1,6 +1,6 @@
 <template>
   <div class="heading text-center">
-    <h2>Available Guides for ELS for Libraries</h2>
+    <h2>Available Guides for ELS for Language Ecosystems</h2>
     <p>If something's missing or you have questions, contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.</p>
   </div>
 
@@ -85,8 +85,23 @@ const techData = [
     ecosystemIcon: "/images/java.webp",
     projects: [
       {
+        name: "Aircompressor",
+        versions: "0.8 | 0.10 | 0.20 | 0.21 | 0.27",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache ActiveMQ Artemis",
-        versions: "2.26.0",
+        versions: "2.26.0 | 2.33.0 | 2.37.0 | 2.40.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache ActiveMQ Classic",
+        versions: "6.1.8",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Ant",
+        versions: "1.9.4",
         link: "./java-libraries/",
       },
       {
@@ -101,12 +116,22 @@ const techData = [
       },
       {
         name: "Apache Commons BeanUtils",
-        versions: "1.6 | 1.8.0 | 1.8.3 | 1.9.4",
+        versions: "1.6 | 1.8.0 | 1.8.3 | 1.9.0 | 1.9.2 | 1.9.4 | 1.10.0 | 1.10.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Commons Collections",
+        versions: "3.2 | 3.2.1",
         link: "./java-libraries/",
       },
       {
         name: "Apache Commons Compress",
-        versions: "1.19 | 1.20 | 1.21 | 1.26.2",
+        versions: "1.8.1 | 1.12 | 1.14 | 1.15 | 1.18 | 1.19 | 1.20 | 1.21 | 1.24.0 | 1.25.0 | 1.26.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Commons Configuration",
+        versions: "1.10 | 2.11.0 | 2.12.0",
         link: "./java-libraries/",
       },
       {
@@ -116,7 +141,7 @@ const techData = [
       },
       {
         name: "Apache Commons FileUpload",
-        versions: "1.2.1 | 1.2.2",
+        versions: "1.2.1 | 1.2.2 | 1.3.1 | 1.5",
         link: "./java-libraries/",
       },
       {
@@ -126,7 +151,7 @@ const techData = [
       },
       {
         name: "Apache Commons IO",
-        versions: "2.4 | 2.5 | 2.6 | 2.7 | 2.11.0",
+        versions: "2.0.1 | 2.2 | 2.4 | 2.5 | 2.6 | 2.7 | 2.8.0 | 2.11.0",
         link: "./java-libraries/",
       },
       {
@@ -136,12 +161,17 @@ const techData = [
       },
       {
         name: "Apache Commons Lang3",
-        versions: "3.4 | 3.8.1 | 3.10 | 3.12.0 | 3.14.0 | 3.17.0",
+        versions: "3.4 | 3.8.1 | 3.10 | 3.11 | 3.12.0 | 3.14.0 | 3.15.0 | 3.17.0",
         link: "./apache-commons-lang/",
       },
       {
+        name: "Apache Commons VFS",
+        versions: "2.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache CXF",
-        versions: "3.5.9 | 3.5.11",
+        versions: "3.4.5 | 3.5.9 | 3.5.11",
         link: "./apache-cxf/",
       },
       {
@@ -151,7 +181,27 @@ const techData = [
       },
       {
         name: "Apache HttpComponents Client",
-        versions: "4.5.2",
+        versions: "4.2 | 4.2.6 | 4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache HttpComponents Client 5",
+        versions: "5.5.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache HttpComponents Core 5",
+        versions: "5.2.5",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Ivy",
+        versions: "2.3.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Neethi",
+        versions: "3.1.1",
         link: "./java-libraries/",
       },
       {
@@ -160,13 +210,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Pulsar",
+        versions: "3.2.4",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Kafka®",
-        versions: "3.2.3",
+        versions: "2.8.2 | 3.2.3 | 3.7.1",
         link: "./apache-kafka/",
       },
       {
         name: "Apache Log4j",
-        versions: "1.2.16 | 1.2.17 | 2.17.1 | 2.22.1",
+        versions: "1.2.14 | 1.2.15 | 1.2.16 | 1.2.17 | 2.5 | 2.11.0 | 2.12.4 | 2.17.1 | 2.17.2 | 2.18.0 | 2.22.1 | 2.23.1 | 2.24.3",
         link: "./apache-log4j/",
       },
       {
@@ -181,7 +236,7 @@ const techData = [
       },
       {
         name: "Apache Maven",
-        versions: "3.8.1",
+        versions: "3.0.5 | 3.2.5 | 3.8.1",
         link: "./java-libraries/",
       },
       {
@@ -202,7 +257,7 @@ const techData = [
       },
       {
         name: "Apache Thrift",
-        versions: "0.9.1 | 0.9.3",
+        versions: "0.9.1 | 0.9.3 | 0.14.1",
         link: "./java-libraries/",
       },
       {
@@ -212,13 +267,23 @@ const techData = [
       },
       {
         name: "Apache Tomcat®",
-        versions: "8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
+        versions: "7.0.70 | 7.0.109 | 8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
         link: "./apache-tomcat/",
       },
       {
         name: "Apache Velocity Engine™",
-        versions: "1.7",
+        versions: "1.7 | 1.7.1",
         link: "./apache-velocity-engine/",
+      },
+      {
+        name: "Apache Xalan",
+        versions: "2.7.1 | 2.7.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache XML Graphics Batik",
+        versions: "1.7 | 1.8",
+        link: "./java-libraries/",
       },
       {
         name: "Apache XML Graphics Commons",
@@ -227,17 +292,52 @@ const techData = [
       },
       {
         name: "Apache XMLBeans",
-        versions: "2.6.0",
+        versions: "2.3.0 | 2.6.0 | 5.1.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "AssertJ",
+        versions: "2.9.0 | 3.11.1 | 3.18.1 | 3.19.0 | 3.23.1 | 3.24.2 | 3.25.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apereo CAS Client",
+        versions: "4.0.4",
         link: "./java-libraries/",
       },
       {
         name: "Bouncy Castle",
-        versions: "1.64 | 1.76 | 1.78.1",
+        versions: "1.64 | 1.76 | 1.77 | 1.78.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "c3p0",
+        versions: "0.9.5.4 | 0.9.5.5",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Cassandra Java Driver",
+        versions: "4.18.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Couchbase Java Client",
+        versions: "3.6.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Couchbase JVM Core IO",
+        versions: "2.6.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Couchbase JVM Core IO Deps",
+        versions: "1.6.3",
         link: "./java-libraries/",
       },
       {
         name: "DNSJava",
-        versions: "2.1.7",
+        versions: "2.1.7 | 3.5.2",
         link: "./java-libraries/",
       },
       {
@@ -251,13 +351,23 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Eclipse Aether",
+        versions: "1.0.2.v20150114",
+        link: "./java-libraries/",
+      },
+      {
         name: "Eclipse JGit",
         versions: "5.7.0 | 5.13.3",
         link: "./java-libraries/",
       },
       {
         name: "Eclipse Parsson",
-        versions: "1.0.0",
+        versions: "1.0.0 | 1.1.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Eclipse Sisu",
+        versions: "0.0.0.M5",
         link: "./java-libraries/",
       },
       {
@@ -271,13 +381,28 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Elasticsearch",
+        versions: "7.16.3",
+        link: "./elasticsearch/",
+      },
+      {
+        name: "EWS Java API",
+        versions: "2.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "excel-streaming-reader",
         versions: "5.0.2",
         link: "./java-libraries/",
       },
       {
+        name: "GlassFish",
+        versions: "3.0.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Google Gson",
-        versions: "2.8.5 | 2.9.1",
+        versions: "2.2.4 | 2.4 | 2.8.5 | 2.8.9 | 2.9.1 | 2.10.1 | 2.11.0",
         link: "./java-libraries/",
       },
       {
@@ -296,8 +421,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Grails",
+        versions: "2.5.6 | 5.3.6 | 6.2.1 | 6.2.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Grails Plugin Converters",
+        versions: "5.0.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "H2 Database",
-        versions: "1.4.200",
+        versions: "1.3.176 | 1.4.200 | 2.1.210",
         link: "./java-libraries/",
       },
       {
@@ -307,13 +442,33 @@ const techData = [
       },
       {
         name: "Hibernate",
-        versions: "4.3.11.Final | 5.4.3.Final | 5.4.30.Final | 5.4.31.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final",
+        versions: "4.3.11.Final | 5.1.2.Final | 5.4.3.Final | 5.4.30.Final | 5.4.31.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final | 6.2.20.Final | 6.4.10.Final | 6.5.3.Final | 6.6.38.Final | 6.6.39.Final",
+        link: "./hibernate/",
+      },
+      {
+        name: "Hibernate Commons Annotations",
+        versions: "5.1.2.Final",
         link: "./hibernate/",
       },
       {
         name: "Hibernate Search",
         versions: "5.11.10.Final",
         link: "./hibernate/",
+      },
+      {
+        name: "Hibernate Validator",
+        versions: "5.4.3.Final | 6.2.5.Final",
+        link: "./hibernate/",
+      },
+      {
+        name: "HornetQ",
+        versions: "2.4.9.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "HPPC",
+        versions: "0.8.1",
+        link: "./java-libraries/",
       },
       {
         name: "HtmlUnit",
@@ -326,13 +481,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "iTextPDF",
+        versions: "5.0.6",
+        link: "./java-libraries/",
+      },
+      {
         name: "Jackson",
-        versions: "1.9.13 | 2.14.2",
+        versions: "1.9.13 | 2.12.1 | 2.14.1 | 2.14.2",
         link: "./jackson/",
       },
       {
         name: "JasperReports",
-        versions: "3.7.4",
+        versions: "3.7.4 | 6.2.2 | 6.21.5",
         link: "./java-libraries/",
       },
       {
@@ -351,6 +511,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "jose4j",
+        versions: "0.8.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "JSON",
         versions: "20090211 | 20140107",
         link: "./java-libraries/",
@@ -362,7 +527,22 @@ const techData = [
       },
       {
         name: "JSON Smart v2",
-        versions: "2.4.8",
+        versions: "1.3.2 | 2.4.8 | 2.5.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "json-io",
+        versions: "2.9.4",
+        link: "./java-libraries/",
+      },
+      {
+        name: "JsonPath",
+        versions: "2.2.0 | 2.5.0 | 2.6.0 | 2.7.0 | 2.8.0 | 2.9.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "jsoup",
+        versions: "1.7.2 | 1.7.3 | 1.17.2",
         link: "./java-libraries/",
       },
       {
@@ -371,13 +551,28 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Lettuce",
+        versions: "6.1.10.RELEASE | 6.3.2.RELEASE",
+        link: "./java-libraries/",
+      },
+      {
         name: "Logback",
-        versions: "1.1.7 | 1.2.13 | 1.4.14",
+        versions: "1.1.7 | 1.2.3 | 1.2.12 | 1.2.13 | 1.4.11 | 1.4.14 | 1.5.18",
         link: "./java-libraries/",
       },
       {
         name: "LZ4",
-        versions: "1.8.1",
+        versions: "1.8.0 | 1.8.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "mchange-commons-java",
+        versions: "0.2.15 | 0.2.19 | 0.2.20",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Micronaut",
+        versions: "3.6.0 | 3.8.5 | 3.10.4 | 4.5.4",
         link: "./java-libraries/",
       },
       {
@@ -391,13 +586,28 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "MySQL Connector/J",
+        versions: "5.1.49",
+        link: "./java-libraries/",
+      },
+      {
         name: "NekoHTML",
         versions: "1.9.22",
         link: "./java-libraries/",
       },
       {
+        name: "Neo4j Bolt Connection",
+        versions: "2.0.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Neo4j Java Driver",
+        versions: "5.28.5",
+        link: "./java-libraries/",
+      },
+      {
         name: "Netty",
-        versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final",
+        versions: "3.10.6.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.94.Final | 4.1.107.Final | 4.1.108.Final | 4.1.111.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.119.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
         link: "./java-libraries/",
       },
       {
@@ -407,7 +617,12 @@ const techData = [
       },
       {
         name: "Nimbus JOSE + JWT",
-        versions: "9.22 | 9.23 | 9.24.4",
+        versions: "8.23 | 9.22 | 9.23 | 9.24.4 | 9.37.3 | 9.39.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Nimbus OAuth2 OIDC SDK",
+        versions: "9.43.3 | 9.43.6",
         link: "./java-libraries/",
       },
       {
@@ -422,7 +637,7 @@ const techData = [
       },
       {
         name: "Plexus Utils",
-        versions: "1.4.5 | 1.5.8",
+        versions: "1.2 | 1.4.5 | 1.5.6 | 1.5.8 | 1.5.15 | 2.0.4 | 2.0.5 | 2.0.6 | 2.1 | 3.0.1 | 3.0.15 | 3.0.17 | 3.0.18 | 3.0.20 | 3.0.24 | 3.1.0 | 3.2.0 | 3.2.1 | 3.3.1 | 3.4.1 | 3.4.2 | 3.5.1 | 3.6.0 | 4.0.0 | 4.0.1 | 4.0.2",
         link: "./java-libraries/",
       },
       {
@@ -432,8 +647,13 @@ const techData = [
       },
       {
         name: "Protobuf",
-        versions: "2.5.0 | 2.6.1 | 3.21.9",
+        versions: "2.5.0 | 2.6.1 | 3.19.6 | 3.21.1 | 3.21.9",
         link: "./protobuf/",
+      },
+      {
+        name: "Quartz Scheduler",
+        versions: "1.8.5",
+        link: "./java-libraries/",
       },
       {
         name: "Querydsl",
@@ -441,28 +661,43 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "RabbitMQ Java Client",
+        versions: "5.19.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Reactor BOM",
-        versions: "2020.0.23 | 2020.0.38 | 2022.0.15",
+        versions: "2020.0.0 | 2020.0.7 | 2020.0.23 | 2020.0.32 | 2020.0.38 | 2020.0.47 | 2022.0.13 | 2022.0.15 | 2023.0.19",
         link: "./java-libraries/",
       },
       {
         name: "Reactor Netty",
-        versions: "1.0.23 | 1.0.32 | 1.0.39 | 1.1.15",
+        versions: "1.0.0 | 1.0.7 | 1.0.23 | 1.0.32 | 1.0.39 | 1.0.48 | 1.1.13 | 1.1.15 | 1.1.31",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Retrofit",
+        versions: "2.9.0",
         link: "./java-libraries/",
       },
       {
         name: "RSocket",
-        versions: "1.1.3",
+        versions: "1.1.3 | 1.1.5",
+        link: "./java-libraries/",
+      },
+      {
+        name: "SLF4J",
+        versions: "1.6.1 | 1.7.21",
         link: "./java-libraries/",
       },
       {
         name: "SnakeYAML",
-        versions: "1.23 | 1.26 | 1.29 | 1.30 | 1.33",
+        versions: "1.23 | 1.26 | 1.27 | 1.28 | 1.29 | 1.30 | 1.33",
         link: "./java-libraries/",
       },
       {
         name: "Snappy Java",
-        versions: "1.1.8.4",
+        versions: "1.1.2 | 1.1.8.4",
         link: "./java-libraries/",
       },
       {
@@ -471,41 +706,46 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Sonatype Sisu",
+        versions: "2.3.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Spring® Framework",
-        versions: "3.1 | 4.0 | 4.1 | 4.3 | 5.2 | 5.3 | 6.0 | 6.1",
+        versions: "3.0 | 3.1 | 4.0 | 4.1 | 4.2 | 4.3 | 5.0 | 5.1 | 5.2 | 5.3 | 6.0 | 6.1 | 6.2",
         link: "./spring/",
         detailsHash: "Framework",
       },
       {
         name: "Spring® AMQP",
-        versions: "2.4.17",
+        versions: "2.1.8.RELEASE | 2.3.16 | 2.4.17 | 3.0.10 | 3.1.8 | 3.1.12",
         link: "./spring/",
       },
       {
         name: "Spring® Batch",
-        versions: "4.3.10",
+        versions: "4.3.10 | 5.1.2 | 5.1.3 | 5.2.6",
         link: "./spring/",
       },
       {
         name: "Spring® Boot",
-        versions: "2.4 | 2.6 | 2.7 | 3.1",
+        versions: "2.1 | 2.3 | 2.4 | 2.5 | 2.6 | 2.7 | 3.0 | 3.1 | 3.2 | 3.3 | 3.4 | 3.5",
         link: "./spring/",
         detailsHash: "Boot",
       },
       {
         name: "Spring® Cloud",
-        versions: "3.1.9",
+        versions: "3.1.6 | 3.1.9",
         link: "./spring/",
       },
       {
         name: "Spring® Data",
-        versions: "2021.2",
+        versions: "2021.2 | 2023.1 | 2024.0 | 2024.1 | 2025.0",
         link: "./spring/",
         detailsHash: "Data",
       },
       {
         name: "Spring® Security",
-        versions: "5.7 | 5.8 | 6.1",
+        versions: "4.2 | 5.6 | 5.7 | 5.8 | 6.0 | 6.1 | 6.2 | 6.3 | 6.4 | 6.5",
         link: "./spring/",
         detailsHash: "Security",
       },
@@ -516,28 +756,28 @@ const techData = [
       },
       {
         name: "Spring® Web Services",
-        versions: "3.1.8",
+        versions: "3.0.7.RELEASE | 3.1.6 | 3.1.8 | 4.0.15 | 4.0.17 | 4.1.4",
         link: "./spring/",
       },
       {
         name: "Spring® Integration",
-        versions: "5.5.20",
+        versions: "5.5.20 | 6.3.11 | 6.4.10 | 6.5.10",
         link: "./spring/",
       },
       {
         name: "Spring® HATEOAS",
-        versions: "1.5.6",
+        versions: "0.25.2.RELEASE | 1.5.6 | 2.0.7 | 2.3.4 | 2.4.1",
         link: "./spring/",
       },
       {
         name: "Spring® LDAP",
-        versions: "2.4.1 | 2.4.4",
+        versions: "2.4.1 | 2.4.4 | 3.0.6 | 3.2.12",
         link: "./spring/",
         detailsHash: "LDAP",
       },
       {
         name: "Spring® GraphQL",
-        versions: "1.0.6",
+        versions: "1.0.6 | 1.2.9 | 1.3.5 | 1.3.7 | 1.4.6",
         link: "./spring/",
       },
       {
@@ -547,37 +787,37 @@ const techData = [
       },
       {
         name: "Spring® Plugin",
-        versions: "2.0.0",
+        versions: "2.0.0 | 3.0.0",
         link: "./spring/",
       },
       {
         name: "Spring® Web Flow",
-        versions: "2.3.1 | 2.3.3",
+        versions: "2.3.1 | 2.3.3 | 3.0.2",
         link: "./spring/",
       },
       {
         name: "Spring® for Apache Pulsar",
-        versions: "1.1.13",
+        versions: "1.0.12 | 1.1.13 | 1.2.13 | 1.2.18",
         link: "./spring/",
       },
       {
         name: "Spring® Authorization Server",
-        versions: "1.1.4",
+        versions: "1.1.4 | 1.2.7 | 1.3.7 | 1.5.8",
         link: "./spring/",
       },
       {
         name: "Thymeleaf",
-        versions: "3.0.15.RELEASE",
+        versions: "3.0.15.RELEASE | 3.1.2.RELEASE | 3.1.3.RELEASE",
         link: "./java-libraries/",
       },
       {
         name: "Undertow",
-        versions: "2.2.33.Final | 2.3.0.Final | 2.3.10.Final | 2.3.18.Final",
+        versions: "2.2.24.Final | 2.2.28.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final",
         link: "./java-libraries/",
       },
       {
         name: "Woodstox",
-        versions: "5.0.3",
+        versions: "5.0.3 | 5.3.0",
         link: "./java-libraries/",
       },
       {
@@ -591,8 +831,13 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "XStream",
+        versions: "1.4.17",
+        link: "./java-libraries/",
+      },
+      {
         name: "Eclipse Jetty",
-        versions: "8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 10.0.26 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28",
+        versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 9.4.63 | 9.4.64 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 10.0.31 | 10.0.32 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30",
         link: "./jetty/",
       },
       {
@@ -613,7 +858,7 @@ const techData = [
       },
       {
         name: "AngularJS",
-        versions: "1.4.4 | 1.5.11 | 1.6.10 | 1.7.9 | 1.8.2 | 1.8.3",
+        versions: "1.4.4 | 1.4.7 | 1.5.10 | 1.5.11 | 1.6.10 | 1.7.9 | 1.8.2 | 1.8.3",
         link: "./angularjs/",
       },
       {
@@ -623,7 +868,7 @@ const techData = [
       },
       {
         name: "adm-zip",
-        versions: "0.4.4",
+        versions: "0.4.4 | 0.4.7 | 0.4.16 | 0.5.18",
         link: "./javascript-libraries/",
       },
       {
@@ -633,12 +878,17 @@ const techData = [
       },
       {
         name: "ag-grid-community",
-        versions: "20.2.0 | 21.0.0 | 23.0.2 | 23.2.1 | 24.1.0 | 25.0.0 | 26.1.0 | 26.2.0 | 26.2.1 | 28.1.0 | 28.1.1 | 28.2.0 | 29.1.0 | 30.1.0 | 30.2.0 | 31.1.1",
+        versions: "20.2.0 | 21.0.0 | 23.0.2 | 23.2.1 | 24.1.0 | 25.0.0 | 26.0.0 | 26.1.0 | 26.2.0 | 26.2.1 | 28.1.0 | 28.1.1 | 28.2.0 | 29.1.0 | 30.1.0 | 30.2.0 | 31.1.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ag-grid-enterprise",
+        versions: "16.0.1 | 17.1.1 | 18.0.1 | 20.2.0 | 21.0.0 | 23.0.2 | 23.2.1 | 24.1.0 | 25.0.0 | 26.1.0 | 26.2.0 | 26.2.1 | 28.1.0 | 28.1.3 | 30.1.0 | 31.1.1",
         link: "./javascript-libraries/",
       },
       {
         name: "ajv",
-        versions: "4.11.8 | 5.5.2 | 6.4.0 | 6.12.3 | 6.12.4 | 6.12.6 | 6.14.0 | 8.6.2 | 8.9.0 | 8.11.0 | 8.12.0 | 8.17.1",
+        versions: "4.11.8 | 5.5.2 | 6.4.0 | 6.5.3 | 6.9.1 | 6.10.0 | 6.10.2 | 6.11.0 | 6.12.3 | 6.12.4 | 6.12.6 | 6.14.0 | 8.6.2 | 8.9.0 | 8.11.0 | 8.12.0 | 8.17.1",
         link: "./javascript-libraries/",
       },
       {
@@ -668,7 +918,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.27.2 | 0.33.0",
+        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.26.0 | 0.26.1 | 0.27.2 | 0.33.0 | 1.6.2 | 1.6.8 | 1.7.5 | 1.7.7 | 1.7.9",
         link: "./javascript-libraries/",
       },
       {
@@ -677,8 +927,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "babel-core",
+        versions: "7.11.5 | 7.12.13 | 7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "babel-helpers",
-        versions: "7.15.4 | 7.24.0 | 7.24.1 | 7.25.6 | 7.26.0",
+        versions: "7.11.5 | 7.12.13 | 7.15.4 | 7.18.9 | 7.21.0 | 7.21.5 | 7.24.0 | 7.24.1 | 7.25.6 | 7.26.0 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
@@ -688,17 +943,27 @@ const techData = [
       },
       {
         name: "babel-runtime",
-        versions: "7.11.2 | 7.12.5 | 7.12.18 | 7.14.8 | 7.15.4 | 7.16.7 | 7.18.9 | 7.21.0 | 7.22.6 | 7.22.15 | 7.23.1 | 7.23.2 | 7.23.9 | 7.24.0 | 7.24.1 | 7.24.4 | 7.24.7 | 7.25.7 | 7.26.0",
+        versions: "7.11.2 | 7.11.5 | 7.12.5 | 7.12.13 | 7.12.18 | 7.14.8 | 7.15.4 | 7.16.7 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.6 | 7.22.15 | 7.23.1 | 7.23.2 | 7.23.9 | 7.24.0 | 7.24.1 | 7.24.4 | 7.24.7 | 7.25.7 | 7.26.0 | 7.29.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "babel-runtime-corejs2",
+        versions: "7.11.5 | 7.12.13 | 7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-runtime-corejs3",
-        versions: "7.15.3",
+        versions: "7.11.5 | 7.12.13 | 7.15.3 | 7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-traverse",
         versions: "6.26.0 | 7.15.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "base64-url",
+        versions: "1.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -713,17 +978,17 @@ const techData = [
       },
       {
         name: "bn.js",
-        versions: "4.11.8 | 4.12.0",
+        versions: "4.11.8 | 4.12.0 | 4.12.2 | 5.2.2",
         link: "./javascript-libraries/",
       },
       {
         name: "body-parser",
-        versions: "1.8.4 | 1.13.3 | 1.14.2 | 1.19.0 | 1.20.1 | 1.20.2",
+        versions: "1.8.4 | 1.13.3 | 1.14.2 | 1.19.0 | 1.20.0 | 1.20.1 | 1.20.2",
         link: "./javascript-libraries/",
       },
       {
         name: "Bootstrap",
-        versions: "3.2.0 | 3.3.6 | 3.3.7 | 3.4.1 | 4.1.1 | 4.1.3 | 4.6.2",
+        versions: "3.0.0 | 3.2.0 | 3.3.1 | 3.3.2 | 3.3.5 | 3.3.6 | 3.3.7 | 3.4.1 | 4.1.1 | 4.1.3 | 4.6.2",
         link: "./bootstrap/",
       },
       {
@@ -733,12 +998,12 @@ const techData = [
       },
       {
         name: "bower",
-        versions: "1.8.4",
+        versions: "1.8.4 | 1.8.14",
         link: "./javascript-libraries/",
       },
       {
         name: "brace-expansion",
-        versions: "1.1.11 | 2.0.1",
+        versions: "1.1.11 | 1.1.12 | 2.0.1 | 2.1.2",
         link: "./javascript-libraries/",
       },
       {
@@ -753,7 +1018,7 @@ const techData = [
       },
       {
         name: "browserslist",
-        versions: "4.10.0 | 4.13.0 | 4.27.0",
+        versions: "4.10.0 | 4.13.0 | 4.14.2 | 4.27.0",
         link: "./javascript-libraries/",
       },
       {
@@ -793,12 +1058,17 @@ const techData = [
       },
       {
         name: "connect",
-        versions: "1.9.2 | 2.6.0 | 2.7.5",
+        versions: "1.9.2 | 2.6.0 | 2.7.5 | 2.12.0",
         link: "./javascript-libraries/",
       },
       {
         name: "cookie",
         versions: "0.0.5 | 0.1.3 | 0.3.1 | 0.4.0 | 0.4.2 | 0.5.0 | 0.6.0 | 0.7.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "cookie-signature",
+        versions: "1.0.0 | 1.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -828,27 +1098,27 @@ const techData = [
       },
       {
         name: "debug",
-        versions: "0.7.4 | 1.0.5 | 2.1.1 | 2.2.0 | 2.3.3 | 2.6.9 | 3.1.0 | 3.2.6 | 3.2.7 | 4.1.1 | 4.4.3",
+        versions: "0.7.4 | 1.0.2 | 1.0.3 | 1.0.4 | 1.0.5 | 2.1.0 | 2.1.1 | 2.2.0 | 2.3.3 | 2.6.4 | 2.6.9 | 3.1.0 | 3.2.6 | 3.2.7 | 4.1.1 | 4.4.3",
         link: "./javascript-libraries/",
       },
       {
         name: "decode-uri-component",
-        versions: "0.2.0",
+        versions: "0.2.0 | 0.2.2",
         link: "./javascript-libraries/",
       },
       {
         name: "defu",
-        versions: "6.1.2",
+        versions: "5.0.1 | 6.1.2",
         link: "./javascript-libraries/",
       },
       {
         name: "devalue",
-        versions: "2.0.1 | 4.3.3",
+        versions: "2.0.1 | 4.3.0 | 4.3.1 | 4.3.2 | 4.3.3",
         link: "./javascript-libraries/",
       },
       {
         name: "diff",
-        versions: "1.0.2 | 1.4.0 | 3.5.0 | 7.0.0",
+        versions: "1.0.2 | 1.4.0 | 3.5.0 | 4.0.2 | 5.0.0 | 7.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -858,12 +1128,12 @@ const techData = [
       },
       {
         name: "dompurify",
-        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3",
+        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3 | 3.2.7 | 3.4.8",
         link: "./javascript-libraries/",
       },
       {
         name: "dset",
-        versions: "3.1.3",
+        versions: "3.1.2 | 3.1.3",
         link: "./javascript-libraries/",
       },
       {
@@ -872,9 +1142,9 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "Ember.js",
-        versions: "0.2.7 | 1.13.11 | 2.18.2 | 3.28.6 | 4.12.13",
-        link: "./ember/",
+        name: "ember-cli",
+        versions: "0.2.7 | 1.13.11 | 2.18.2 | 3.28.6",
+        link: "./ember-cli/",
       },
       {
         name: "elliptic",
@@ -883,7 +1153,7 @@ const techData = [
       },
       {
         name: "engine.io",
-        versions: "3.2.1",
+        versions: "1.8.3 | 3.1.5 | 3.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -893,12 +1163,17 @@ const techData = [
       },
       {
         name: "esbuild",
-        versions: "0.13.8 | 0.14.22 | 0.14.25 | 0.14.54 | 0.15.18 | 0.15.5 | 0.17.19 | 0.18.17 | 0.18.20 | 0.19.12 | 0.20.1 | 0.21.5",
+        versions: "0.13.8 | 0.14.22 | 0.14.25 | 0.14.54 | 0.15.5 | 0.15.18 | 0.17.8 | 0.17.15 | 0.17.19 | 0.18.17 | 0.18.20 | 0.19.8 | 0.19.12 | 0.20.1 | 0.21.5 | 0.23.1",
         link: "./javascript-libraries/",
       },
       {
         name: "eslint-plugin-kit",
         versions: "0.2.7",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "estree-util-value-to-estree",
+        versions: "1.3.0",
         link: "./javascript-libraries/",
       },
       {
@@ -923,18 +1198,23 @@ const techData = [
       },
       {
         name: "fast-uri",
-        versions: "3.0.1 | 3.0.3",
+        versions: "2.4.0 | 2.4.2 | 2.4.3 | 3.0.1 | 3.0.3",
         link: "./javascript-libraries/",
       },
       {
         name: "fast-xml-parser",
-        versions: "3.14.0 | 3.17.5 | 3.19.0 | 4.2.7 | 4.4.0 | 4.5.3 | 4.5.6",
+        versions: "3.14.0 | 3.17.5 | 3.19.0 | 4.2.7 | 4.4.0 | 4.5.3 | 4.5.6 | 4.5.7",
         link: "./javascript-libraries/",
       },
       {
         name: "fastify",
-        versions: "3.29.5 | 4.29.1",
+        versions: "3.29.5 | 4.29.1 | 5.11.3",
         link: "./fastify/",
+      },
+      {
+        name: "fastify-middie",
+        versions: "8.3.3",
+        link: "./javascript-libraries/",
       },
       {
         name: "file-type",
@@ -942,13 +1222,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "find-my-way",
+        versions: "9.6.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "flatted",
-        versions: "3.2.9 | 3.3.3",
+        versions: "2.0.2 | 3.2.9 | 3.3.1 | 3.3.2 | 3.3.3",
         link: "./javascript-libraries/",
       },
       {
         name: "follow-redirects",
-        versions: "0.0.3 | 1.5.10 | 1.15.2 | 1.15.3 | 1.15.5 | 1.15.6 | 1.15.9 | 1.15.11",
+        versions: "0.0.3 | 1.0.0 | 1.2.6 | 1.5.10 | 1.15.2 | 1.15.3 | 1.15.5 | 1.15.6 | 1.15.9 | 1.15.11",
         link: "./javascript-libraries/",
       },
       {
@@ -968,7 +1253,7 @@ const techData = [
       },
       {
         name: "fresh",
-        versions: "0.2.4 | 0.3.0 | 0.5.2",
+        versions: "0.1.0 | 0.2.0 | 0.2.4 | 0.3.0 | 0.5.2",
         link: "./javascript-libraries/",
       },
       {
@@ -983,12 +1268,12 @@ const techData = [
       },
       {
         name: "glob",
-        versions: "10.2.6 | 10.4.5",
+        versions: "10.2.6 | 10.3.10 | 10.4.5",
         link: "./javascript-libraries/",
       },
       {
         name: "got",
-        versions: "2.9.2 | 8.3.2 | 9.6.0",
+        versions: "2.9.2 | 6.7.1 | 8.3.2 | 9.6.0",
         link: "./javascript-libraries/",
       },
       {
@@ -998,7 +1283,12 @@ const techData = [
       },
       {
         name: "handlebars",
-        versions: "1.0.12 | 1.3.0 | 2.0.0 | 3.0.3 | 4.7.7 | 4.7.8",
+        versions: "1.0.12 | 1.3.0 | 2.0.0 | 3.0.3 | 3.0.8 | 4.7.7 | 4.7.8 | 4.7.9",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "hapi-content",
+        versions: "5.0.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1007,13 +1297,28 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "hapi-wreck",
+        versions: "17.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "happy-dom",
+        versions: "9.10.9 | 14.12.3 | 15.11.7",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "hawk",
-        versions: "0.13.1 | 1.0.0 | 1.1.1 | 2.3.1 | 3.1.0",
+        versions: "0.13.1 | 1.0.0 | 1.1.1 | 2.3.1 | 3.1.0 | 3.1.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "highcharts",
+        versions: "6.0.7 | 6.1.0 | 6.1.3 | 6.2.0 | 7.2.0 | 7.2.2 | 8.2.2",
         link: "./javascript-libraries/",
       },
       {
         name: "highlight.js",
-        versions: "9.18.5",
+        versions: "8.9.1 | 9.18.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1022,8 +1327,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "hosted-git-info",
+        versions: "2.1.4 | 2.7.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "http-proxy-middleware",
-        versions: "0.19.1 | 2.0.8",
+        versions: "0.0.5 | 0.17.2 | 0.17.3 | 0.18.0 | 0.19.1 | 0.20.0 | 1.0.0 | 1.1.0 | 1.3.1 | 2.0.6 | 2.0.7 | 2.0.8 | 3.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1032,13 +1342,28 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "i18next-http-backend",
+        versions: "1.4.4 | 2.5.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "immutable",
+        versions: "3.8.1 | 3.8.2 | 3.8.3 | 4.1.0 | 4.3.5 | 4.3.7 | 5.0.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "ini",
-        versions: "1.3.5",
+        versions: "1.3.3 | 1.3.5",
         link: "./javascript-libraries/",
       },
       {
         name: "ip",
         versions: "1.1.5 | 1.1.9 | 2.0.0 | 2.0.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ip-address",
+        versions: "6.4.0 | 9.0.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1048,8 +1373,13 @@ const techData = [
       },
       {
         name: "jQuery",
-        versions: "1.8.2 | 1.12.4 | 2.2.4 | 3.4.1",
+        versions: "1.3.2 | 1.4.1 | 1.4.2 | 1.4.3 | 1.8.2 | 1.8.3 | 1.11.3 | 1.12.4 | 2.1.3 | 2.2.4 | 3.1.1 | 3.2.1 | 3.3.1 | 3.4.1 | 3.6.0",
         link: "./jquery/",
+      },
+      {
+        name: "jquery-mobile",
+        versions: "1.4.5",
+        link: "./javascript-libraries/",
       },
       {
         name: "jQuery UI",
@@ -1068,7 +1398,7 @@ const techData = [
       },
       {
         name: "js-yaml",
-        versions: "3.3.1 | 3.7.0 | 3.14.1 | 4.1.0",
+        versions: "3.3.1 | 3.7.0 | 3.14.1 | 3.14.2 | 3.15.0 | 4.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1083,7 +1413,7 @@ const techData = [
       },
       {
         name: "JSON Web Token (JWT)",
-        versions: "0.4.0 | 0.4.1 | 8.5.1",
+        versions: "0.1.0 | 0.3.0 | 0.4.0 | 0.4.1 | 5.4.0 | 7.1.6 | 8.5.1",
         link: "./jsonwebtoken/",
       },
       {
@@ -1102,13 +1432,23 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "jws",
+        versions: "0.2.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "jwt-simple",
+        versions: "0.3.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "knex",
         versions: "0.95.15",
         link: "./javascript-libraries/",
       },
       {
         name: "karma",
-        versions: "3.0.0 | 4.0.1 | 4.1.0 | 4.4.1 | 5.0.9",
+        versions: "1.5.0 | 1.7.0 | 3.0.0 | 4.0.0 | 4.0.1 | 4.1.0 | 4.4.1 | 5.0.0 | 5.0.9",
         link: "./karma/",
       },
       {
@@ -1118,13 +1458,23 @@ const techData = [
       },
       {
         name: "koa",
-        versions: "1.7.1",
+        versions: "1.7.1 | 2.15.3",
         link: "./koa/",
       },
       {
+        name: "koa-cors",
+        versions: "3.4.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "Lodash",
-        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.15 | 4.17.19 | 4.17.21 | 4.18.1 | 4.5.0",
+        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.4 | 4.17.5 | 4.17.11 | 4.17.15 | 4.17.19 | 4.17.21 | 4.18.1 | 4.5.0",
         link: "./lodash/",
+      },
+      {
+        name: "lodash-es",
+        versions: "4.17.11 | 4.17.15 | 4.17.21",
+        link: "./javascript-libraries/",
       },
       {
         name: "lodash.merge",
@@ -1132,8 +1482,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "lodash.template",
+        versions: "3.6.2 | 4.4.0 | 4.5.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "log4js",
-        versions: "3.0.6 | 4.5.1",
+        versions: "3.0.3 | 3.0.6 | 4.5.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1142,8 +1497,23 @@ const techData = [
         link: "./loopback/",
       },
       {
+        name: "linkify-it",
+        versions: "1.2.4 | 4.0.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "linkifyjs",
+        versions: "4.1.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "loader-utils",
         versions: "0.2.17 | 1.1.0 | 1.2.3 | 2.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "luxon",
+        versions: "2.3.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1153,7 +1523,7 @@ const techData = [
       },
       {
         name: "marked",
-        versions: "0.2.10 | 0.7.0 | 4.0.6 | 4.0.7 | 4.0.9",
+        versions: "0.2.10 | 0.3.19 | 0.7.0 | 0.8.2 | 1.2.7 | 4.0.6 | 4.0.7 | 4.0.9",
         link: "./javascript-libraries/",
       },
       {
@@ -1168,22 +1538,22 @@ const techData = [
       },
       {
         name: "mime",
-        versions: "1.2.11 | 1.3.0 | 1.3.4",
+        versions: "1.2.6 | 1.2.11 | 1.3.0 | 1.3.4 | 1.3.6",
         link: "./javascript-libraries/",
       },
       {
         name: "minimatch",
-        versions: "0.0.4 | 0.0.5 | 0.2.14 | 0.3.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.1.2 | 3.1.5 | 5.1.0",
+        versions: "0.0.4 | 0.0.5 | 0.2.5 | 0.2.14 | 0.3.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.0.5 | 3.0.8 | 3.1.2 | 3.1.5 | 5.1.0 | 9.0.3",
         link: "./javascript-libraries/",
       },
       {
         name: "minimist",
-        versions: "0.0.8 | 0.0.10 | 1.2.0 | 1.2.1 | 1.2.8",
+        versions: "0.0.8 | 0.0.9 | 0.0.10 | 1.2.0 | 1.2.1 | 1.2.8",
         link: "./javascript-libraries/",
       },
       {
         name: "moment",
-        versions: "2.10.6 | 2.24.0",
+        versions: "2.0.0 | 2.10.6 | 2.24.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1198,12 +1568,12 @@ const techData = [
       },
       {
         name: "Mongoose",
-        versions: "5.13.23 | 6.12.2 | 7.8.8",
+        versions: "5.13.23 | 6.12.2 | 7.8.8 | 9.6.2",
         link: "./mongoose/",
       },
       {
         name: "morgan",
-        versions: "1.5.3",
+        versions: "1.5.3 | 1.6.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1212,8 +1582,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "ms",
+        versions: "0.3.0 | 0.6.2 | 0.7.1 | 0.7.2 | 1.0.0 | 2.0.0 | 2.1.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "multer",
-        versions: "1.4.5-lts | 1.4.5-lts.2",
+        versions: "1.4.5-lts | 1.4.5-lts.1 | 1.4.5-lts.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "multiparty",
+        versions: "2.2.0 | 3.3.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1228,7 +1608,22 @@ const techData = [
       },
       {
         name: "negotiator",
-        versions: "0.5.3",
+        versions: "0.3.0 | 0.5.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nestjs-core",
+        versions: "10.4.22",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nestjs-microservices",
+        versions: "10.4.22",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nestjs-platform-express",
+        versions: "10.4.22",
         link: "./javascript-libraries/",
       },
       {
@@ -1257,6 +1652,26 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "node-notifier",
+        versions: "5.4.5 | 7.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nodemailer",
+        versions: "0.7.1 | 2.7.2 | 6.10.1 | 9.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "node-sass",
+        versions: "4.14.1 | 6.0.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "npm-user-validate",
+        versions: "0.1.2 | 0.1.5",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "nth-check",
         versions: "1.0.2",
         link: "./javascript-libraries/",
@@ -1269,6 +1684,11 @@ const techData = [
       {
         name: "object-path",
         versions: "0.11.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "pacote",
+        versions: "18.0.6 | 20.0.0 | 20.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1288,12 +1708,12 @@ const techData = [
       },
       {
         name: "path-to-regexp",
-        versions: "0.1.3 | 0.1.12",
+        versions: "0.1.3 | 0.1.12 | 6.2.1",
         link: "./javascript-libraries/",
       },
       {
         name: "pdfjs-dist",
-        versions: "2.16.105 | 3.11.174",
+        versions: "2.14.305 | 2.16.105 | 3.11.174",
         link: "./javascript-libraries/",
       },
       {
@@ -1303,12 +1723,17 @@ const techData = [
       },
       {
         name: "picomatch",
-        versions: "2.3.1 | 4.0.2",
+        versions: "2.3.1 | 4.0.1 | 4.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "piscina",
+        versions: "4.6.1",
         link: "./javascript-libraries/",
       },
       {
         name: "PostCSS",
-        versions: "5.2.18 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.6",
+        versions: "5.2.18 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.6",
         link: "./postcss/",
       },
       {
@@ -1318,7 +1743,7 @@ const techData = [
       },
       {
         name: "protobufjs",
-        versions: "6.11.6",
+        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1333,7 +1758,7 @@ const techData = [
       },
       {
         name: "qs",
-        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.5 | 2.3.3 | 2.4.2 | 4.0.0 | 5.1.0 | 5.2.0 | 6.5.3 | 6.5.5 | 6.14.0",
+        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.4 | 2.2.5 | 2.3.3 | 2.4.2 | 3.1.0 | 4.0.0 | 5.1.0 | 5.2.0 | 5.2.1 | 6.5.3 | 6.5.5 | 6.7.0 | 6.10.3 | 6.10.7 | 6.11.0 | 6.14.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1353,8 +1778,43 @@ const techData = [
       },
       {
         name: "react-router",
-        versions: "6.3.0 | 7.5.1",
+        versions: "6.3.0 | 6.30.3 | 6.30.6 | 7.5.1",
         link: "./react-router/",
+      },
+      {
+        name: "react-router-dom",
+        versions: "6.30.3 | 6.30.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "react-router-dom-v5-compat",
+        versions: "6.30.4 | 6.30.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "react-router-native",
+        versions: "6.30.3 | 6.30.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "react-server-dom-esm",
+        versions: "0.0.0-13a913d5-20260727",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "react-server-dom-parcel",
+        versions: "19.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "react-server-dom-turbopack",
+        versions: "19.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "react-server-dom-webpack",
+        versions: "19.2.0",
+        link: "./javascript-libraries/",
       },
       {
         name: "redis",
@@ -1368,12 +1828,12 @@ const techData = [
       },
       {
         name: "Request",
-        versions: "2.88.0 | 2.88.2",
+        versions: "2.65.0 | 2.75.0 | 2.81.0 | 2.88.0 | 2.88.2",
         link: "./javascript-libraries/",
       },
       {
         name: "Rollup",
-        versions: "0.41.6 | 0.57.1 | 2.1.0 | 2.26.5 | 2.38.4 | 2.79.1 | 2.79.2",
+        versions: "0.36.3 | 0.41.6 | 0.56.4 | 0.57.1 | 0.59.4 | 0.63.5 | 2.1.0 | 2.26.5 | 2.38.4 | 2.77.3 | 2.79.1 | 2.79.2 | 3.15.0 | 4.22.4",
         link: "./javascript-libraries/",
       },
       {
@@ -1383,7 +1843,7 @@ const techData = [
       },
       {
         name: "semver",
-        versions: "2.3.2 | 4.3.6 | 5.0.3 | 6.3.0 | 7.1.3 | 7.3.2 | 7.3.4 | 7.3.8",
+        versions: "2.3.2 | 4.3.6 | 5.0.3 | 5.1.0 | 5.3.0 | 5.6.0 | 6.3.0 | 7.0.0 | 7.1.3 | 7.3.2 | 7.3.4 | 7.3.5 | 7.3.8",
         link: "./javascript-libraries/",
       },
       {
@@ -1393,32 +1853,57 @@ const techData = [
       },
       {
         name: "serialize-javascript",
-        versions: "1.9.1 | 3.1.0 | 4.0.0 | 5.0.1 | 6.0.2",
+        versions: "1.9.1 | 2.1.2 | 3.1.0 | 4.0.0 | 5.0.1 | 6.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "serve-static",
+        versions: "1.10.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "set-value",
+        versions: "2.0.0",
         link: "./javascript-libraries/",
       },
       {
         name: "shell-quote",
-        versions: "1.4.3 | 1.7.2",
+        versions: "1.4.3 | 1.6.1 | 1.7.2 | 1.7.3",
         link: "./javascript-libraries/",
       },
       {
         name: "shelljs",
-        versions: "0.1.4 | 0.3.0",
+        versions: "0.1.4 | 0.3.0 | 0.8.2 | 0.8.4",
         link: "./javascript-libraries/",
       },
       {
         name: "socket.io",
-        versions: "2.1.1",
+        versions: "2.0.4 | 2.1.1",
         link: "./javascript-libraries/",
       },
       {
         name: "socket.io-parser",
-        versions: "3.2.0 | 3.3.4 | 3.4.3 | 4.2.4",
+        versions: "3.1.3 | 3.2.0 | 3.3.4 | 3.4.3 | 4.2.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "sockjs",
+        versions: "0.3.18 | 0.3.19",
         link: "./javascript-libraries/",
       },
       {
         name: "ssr-window",
         versions: "4.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ssri",
+        versions: "5.3.0 | 7.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "storybook",
+        versions: "7.0.7 | 8.6.14 | 9.1.16 | 10.1.9",
         link: "./javascript-libraries/",
       },
       {
@@ -1433,12 +1918,27 @@ const techData = [
       },
       {
         name: "svgo",
-        versions: "2.8.0",
+        versions: "2.8.0 | 4.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "swagger-ui",
+        versions: "2.2.10",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "swagger-ui-dist",
+        versions: "3.52.5",
         link: "./javascript-libraries/",
       },
       {
         name: "swiper",
-        versions: "11.2.10",
+        versions: "8.4.7 | 11.2.10",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "systeminformation",
+        versions: "5.23.8",
         link: "./javascript-libraries/",
       },
       {
@@ -1448,12 +1948,17 @@ const techData = [
       },
       {
         name: "tar",
-        versions: "1.0.3 | 2.1.1 | 2.2.1 | 2.2.2 | 4.4.19 | 6.0.2 | 6.2.1",
+        versions: "1.0.3 | 2.1.1 | 2.2.1 | 2.2.2 | 4.4.19 | 6.0.2 | 6.1.15 | 6.2.0 | 6.2.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "tar-fs",
+        versions: "1.5.1 | 3.0.4",
         link: "./javascript-libraries/",
       },
       {
         name: "terser",
-        versions: "3.17.0 | 4.6.3 | 4.6.10 | 4.8.1 | 5.3.0 | 5.5.1 | 5.7.1",
+        versions: "3.17.0 | 4.6.3 | 4.6.10 | 4.8.1 | 5.3.0 | 5.5.1 | 5.7.1 | 5.10.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1463,12 +1968,17 @@ const techData = [
       },
       {
         name: "tmp",
-        versions: "0.0.24 | 0.0.28 | 0.0.30 | 0.0.33 | 0.1.0 | 0.2.1",
+        versions: "0.0.24 | 0.0.28 | 0.0.30 | 0.0.31 | 0.0.33 | 0.1.0 | 0.2.1 | 0.2.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "tmpl",
+        versions: "1.0.4",
         link: "./javascript-libraries/",
       },
       {
         name: "tough-cookie",
-        versions: "0.12.1 | 1.2.0 | 2.2.0 | 2.4.3 | 2.5.0 | 3.0.1",
+        versions: "0.12.1 | 1.2.0 | 2.2.0 | 2.2.2 | 2.3.4 | 2.4.3 | 2.5.0 | 3.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1478,17 +1988,17 @@ const techData = [
       },
       {
         name: "UAParser.js",
-        versions: "0.7.21",
+        versions: "0.7.21 | 0.7.22 | 0.7.31",
         link: "./javascript-libraries/",
       },
       {
         name: "uglify-js",
-        versions: "1.1.1 | 1.3.5 | 2.3.6",
+        versions: "1.1.1 | 1.3.5 | 2.3.6 | 2.8.29 | 3.4.10",
         link: "./javascript-libraries/",
       },
       {
         name: "underscore",
-        versions: "1.4.4 | 1.6.0 | 1.7.0",
+        versions: "1.4.4 | 1.6.0 | 1.7.0 | 1.13.4",
         link: "./javascript-libraries/",
       },
       {
@@ -1498,8 +2008,23 @@ const techData = [
       },
       {
         name: "undici",
-        versions: "5.28.5 | 5.29.0 | 6.11.1",
+        versions: "5.5.1 | 5.28.5 | 5.29.0 | 6.11.1",
         link: "./undici/",
+      },
+      {
+        name: "unhead",
+        versions: "1.11.20",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "unhead-schema",
+        versions: "1.11.20",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "unhead-vue",
+        versions: "1.11.20",
+        link: "./javascript-libraries/",
       },
       {
         name: "uuid",
@@ -1508,12 +2033,17 @@ const techData = [
       },
       {
         name: "validator",
-        versions: "8.2.0 | 10.11.0",
+        versions: "8.2.0 | 10.11.0 | 13.12.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "visualcaptcha.jquery",
+        versions: "0.0.8",
         link: "./javascript-libraries/",
       },
       {
         name: "Vite",
-        versions: "2.9.18 | 3.2.11 | 4.5.14 | 4.5.5 | 5.4.14 | 5.4.21",
+        versions: "2.9.18 | 3.2.11 | 4.1.5 | 4.5.5 | 4.5.14 | 5.4.14 | 5.4.21 | 6.4.2 | 7.3.2 | 7.3.3 | 8.0.8 | 8.0.10 | 8.0.12",
         link: "./vite/",
       },
       {
@@ -1537,18 +2067,138 @@ const techData = [
         link: "./vue-template-compiler/",
       },
       {
+        name: "web3",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-bzz",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-helpers",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-method",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-promievent",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-requestmanager",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-subscriptions",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-abi",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-accounts",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-contract",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-ens",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-iban",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-personal",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth2-beaconchain",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth2-core",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-net",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-providers-http",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-providers-ipc",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-providers-ws",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-shh",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-utils",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "webpack",
         versions: "5.50.0 | 5.55.0 | 5.76.1 | 5.88.2 | 5.94.0",
         link: "./webpack/",
       },
       {
+        name: "webpack-bundle-analyzer",
+        versions: "2.13.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "webpack-dev-middleware",
-        versions: "1.12.2 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3",
+        versions: "1.10.2 | 1.12.0 | 1.12.2 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 7.4.5",
         link: "./javascript-libraries/",
       },
       {
         name: "webpack-dev-server",
-        versions: "2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.15.1",
+        versions: "2.7.1 | 2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.11.1 | 4.15.1 | 4.15.2 | 5.2.2",
         link: "./webpack-dev-server/",
       },
       {
@@ -1557,13 +2207,23 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "websocket-driver",
+        versions: "0.6.5",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "websocket-extensions",
         versions: "0.1.1",
         link: "./javascript-libraries/",
       },
       {
+        name: "word-wrap",
+        versions: "1.2.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "ws",
-        versions: "1.1.1 | 1.1.2 | 3.3.3 | 4.1.0 | 7.4.6",
+        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.0.0 | 6.2.1 | 7.4.5 | 7.4.6 | 7.5.9 | 8.13.0 | 8.16.0 | 8.18.0 | 8.20.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1573,22 +2233,42 @@ const techData = [
       },
       {
         name: "xml2js",
-        versions: "0.2.6 | 0.2.8 | 0.4.23",
+        versions: "0.2.6 | 0.2.8 | 0.4.4 | 0.4.23",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "xmldom",
+        versions: "0.1.31 | 0.6.0",
         link: "./javascript-libraries/",
       },
       {
         name: "xmlhttprequest-ssl",
-        versions: "1.5.3 | 1.5.5",
+        versions: "1.5.1 | 1.5.3 | 1.5.5",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "y18n",
+        versions: "4.0.0",
         link: "./javascript-libraries/",
       },
       {
         name: "yaml",
-        versions: "1.10.2",
+        versions: "1.10.2 | 2.5.0",
         link: "./javascript-libraries/",
       },
       {
         name: "yargs-parser",
         versions: "4.2.1 | 7.0.0 | 10.1.0 | 11.1.1 | 13.1.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "yarn",
+        versions: "1.15.2 | 1.21.0 | 1.22.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "yeoman-environment",
+        versions: "3.19.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1598,7 +2278,7 @@ const techData = [
       },
       {
         name: "zod",
-        versions: "3.25.76",
+        versions: "3.21.4 | 3.25.76",
         link: "./javascript-libraries/",
       },
     ],
@@ -1639,7 +2319,7 @@ const techData = [
       },
       {
         name: "Django",
-        versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.0.3 | 5.0.4 | 5.0.5| 5.1 | 5.1.4 | 5.1.9",
+        versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9 | 5.1.10",
         link: "./django/",
       },
       {
@@ -1859,7 +2539,7 @@ const techData = [
       },
       {
         name: "setuptools",
-        versions: "59.8.0 | 65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.8.0",
+        versions: "59.8.0 | 60.0.0 | 65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.3.2 | 75.8.0",
         link: "./python-libraries/",
       },
       {
@@ -1919,6 +2599,21 @@ const techData = [
     ecosystemIcon: "/images/php-logo.webp",
     projects: [
       {
+        name: "Apigility",
+        versions: "1.2.1",
+        link: "./zf-apigility/",
+      },
+      {
+        name: "Assetic",
+        versions: "1.4.0",
+        link: "./assetic/",
+      },
+      {
+        name: "AssetManager",
+        versions: "1.8.1",
+        link: "./assetmanager/",
+      },
+      {
         name: "AWS SDK for PHP",
         versions: "3.263.4",
         link: "./aws-sdk-php/",
@@ -1960,22 +2655,57 @@ const techData = [
       },
       {
         name: "Drupal",
-        versions: "9.5.x",
+        versions: "8.9.x | 9.5.x",
         link: "./drupal/",
       },
       {
-        name: "php-svg-lib",
-        versions: "0.3.4",
-        link: "./php-svg-lib/",
+        name: "Drupal Bootstrap Site Alert",
+        versions: "7.1.6",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Colorbox",
+        versions: "2.1.2 | 7.2.19",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal GDPR",
+        versions: "3.1.0 | 7.1.0",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Link",
+        versions: "7.1.13",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal OpenID Connect",
+        versions: "7.1.3",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal SpamSpan",
+        versions: "3.2.0 | 7.1.4",
+        link: "./drupal/",
       },
       {
         name: "Firebase PHP-JWT",
-        versions: "6.11.1",
+        versions: "5.5.1 | 6.11.1",
         link: "./firebase-php-jwt/",
       },
       {
+        name: "graphql-php",
+        versions: "14.11.10",
+        link: "./graphql-php/",
+      },
+      {
         name: "Guzzle",
-        versions: "6.3.3",
+        versions: "6.0.2 | 6.3.3 | 6.5.8 | 7.10.0",
+        link: "./guzzle/",
+      },
+      {
+        name: "Guzzle PSR-7",
+        versions: "1.1.0 | 1.4.2 | 1.9.1",
         link: "./guzzle/",
       },
       {
@@ -1984,18 +2714,43 @@ const techData = [
         link: "./httpful/",
       },
       {
-        name: "Laminas",
+        name: "Illuminate Database",
+        versions: "5.4.36",
+        link: "./laravel/",
+      },
+      {
+        name: "Illuminate View",
+        versions: "5.4.36",
+        link: "./laravel/",
+      },
+      {
+        name: "Laminas Diactoros",
         versions: "2.22.0",
         link: "./laminas/",
       },
       {
+        name: "Laminas Http",
+        versions: "2.5.6",
+        link: "./laminas/",
+      },
+      {
         name: "Laravel",
-        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
+        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 6.20.45 | 7.30.7 | 8.12.0 | 8.12.1 | 8.12.2 | 8.12.3 | 8.83.29 | 9.52.21 | 10 | 11 | 12.58.0",
         link: "./laravel/",
       },
       {
+        name: "Laravel DataTables",
+        versions: "9.21.2 | 10.11.4",
+        link: "./laravel-datatables/",
+      },
+      {
+        name: "Laravel Media Library",
+        versions: "9.12.4 | 10.15.0",
+        link: "./laravel-media-library/",
+      },
+      {
         name: "League Commonmark",
-        versions: "1.6.7 | 2.7.1",
+        versions: "1.6.7 | 2.7.1 | 2.8.2",
         link: "./league-commonmark/",
       },
       {
@@ -2004,14 +2759,24 @@ const techData = [
         link: "./league-flysystem/",
       },
       {
+        name: "League OAuth2 Client",
+        versions: "1.4.2",
+        link: "./league-oauth2-client/",
+      },
+      {
         name: "Livewire",
         versions: "3.x",
         link: "./livewire/",
       },
       {
-        name: "phpseclib",
-        versions: "0.3.10",
-        link: "./phpseclib/",
+        name: "Monolog",
+        versions: "1.11.0",
+        link: "./monolog/",
+      },
+      {
+        name: "php-svg-lib",
+        versions: "0.3.4 | 0.4.1",
+        link: "./php-svg-lib/",
       },
       {
         name: "PHPMailer",
@@ -2019,9 +2784,9 @@ const techData = [
         link: "./phpmailer/",
       },
       {
-        name: "PHPUnit",
-        versions: "4.8.10 | 6.5.14 | 7.5.20 | 8.4.3 | 9.5.28 | 10.4.2 | 11.4.4 | 12.4.5",
-        link: "./phpunit/",
+        name: "phpseclib",
+        versions: "0.3.10",
+        link: "./phpseclib/",
       },
       {
         name: "PhpSpreadsheet",
@@ -2029,9 +2794,29 @@ const techData = [
         link: "./phpspreadsheet/",
       },
       {
+        name: "PHPUnit",
+        versions: "4.8.10 | 6.5.14 | 7.5.20 | 8.4.3 | 9.5.28 | 10.4.2 | 11.4.4 | 12.4.5",
+        link: "./phpunit/",
+      },
+      {
         name: "Protobuf",
-        versions: "3.24.4",
+        versions: "3.24.4 | 3.25.9",
         link: "./google-protobuf/",
+      },
+      {
+        name: "Ratchet",
+        versions: "0.3.6",
+        link: "./ratchet/",
+      },
+      {
+        name: "Ratchet Pawl",
+        versions: "0.1.2",
+        link: "./ratchet/",
+      },
+      {
+        name: "ReactPHP HttpClient",
+        versions: "0.4.14",
+        link: "./reactphp-http-client/",
       },
       {
         name: "Saloon",
@@ -2039,9 +2824,9 @@ const techData = [
         link: "./saloon/",
       },
       {
-        name: "Symfony HttpFoundation",
-        versions: "2.8.x | 3.4.x | 4.4.x",
-        link: "./symfony/",
+        name: "svg-sanitize",
+        versions: "0.16.0",
+        link: "./svg-sanitize/",
       },
       {
         name: "SwiftMailer",
@@ -2049,19 +2834,79 @@ const techData = [
         link: "./swiftmailer/",
       },
       {
+        name: "Symfony CMF Routing",
+        versions: "1.4.1",
+        link: "./symfony-cmf-routing/",
+      },
+      {
+        name: "Symfony HttpFoundation",
+        versions: "2.8.x | 3.4.x | 4.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony HttpKernel",
+        versions: "3.4.x | 7.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony Mailer",
+        versions: "6.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony Mime",
+        versions: "5.4.x | 6.4.x | 7.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony Polyfill Intl IDN",
+        versions: "1.30.x",
+        link: "./symfony/",
+      },
+      {
         name: "Symfony Process",
         versions: "3.4.x | 4.4.x | 5.x | 6.x",
         link: "./symfony/",
       },
       {
+        name: "Symfony Routing",
+        versions: "3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony Yaml",
+        versions: "2.8.x | 3.4.x | 4.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Thruway",
+        versions: "0.4.2",
+        link: "./thruway/",
+      },
+      {
+        name: "Twig",
+        versions: "1.44.8 | 2.15.6 | 2.16.1",
+        link: "./twig/",
+      },
+      {
+        name: "yii2-dev",
+        versions: "2.0.54",
+        link: "./yii2-dev/",
+      },
+      {
+        name: "Zend Framework",
+        versions: "2.4.13",
+        link: "./zendframework/",
+      },
+      {
         name: "Zend Framework 1",
-        versions: "1.12.10",
-        link: "./zendframework-zf1/",
+        versions: "1.10.6 | 1.11.0 | 1.12.10",
+        link: "./zendframework/",
       },
       {
         name: "Zend HTTP",
         versions: "2.5.6",
-        link: "./zendframework-zend-http/",
+        link: "./zendframework/",
       },
     ],
   },

@@ -55,7 +55,15 @@ export default {
                     icon: '/images/centos-stream.webp',
                 },
                 {
+                    path: '/els-for-os/cloudlinux-7-els/',
+                    icon: '/images/cloudlinux.webp',
+                },
+                {
                     path: '/els-for-os/debian-10-els/',
+                    icon: '/images/debian.webp',
+                },
+                {
+                    path: '/els-for-os/debian-11-els/',
                     icon: '/images/debian.webp',
                 },
                 {
@@ -171,6 +179,10 @@ export default {
                     icon: '/images/velocity-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/elasticsearch/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/els-for-libraries/hibernate/',
                     icon: '/images/hibernate.webp',
                 },
@@ -241,6 +253,18 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/zf-apigility/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/assetic/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/assetmanager/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/aws-sdk-php/',
                     icon: '/images/aws.webp',
                 },
@@ -249,20 +273,12 @@ export default {
                     icon: '/images/spatie.webp',
                 },
                 {
-                    path: '/els-for-libraries/carbon/',
-                    icon: '/images/nesbot-carbon.webp',
-                },
-                {
-                    path: '/els-for-libraries/dompdf/',
-                    icon: '/images/dompdf-logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/php-svg-lib/',
-                    icon: '/images/dompdf-logo.webp',
-                },
-                {
                     path: '/els-for-libraries/cakephp/',
                     icon: '/images/cakephp.webp',
+                },
+                {
+                    path: '/els-for-libraries/carbon/',
+                    icon: '/images/nesbot-carbon.webp',
                 },
                 {
                     path: '/els-for-libraries/craftcms/',
@@ -277,12 +293,20 @@ export default {
                     icon: '/images/orm.webp',
                 },
                 {
+                    path: '/els-for-libraries/dompdf/',
+                    icon: '/images/dompdf-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/drupal/',
                     icon: '/images/drupal.webp',
                 },
                 {
                     path: '/els-for-libraries/firebase-php-jwt/',
                     icon: '/images/firebase.webp',
+                },
+                {
+                    path: '/els-for-libraries/graphql-php/',
+                    icon: '/images/webonyx.webp',
                 },
                 {
                     path: '/els-for-libraries/guzzle/',
@@ -301,6 +325,14 @@ export default {
                     icon: '/images/laravel-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/laravel-datatables/',
+                    icon: '/images/Yajra.webp',
+                },
+                {
+                    path: '/els-for-libraries/laravel-media-library/',
+                    icon: '/images/spatie.webp',
+                },
+                {
                     path: '/els-for-libraries/league-commonmark/',
                     icon: '/images/league-commonmark-logo.webp',
                 },
@@ -309,32 +341,56 @@ export default {
                     icon: '/images/flysystem.webp',
                 },
                 {
+                    path: '/els-for-libraries/league-oauth2-client/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/livewire/',
                     icon: '/images/livewire-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/phpseclib/',
-                    icon: '/images/phpseclib.webp',
+                    path: '/els-for-libraries/monolog/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
+                    path: '/els-for-libraries/php-svg-lib/',
+                    icon: '/images/dompdf-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/phpmailer/',
                     icon: '/images/phpmailer.webp',
                 },
                 {
-                    path: '/els-for-libraries/phpunit/',
-                    icon: '/images/phpunit.webp',
+                    path: '/els-for-libraries/phpseclib/',
+                    icon: '/images/phpseclib.webp',
                 },
                 {
                     path: '/els-for-libraries/phpspreadsheet/',
                     icon: '/images/phpspreadsheet.webp',
                 },
                 {
+                    path: '/els-for-libraries/phpunit/',
+                    icon: '/images/phpunit.webp',
+                },
+                {
                     path: '/els-for-libraries/google-protobuf/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/ratchet/',
+                    icon: '/images/ratchet.webp',
+                },
+                {
+                    path: '/els-for-libraries/reactphp-http-client/',
                     icon: '/images/php-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/saloon/',
                     icon: '/images/saloon.webp',
+                },
+                {
+                    path: '/els-for-libraries/svg-sanitize/',
+                    icon: '/images/php-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/swiftmailer/',
@@ -345,11 +401,23 @@ export default {
                     icon: '/images/symfony-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/zendframework-zf1/',
-                    icon: '/images/zf1.webp',
+                    path: '/els-for-libraries/symfony-cmf-routing/',
+                    icon: '/images/symfony-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/zendframework-zend-http/',
+                    path: '/els-for-libraries/thruway/',
+                    icon: '/images/thruway.webp',
+                },
+                {
+                    path: '/els-for-libraries/twig/',
+                    icon: '/images/php-twig.webp',
+                },
+                {
+                    path: '/els-for-libraries/yii2-dev/',
+                    icon: '/images/yii_logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/zendframework/',
                     icon: '/images/zf1.webp',
                 },
                 {
@@ -378,7 +446,7 @@ export default {
                     icon: '/images/bootstrap-sass-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/ember/',
+                    path: '/els-for-libraries/ember-cli/',
                     icon: '/images/ember-logo.webp',
                 },
                 {
@@ -534,15 +602,13 @@ export default {
             children: [
                 "/securechain/",
                 {
+                    path: '/securechain/cli/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/securechain/javascript/',
                     icon: '/images/javascript.webp',
                 },
-                {
-                    title: 'Resources',
-                    type: 'section-header',
-                    icon: '/images/star.webp',
-                },
-                "/securechain/managing-securechain-repository/",
             ]
         },
     ],
@@ -588,9 +654,18 @@ export default {
                     icon: '/images/minio.webp',
                 },
                 {
-                    path: '/els-for-applications/mysql-and-percona-server/',
-                    title: 'MySQL and Percona Server',
+                    path: '/els-for-applications/mysql/',
+                    title: 'MySQL',
                     icon: '/images/mysql.webp',
+                },
+                {
+                    path: '/els-for-applications/percona-server/',
+                    title: 'Percona Server',
+                    icon: '/images/percona_server.webp',
+                },
+                {
+                    path: '/els-for-applications/postgresql/',
+                    icon: '/images/TuxCare_color_icon.webp',
                 },
                 {
                     path: '/els-for-applications/wildfly/',

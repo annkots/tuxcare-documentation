@@ -1,20 +1,14 @@
-# MySQL and Percona Server
+# MySQL
 
-Endless Lifecycle Support (ELS) for MySQL and Percona Server from TuxCare provides security fixes for versions that have reached end-of-life. This allows you to continue running your deployments without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for MySQL from TuxCare provides security fixes for versions that have reached end-of-life. This allows you to continue running your deployments without vulnerability concerns, even after official support has ended.
+
+This product ships MySQL Community Server only. Percona Server is patched separately — see [Percona Server](/els-for-applications/percona-server/).
 
 ## Supported OS and MySQL versions
 
 | OS                                                      | Package Type | OS Version | MySQL version |
 | :-----------------------------------------------------: | :----------: | :--------: | :-----------: |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)          | RPM          | 7.x        | 8.0           |
-| EL 8 (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.) | RPM        | 8.x        | 8.0           |
-| EL 9 (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.) | RPM        | 9.x        | 8.0           |
-
-## Supported OS and Percona Server versions
-
-| OS                                      | Package Type | OS Version | Percona Server version |
-| :-------------------------------------: | :----------: | :--------: | :--------------------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.) | RPM    | 7.x        | 8.0                    |
 
 **Supported architecture:** x86_64 (64-bit)
 
@@ -51,18 +45,12 @@ Endless Lifecycle Support (ELS) for MySQL and Percona Server from TuxCare provid
 
 </ELSSteps>
 
-## Removing the repository
-
-To remove the MySQL ELS repository:
-
-```text
-sh install-mysql-els-repo.sh --delete
-```
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-applications/machine-readable-security-data/) — Errata, OVAL, CSAF
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 
 </WhatsNext>

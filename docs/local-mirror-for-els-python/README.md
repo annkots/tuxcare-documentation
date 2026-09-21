@@ -1,6 +1,12 @@
+---
+head:
+  - - meta
+    - name: robots
+      content: noindex, nofollow
+---
 # Installation instructions of a local mirror for ELS Python
 
-We provide the ability to create local mirrors of Python for ELS updates.
+We provide the ability to create local mirrors of Python for Endless Lifecycle Support (ELS) updates.
 
 **To obtain access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).**
 
@@ -47,4 +53,5 @@ We provide the ability to create local mirrors of Python for ELS updates.
 | deb/debian/11/    | Debian 11                                                                  |
 | deb/debian/12/    | Debian 12                                                                  |
 | deb/debian/13/    | Debian 13                                                                  |
-| apk/alpine/3.22/  | Alpine Linux 3.22                                                          |
+| apk/alpine/3.23/  | Alpine Linux 3.23                                                          |
+| apk/alpine/3.24/  | Alpine Linux 3.24                                                          |

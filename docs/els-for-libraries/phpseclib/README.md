@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained phpseclib release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require phpseclib/phpseclib:0.3.10-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require phpseclib/phpseclib:0.3.10-p3+tuxcare` },
      { title: 'composer.json', content: phpseclibjson }
    ]" />
 
@@ -109,7 +109,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 <WhatsNext hide-title>
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=phpseclib%2Fphpseclib) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=phpseclib%2Fphpseclib) — Released fixes
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=phpseclib%2Fphpseclib) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/phpseclib/phpseclib/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
@@ -148,7 +148,7 @@ const cli =
 const phpseclibjson =
 `{
     "require": {
-        "phpseclib/phpseclib": "0.3.10-p1+tuxcare"
+        "phpseclib/phpseclib": "0.3.10-p3+tuxcare"
     }
 }`
 

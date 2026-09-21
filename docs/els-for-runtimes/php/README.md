@@ -26,23 +26,27 @@ alt-php provides a more flexible and convenient environment for working with dif
 
   <template #Active_Support>
 
-| OS                                                                       | Package Type | OS Version                        | PHP versions                                                              |
-| :----------------------------------------------------------------------: | :----------: | :-------------------------------: | :-----------------------------------------------------------------------: |
-| EL 7 ( Amazon Linux 2, CentOS, CloudLinux, Oracle Linux, etc.)           | RPM          | 7.x                               | 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2      |
-| EL 8 ( AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                               | 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2      |
-| EL 9 ( AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x                               | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2           |
-| EL 10 ( AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                              | 5.3, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                          |
-| Ubuntu                                                                   | DEB          | 16.04                             | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                               |
-| Ubuntu                                                                   | DEB          | 18.04, 20.04, 22.04, 24.04        | 5.2, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                          |
-| Debian                                                                   | DEB          | 10, 11, 12                        | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                               |
-| Debian                                                                   | DEB          | 13                                | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2           |
-| Alpine Linux                                                             | APK          | 3.22, 3.23                        | 7.3, 7.4, 8.0, 8.1                                                        |
-| Windows                                                                  | -            | Windows Server 2019, 2022, 2025   | 5.2, 5.4, 5.6, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                               |
+| OS                                                                      | Package Type | OS Version                      | PHP versions                                                                   |
+| :---------------------------------------------------------------------: | :----------: | :-----------------------------: | :----------------------------------------------------------------------------: |
+| EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 6.x                             | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3           |
+| EL 7 (Amazon Linux 2, CentOS, CloudLinux, Oracle Linux, etc.)           | RPM          | 7.x                             | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5 |
+| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                             | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5 |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x                             | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5 |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                            | 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5      |
+| Ubuntu                                                                  | DEB          | 16.04                           | 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3                          |
+| Ubuntu                                                                  | DEB          | 18.04, 20.04                    | 5.2, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5                |
+| Ubuntu                                                                  | DEB          | 22.04, 24.04                    | 5.2, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5                |
+| Ubuntu                                                                  | DEB          | 26.04                           | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5                     |
+| Debian                                                                  | DEB          | 10                              | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5                     |
+| Debian                                                                  | DEB          | 11, 12                          | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5                     |
+| Debian                                                                  | DEB          | 13                              | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5 |
+| Alpine Linux                                                            | APK          | 3.23, 3.24                      | 7.3, 7.4, 8.0, 8.1                                                             |
+| Windows                                                                 | -            | Windows Server 2019, 2022, 2025 | 5.2, 5.4, 5.6, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                                    |
 
 **Supported architectures:**
 
 * x86_64 — all supported Linux OSes
-* aarch64/arm64 — Debian 12 and 13, Alpine Linux 3.22 and later
+* aarch64/arm64 — Debian 12 and 13, Alpine Linux 3.23 and later
 * Windows — x64 (64-bit) and x86 (32-bit) builds
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
@@ -495,7 +499,7 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
 2. Register with your license key or authentication token
 
-   ![image](/images/php-installer-token.webp)
+   ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
 
    :::tip
    If you've already registered on this machine and saved your credentials, the installer detects and uses the saved token automatically.
@@ -505,12 +509,12 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
    Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
 
-   ![image](/images/php-installer-version.webp)
+   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
 
    :::tip
    If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
 
-   ![image](/images/php-installer-versions-2.webp)
+   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
    :::
 
 4. Choose installation path and load modules
@@ -519,7 +523,7 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
    Click **Load** to fetch the required PHP archive. Select the modules you need and click **Continue**.
 
-   ![image](/images/php-installer-load.webp)
+   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
 
 5. Verify the installation
 
@@ -551,19 +555,19 @@ During installation, the installer creates a folder with PHP configuration and s
  1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
  2. Click **Advanced system settings**.
 
-    ![image](/images/php-windows-advanced-settings.webp)
+    ![Windows System window with the Advanced system settings link highlighted](/images/php-windows-advanced-settings.webp)
 
  3. Click on **Environment Variables**.
 
-    ![image](/images/php-windows-environment-variables.webp)
+    ![Advanced tab of Windows System Properties with the Environment Variables button highlighted](/images/php-windows-environment-variables.webp)
 
  4. Under *System variables*, find **Path** and click **Edit**.
 
-    ![image](/images/php-windows-add-path.webp)
+    ![Windows Environment Variables dialog with the Path entry selected under System variables](/images/php-windows-add-path.webp)
 
  5. You will see your PHP `C:\PHP` directory added.
 
-    ![image](/images/php-windows-add-path-2.webp)
+    ![Windows Edit environment variable dialog showing the PHP installation directory added to Path](/images/php-windows-add-path-2.webp)
 </details>
 
 ### Additional configurations
@@ -1031,7 +1035,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=PHP) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=PHP) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=PHP) — Full list of product parts covered by ELS
-* ![](/images/shield.webp) [Machine-readable security data](/els-for-runtimes/machine-readable-security-data/#php) — OVAL, CSAF, Errata, and RSS feeds for PHP ELS
+* ![](/images/shield.webp) [Machine-readable security data](/els-for-runtimes/machine-readable-security-data/#php) — Open Vulnerability and Assessment Language (OVAL), Common Security Advisory Framework (CSAF), Errata, and RSS feeds for PHP ELS
 * ![](/images/clipboard-notes.webp) [PHP Changelog](https://changelog.cloudlinux.com/) — latest updates, fixes, and enhancements for ALT-PHP
 
 </WhatsNext>

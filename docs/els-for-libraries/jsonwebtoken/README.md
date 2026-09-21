@@ -2,13 +2,17 @@
 
 Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides security fixes for JSON Web Token versions that have reached their end of life. This allows you to continue running JSON Web Token applications without vulnerability concerns, even after official support has ended.
 
-## Supported JSON Web Token Versions
+## Supported Versions
 
-* JSON Web Token 0.4.0, 0.4.1, 8.5.1
+* JSON Web Token 0.1.0, 0.3.0, 0.4.0, 0.4.1, 5.4.0, 7.1.6, 8.5.1
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
+
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
 
 <ELSPrerequisites>
 
@@ -58,6 +62,32 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
 
      <TableTabs label="Choose JSON Web Token version: " >
 
+      <template #JSON_Web_Token_0.1.0>
+
+      ```text
+      "dependencies": {
+        "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=0.1.0-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@0.1.0": "npm:@els-js/jsonwebtoken@>=0.1.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #JSON_Web_Token_0.3.0>
+
+      ```text
+      "dependencies": {
+        "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=0.3.0-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@0.3.0": "npm:@els-js/jsonwebtoken@>=0.3.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
       <template #JSON_Web_Token_0.4.0>
 
       ```text
@@ -79,6 +109,32 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
       },
       "overrides": {
         "jsonwebtoken@0.4.1": "npm:@els-js/jsonwebtoken@>=0.4.1-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #JSON_Web_Token_5.4.0>
+
+      ```text
+      "dependencies": {
+        "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=5.4.0-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@5.4.0": "npm:@els-js/jsonwebtoken@>=5.4.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #JSON_Web_Token_7.1.6>
+
+      ```text
+      "dependencies": {
+        "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=7.1.6-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@7.1.6": "npm:@els-js/jsonwebtoken@>=7.1.6-tuxcare.1"
       }
       ```
 
@@ -162,7 +218,7 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=jsonwebtoken) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=jsonwebtoken) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jsonwebtoken/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:jsonwebtoken) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

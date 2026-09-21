@@ -1,6 +1,6 @@
 # Python Libraries
 
-Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for a variety of Python Libraries. This allows you to continue running your Python applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides security fixes for a variety of Python Libraries. This allows you to continue running your Python applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Python Libraries
 
@@ -31,7 +31,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **MySQL Connector/Python** 8.4.0
 * **orjson** 3.8.5
 * **pandas** 2.2.0, 2.2.2
-* **paramiko** 3.0.0
+* **paramiko** 2.12.0, 3.0.0
 * **pdfkit** 0.6.1
 * **pip** 9.0
 * **Pillow** 8.4.0, 9.4.0, 9.5.0, 10.4.0, 11.2.1, 11.3.0
@@ -50,7 +50,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **redis-py** 4.5.1
 * **requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
 * **scikit-learn** 1.0.2
-* **setuptools** 59.8.0, 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.8.0
+* **setuptools** 59.8.0, 60.0.0, 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.3.2, 75.8.0
 * **torch** 1.13.1
 * **tornado** 5.1.1, 6.1.0
 * **tqdm** 4.66.1
@@ -73,7 +73,7 @@ Other libraries upon request.
 
 </ELSPrerequisites>
 
-#### Option 1: Install via command line
+### Option 1: Install via command line
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
@@ -83,7 +83,7 @@ pip install --upgrade -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/reposi
 
 Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above), and `<package>` with the Python package name (e.g., `certifi`).
 
-#### Option 2: Configure `pip` to use the ELS repository (full replacement)
+### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
 This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
 
@@ -114,7 +114,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
 
 </ELSSteps>
 
-#### Option 3: Add the TuxCare ELS repository as additional (recommended)
+### Option 3: Add the TuxCare ELS repository as additional (recommended)
 
 If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version, otherwise `pip` may install the version from public PyPI.
 
@@ -147,7 +147,7 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#Python) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

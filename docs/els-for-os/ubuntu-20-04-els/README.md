@@ -1,13 +1,15 @@
 # Ubuntu 20.04 ELS
 
+<ELSVendorEol os="ubuntu-20-04-els" />
+
 ## Installation
 
 <ELSPrerequisites>
 
-* A valid TuxCare ELS license key
+* A valid TuxCare Endless Lifecycle Support (ELS) license key
 * Root access to the server
 * TCP port 443 open to `cln.cloudlinux.com` and `repo.tuxcare.com`
-* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+* Architecture: x86_64 (amd64) and arm64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 </ELSPrerequisites>
 
@@ -65,11 +67,11 @@
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml) — OVAL security data
-* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/) — CSAF security advisories
+* ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml) — Open Vulnerability and Assessment Language (OVAL) security data
+* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/) — Common Security Advisory Framework (CSAF) security advisories
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Ubuntu+20.04+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
 * ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=Ubuntu+20.04+ELS) — Full list of packages covered by ELS
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates and other repository operations
 
 </WhatsNext>

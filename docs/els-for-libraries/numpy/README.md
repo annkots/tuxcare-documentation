@@ -1,8 +1,8 @@
 # NumPy
 
-Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for NumPy. This allows you to continue running your NumPy applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for NumPy from TuxCare provides security fixes for NumPy. This allows you to continue running your NumPy applications without vulnerability concerns, even after official support has ended.
 
-## Supported NumPy Versions
+## Supported Versions
 
 * **NumPy** 1.15.4, 1.16.0, 1.21.0
 
@@ -18,7 +18,7 @@ Other versions upon request.
 
 </ELSPrerequisites>
 
-#### Option 1: Install via command line
+### Option 1: Install via command line
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
@@ -28,7 +28,7 @@ pip install --upgrade -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/reposi
 
 Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above).
 
-#### Option 2: Configure `pip` to use the ELS repository (full replacement)
+### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
 This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
 
@@ -59,7 +59,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
 
 </ELSSteps>
 
-#### Option 3: Add the TuxCare ELS repository as additional (recommended)
+### Option 3: Add the TuxCare ELS repository as additional (recommended)
 
 If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version, otherwise `pip` may install the version from public PyPI.
 
@@ -92,7 +92,7 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=NumPy) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=NumPy) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/numpy/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:numpy) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#Python) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

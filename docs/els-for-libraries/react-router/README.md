@@ -2,13 +2,17 @@
 
 Endless Lifecycle Support (ELS) for react-router from TuxCare provides security fixes for react-router versions that have reached their end of life. This allows you to continue running react-router applications without vulnerability concerns, even after official support has ended.
 
-## Supported react-router Versions
+## Supported Versions
 
-* react-router 6.3.0, 7.5.1
+* react-router 6.3.0, 6.30.3, 6.30.6, 7.5.1
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
+
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
 
 <ELSPrerequisites>
 
@@ -66,6 +70,32 @@ Endless Lifecycle Support (ELS) for react-router from TuxCare provides security 
       },
       "overrides": {
         "react-router@6.3.0": "npm:@els-js/react-router@>=6.3.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #react_router_6.30.3>
+
+      ```text
+      "dependencies": {
+        "react-router": "npm:@els-js/react-router@>=6.30.3-tuxcare.1"
+      },
+      "overrides": {
+        "react-router@6.30.3": "npm:@els-js/react-router@>=6.30.3-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #react_router_6.30.6>
+
+      ```text
+      "dependencies": {
+        "react-router": "npm:@els-js/react-router@>=6.30.6-tuxcare.1"
+      },
+      "overrides": {
+        "react-router@6.30.6": "npm:@els-js/react-router@>=6.30.6-tuxcare.1"
       }
       ```
 
@@ -150,7 +180,7 @@ Endless Lifecycle Support (ELS) for react-router from TuxCare provides security 
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=react-router) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?q=react-router) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/react-router/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:react-router) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

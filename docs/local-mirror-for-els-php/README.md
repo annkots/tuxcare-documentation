@@ -1,6 +1,12 @@
+---
+head:
+  - - meta
+    - name: robots
+      content: noindex, nofollow
+---
 # Installation instructions of a local mirror for ELS PHP
 
-We provide the ability to create local mirrors of PHP for ELS updates.
+We provide the ability to create local mirrors of PHP for Endless Lifecycle Support (ELS) updates.
 
 **To obtain access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).**
 
@@ -34,6 +40,7 @@ We provide the ability to create local mirrors of PHP for ELS updates.
 
 | Option            | OS                                                                         |
 | :---------------: | :------------------------------------------------------------------------: |
+| rpm/el/6/         | CentOS 6, CloudLinux 6, Oracle Linux 6, etc.                               |
 | rpm/el/7/         | CentOS 7, CloudLinux 7, OracleLinux 7, Amazon Linux 2, etc.                |
 | rpm/el/8/         | AlmaLinux 8, CentOS 8, CentOS 8 Stream, CloudLinux 8, Oracle Linux 8, etc. |
 | rpm/el/9/         | AlmaLinux 9, CloudLinux 9, Oracle Linux 9, etc.                            |
@@ -43,8 +50,10 @@ We provide the ability to create local mirrors of PHP for ELS updates.
 | deb/ubuntu/20.04/ | Ubuntu 20.04                                                               |
 | deb/ubuntu/22.04/ | Ubuntu 22.04                                                               |
 | deb/ubuntu/24.04/ | Ubuntu 24.04                                                               |
+| deb/ubuntu/26.04/ | Ubuntu 26.04                                                               |
 | deb/debian/10/    | Debian 10                                                                  |
 | deb/debian/11/    | Debian 11                                                                  |
 | deb/debian/12/    | Debian 12                                                                  |
 | deb/debian/13/    | Debian 13                                                                  |
-| apk/alpine/3.22/  | Alpine Linux 3.22                                                          |
+| apk/alpine/3.23/  | Alpine Linux 3.23                                                          |
+| apk/alpine/3.24/  | Alpine Linux 3.24                                                          |

@@ -4,7 +4,8 @@ Endless Lifecycle Support (ELS) for Guzzle from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* **Guzzle** 6.3.3
+* **Guzzle** 6.0.2, 6.3.3, 6.5.8, 7.10.0
+* **Guzzle PSR-7** 1.1.0, 1.4.2, 1.9.1
 
 Other versions upon request.
 
@@ -59,10 +60,72 @@ Other versions upon request.
 
    Install the TuxCare-maintained Guzzle release that matches your project:
 
+   <TableTabs label="Choose version: ">
+
+   <template #Guzzle_6.3>
+
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.3.3-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.3.3-p2+tuxcare` },
      { title: 'composer.json', content: guzzlejson }
    ]" />
+
+   </template>
+
+   <template #Guzzle_6.0>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.0.2-p1+tuxcare` },
+     { title: 'composer.json', content: guzzlejson602 }
+   ]" />
+
+   </template>
+
+   <template #Guzzle_6.5>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.5.8-p1+tuxcare` },
+     { title: 'composer.json', content: guzzlejson658 }
+   ]" />
+
+   </template>
+
+   <template #Guzzle_7.10>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:7.10.0-p1+tuxcare` },
+     { title: 'composer.json', content: guzzlejson710 }
+   ]" />
+
+   </template>
+
+   <template #Guzzle_PSR-7_1.1>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require guzzlehttp/psr7:1.1.0-p1+tuxcare` },
+     { title: 'composer.json', content: psr7json110 }
+   ]" />
+
+   </template>
+
+   <template #Guzzle_PSR-7_1.4>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require guzzlehttp/psr7:1.4.2-p1+tuxcare` },
+     { title: 'composer.json', content: psr7json142 }
+   ]" />
+
+   </template>
+
+   <template #Guzzle_PSR-7_1.9>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require guzzlehttp/psr7:1.9.1-p1+tuxcare` },
+     { title: 'composer.json', content: psr7json }
+   ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -109,7 +172,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 <WhatsNext hide-title>
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=guzzlehttp%2Fguzzle) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=guzzlehttp%2Fguzzle) — Released fixes
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=guzzlehttp%2Fguzzle) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/guzzlehttp/guzzle/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
@@ -148,7 +211,49 @@ const cli =
 const guzzlejson =
 `{
     "require": {
-        "guzzlehttp/guzzle": "6.3.3-p1+tuxcare"
+        "guzzlehttp/guzzle": "6.3.3-p2+tuxcare"
+    }
+}`
+
+const guzzlejson602 =
+`{
+    "require": {
+        "guzzlehttp/guzzle": "6.0.2-p1+tuxcare"
+    }
+}`
+
+const guzzlejson658 =
+`{
+    "require": {
+        "guzzlehttp/guzzle": "6.5.8-p1+tuxcare"
+    }
+}`
+
+const guzzlejson710 =
+`{
+    "require": {
+        "guzzlehttp/guzzle": "7.10.0-p1+tuxcare"
+    }
+}`
+
+const psr7json110 =
+`{
+    "require": {
+        "guzzlehttp/psr7": "1.1.0-p1+tuxcare"
+    }
+}`
+
+const psr7json142 =
+`{
+    "require": {
+        "guzzlehttp/psr7": "1.4.2-p1+tuxcare"
+    }
+}`
+
+const psr7json =
+`{
+    "require": {
+        "guzzlehttp/psr7": "1.9.1-p1+tuxcare"
     }
 }`
 

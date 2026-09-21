@@ -1,6 +1,6 @@
 # Managing the ELS repository
 
-This page provides instructions for upgrading to newer TuxCare-patched application versions.
+This page provides instructions for upgrading to newer TuxCare-patched application versions in the Endless Lifecycle Support (ELS) repository.
 
 ## Upgrading to a newer TuxCare version
 
@@ -25,6 +25,46 @@ This page provides instructions for upgrading to newer TuxCare-patched applicati
 </ELSSteps>
 
 If you encounter any issues, please contact [TuxCare support](https://tuxcare.com/support-portal/).
+
+## Removing the ELS repository
+
+The ELS repository is removed by running the installation script with the `--delete` flag.
+
+<TableTabs label="Choose the application: " :labels="{ MariaDB: 'MariaDB', MySQL: 'MySQL', Percona_Server: 'Percona Server', PostgreSQL: 'PostgreSQL' }">
+
+<template #MariaDB>
+
+```text
+sh install-mariadb-els-repo.sh --delete
+```
+
+</template>
+
+<template #MySQL>
+
+```text
+sh install-mysql-els-repo.sh --delete
+```
+
+</template>
+
+<template #Percona_Server>
+
+```text
+sh install-percona-els-repo.sh --delete
+```
+
+</template>
+
+<template #PostgreSQL>
+
+```text
+sh install-postgresql-els-repo.sh --delete
+```
+
+</template>
+
+</TableTabs>
 
 ## Source code
 

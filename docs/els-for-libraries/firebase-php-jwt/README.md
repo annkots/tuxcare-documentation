@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Firebase PHP-JWT from TuxCare provides secur
 
 ## Supported Versions
 
-* **Firebase PHP-JWT** 6.11.1
+* **Firebase PHP-JWT** 5.5.1, 6.11.1
 
 Other versions upon request.
 
@@ -59,10 +59,27 @@ Other versions upon request.
 
    Install the TuxCare-maintained Firebase PHP-JWT release that matches your project:
 
+   <TableTabs label="Choose version: ">
+
+   <template #Firebase_PHP-JWT_5.5>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require firebase/php-jwt:v5.5.1-p1+tuxcare` },
+     { title: 'composer.json', content: phpjwtjson55 }
+   ]" />
+
+   </template>
+
+   <template #Firebase_PHP-JWT_6.11>
+
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require firebase/php-jwt:6.11.1-p2+tuxcare` },
-     { title: 'composer.json', content: pkgjson }
+     { title: 'composer.json', content: phpjwtjson611 }
    ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -104,29 +121,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in Firebase PHP-JWT
-
-Fixes for the following vulnerabilities are available in ELS for Firebase PHP-JWT from TuxCare:
-
-<TableTabs label="Choose a version: " >
-
-<template #Firebase_PHP-JWT_6.11.1>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version      |
-|----------------|----------|---------------------|-----------------------|
-| CVE-2025-45769 | High     | 6.11.1              | 6.11.1-p2+tuxcare     |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=firebase%2Fphp-jwt) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=firebase%2Fphp-jwt) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/firebase/php-jwt/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 
@@ -160,7 +162,14 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const pkgjson =
+const phpjwtjson55 =
+`{
+    "require": {
+        "firebase/php-jwt": "v5.5.1-p1+tuxcare"
+    }
+}`
+
+const phpjwtjson611 =
 `{
     "require": {
         "firebase/php-jwt": "6.11.1-p2+tuxcare"

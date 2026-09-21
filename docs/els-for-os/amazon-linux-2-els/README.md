@@ -1,13 +1,15 @@
 # Amazon Linux 2 ELS
 
+<ELSVendorEol os="amazon-linux-2-els" />
+
 ## Installation
 
 <ELSPrerequisites>
 
-* A valid TuxCare ELS license key
+* A valid TuxCare Endless Lifecycle Support (ELS) license key
 * Root access to the server
 * TCP port 443 open to `cln.cloudlinux.com` and `repo.tuxcare.com`
-* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+* Architecture: x86_64 and aarch64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 </ELSPrerequisites>
 
@@ -30,11 +32,29 @@
 3. Verify that the installation was successful by running the following command
 
    ```
-   yum info els-define
+   yum info els-os-release
    ```
 
    It should return information about the available package. If the package information is displayed, the installation was successful.
    After that, you can install updates from the repository using a standard `yum upgrade` command.
+
+   Example:
+
+   ```
+   [els@amazonlinux2 ~]# yum info els-os-release
+   Loaded plugins: priorities
+   Installed Packages
+   Name        : els-os-release
+   Arch        : noarch
+   Version     : 1.0.0
+   Release     : 2.amzn2
+   Size        : 3.4 k
+   Repo        : installed
+   Summary     : TuxCare OS ELS repository configuration
+   License     : GPLv2+
+   Description : This package configures the TuxCare ELS repository for Amazon
+               : Linux 2 system.
+   ```
 
 </ELSSteps>
 
@@ -42,10 +62,10 @@
 
 <WhatsNext hide-title>
 
-* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/amazonlinux2els/) — CSAF security advisories
+* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/amazonlinux2els/) — Common Security Advisory Framework (CSAF) security advisories
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Amazon+Linux+2+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, CSAF
 * ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=Amazon+Linux+2+ELS) — Full list of packages covered by ELS
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates and other repository operations
 
 </WhatsNext>

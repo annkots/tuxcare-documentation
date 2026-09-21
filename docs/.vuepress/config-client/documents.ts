@@ -40,8 +40,8 @@ export default [
         link: "/els-for-os/",
     },
     {
-        title: "ELS for Libraries",
-        description: "provides security fixes for software libraries beyond their official end-of-life date.",
+        title: "ELS for Language Ecosystems",
+        description: "provides security fixes for open-source packages across language ecosystems beyond their official end-of-life date.",
         link: "/els-for-libraries/",
     },
     {

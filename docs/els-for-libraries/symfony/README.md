@@ -2,10 +2,16 @@
 
 Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, Symfony HttpFoundation from TuxCare provides security fixes for Symfony component versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
-## Supported Versions and Components
+## Supported Versions
 
 * **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
 * **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
+* **Symfony HttpKernel** 3.4.x, 7.4.x
+* **Symfony Mailer** 6.4.x
+* **Symfony Mime** 5.4.x, 6.4.x, 7.4.x
+* **Symfony Routing** 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x
+* **Symfony Yaml** 2.8.x, 3.4.x, 4.4.x
+* **Symfony Polyfill Intl IDN** 1.30.x
 
 Other versions upon request.
 
@@ -58,12 +64,155 @@ Other versions upon request.
 
 4. Install Symfony components
 
-   Install the TuxCare-maintained Symfony components release that matches your project:
+   Install the TuxCare-maintained Symfony component release that matches your project:
 
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p2+tuxcare` },
-     { title: 'composer.json', content: symfonyjson }
-   ]" />
+   <TableTabs label="Choose version: ">
+
+   <template #Symfony_Process>
+
+   ```text
+   composer require symfony/process:6.4.13-p2+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/process": "6.4.13-p2+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_HttpFoundation>
+
+   ```text
+   composer require symfony/http-foundation:4.4.49-p2+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/http-foundation": "4.4.49-p2+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_HttpKernel>
+
+   ```text
+   composer require symfony/http-kernel:7.4.10-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/http-kernel": "7.4.10-p1+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_Mailer>
+
+   ```text
+   composer require symfony/mailer:6.4.34-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/mailer": "6.4.34-p1+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_Mime>
+
+   ```text
+   composer require symfony/mime:7.4.9-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/mime": "7.4.9-p1+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_Routing>
+
+   ```text
+   composer require symfony/routing:7.4.9-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/routing": "7.4.9-p1+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_Yaml>
+
+   ```text
+   composer require symfony/yaml:4.4.45-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/yaml": "4.4.45-p1+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_Polyfill_Intl_IDN>
+
+   ```text
+   composer require symfony/polyfill-intl-idn:v1.30.0-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/polyfill-intl-idn": "v1.30.0-p1+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -105,48 +254,15 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in Symfony
-
-<TableTabs label="Choose Symfony component: " >
-
-<template #Symfony_Process>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2026-24739 | Medium   | < 6.4.14             | 6.4.13-p2+tuxcare |
-| CVE-2026-24739 | Medium   | < 5.4.46             | 5.4.45-p2+tuxcare |
-| CVE-2026-24739 | Medium   | < 4.4.45             | 4.4.44-p1+tuxcare |
-| CVE-2026-24739 | Medium   | < 3.4.48             | 3.4.47-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 4.4.45             | 4.4.44-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 3.4.48             | 3.4.47-p1+tuxcare |
-
-</template>
-
-<template #Symfony_HttpFoundation>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 2.8.52-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 3.4.47-p3+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p1+tuxcare |
-| CVE-2024-50345 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p2+tuxcare |
-| CVE-2024-50345 | Medium   |< 5.4.46, >=6,<6.4.14, >=7,<7.1.7| 3.4.47-p3+tuxcare |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony/) — Vulnerability Exploitability eXchange feed
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Symfony) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Symfony) — Released fixes for Symfony
-* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Symfony) — Symfony components covered by ELS
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Symfony) — Patched versions and changelogs
+* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Symfony) — Components covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony/) — Vulnerability Exploitability eXchange feed
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 
@@ -179,12 +295,5 @@ const composerjson =
 
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
-
-const symfonyjson =
-`{
-    "require": {
-        "symfony/process": "6.4.13-p2+tuxcare"
-    }
-}`
 
 </script>

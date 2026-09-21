@@ -1,8 +1,8 @@
 # Celery
 
-Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for Celery. This allows you to continue running your Celery applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Celery from TuxCare provides security fixes for Celery. This allows you to continue running your Celery applications without vulnerability concerns, even after official support has ended.
 
-## Supported Celery Versions
+## Supported Versions
 
 * **Celery** 4.4.7, 5.1.2
 
@@ -18,7 +18,7 @@ Other versions upon request.
 
 </ELSPrerequisites>
 
-#### Option 1: Install via command line
+### Option 1: Install via command line
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
@@ -30,7 +30,7 @@ pip install --upgrade \
 
 Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above).
 
-#### Option 2: Configure `pip` to use the ELS repository (full replacement)
+### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
 This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
 
@@ -61,7 +61,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
 
 </ELSSteps>
 
-#### Option 3: Add the TuxCare ELS repository as additional (recommended)
+### Option 3: Add the TuxCare ELS repository as additional (recommended)
 
 If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version, otherwise `pip` may install the version from public PyPI.
 
@@ -94,7 +94,7 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Celery) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Celery) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/celery/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom:celery) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#Python) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

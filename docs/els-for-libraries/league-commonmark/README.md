@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for League CommonMark from TuxCare provides secu
 
 ## Supported Versions
 
-* **League CommonMark** 1.6.7, 2.7.1
+* **League CommonMark** 1.6.7, 2.7.1, 2.8.2
 
 Other versions upon request.
 
@@ -79,6 +79,15 @@ Other versions upon request.
 
    </template>
 
+   <template #League_CommonMark_2.8>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require league/commonmark:2.8.2-p2+tuxcare` },
+     { title: 'composer.json', content: commonmarkjson28 }
+   ]" />
+
+   </template>
+
    </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -121,40 +130,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in League CommonMark
-
-Fixes for the following vulnerabilities are available in ELS for League CommonMark from TuxCare:
-
-<TableTabs label="Choose League CommonMark version: ">
-
-<template #League_CommonMark_1.6>
-
-| CVE ID              | Severity | Vulnerable versions | Fixed in version    |
-|---------------------|----------|---------------------|---------------------|
-| CVE-2026-30838      | High     | < 2.8.1             | 1.6.7-p3+tuxcare    |
-| CVE-2025-46734      | Medium   | < 2.7.0             | 1.6.7-p2+tuxcare    |
-| GHSA-c2pc-g5qf-rfrf | High     | < 2.6.0             | 1.6.7-p1+tuxcare    |
-
-</template>
-
-<template #League_CommonMark_2.7>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2026-33347 | High     | < 2.8.2             | 2.7.1-p1+tuxcare    |
-| CVE-2026-30838 | High     | < 2.8.1             | 2.7.1-p1+tuxcare    |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=league%2Fcommonmark) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=league%2Fcommonmark) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/league/commonmark/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 
@@ -199,6 +182,13 @@ const commonmarkjson27 =
 `{
     "require": {
         "league/commonmark": "2.7.1-p1+tuxcare"
+    }
+}`
+
+const commonmarkjson28 =
+`{
+    "require": {
+        "league/commonmark": "2.8.2-p2+tuxcare"
     }
 }`
 

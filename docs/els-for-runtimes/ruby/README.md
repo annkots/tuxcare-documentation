@@ -22,22 +22,23 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 ## Supported OS and Ruby versions
 
-| Operating Systems                                                        | Package Type | OS Version | Ruby versions                 |
-| :----------------------------------------------------------------------: | :----------: | :--------: | :---------------------------: |
-| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.)  | RPM          | 8.x        | 2.7, 3.0, 3.1, 3.2            |
-| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                 | RPM          | 9.x        | 2.7, 3.0, 3.1, 3.2            |
-| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                        | RPM          | 10.x       | 2.7, 3.0, 3.1, 3.2            |
-| Debian                                                                   | DEB          | 11         | 2.7, 3.0, 3.1, 3.2            |
-| Debian                                                                   | DEB          | 12         | 2.6, 2.7, 3.0, 3.1, 3.2       |
-| Debian                                                                   | DEB          | 13         | 2.6, 2.7, 3.0, 3.1, 3.2       |
-| Ubuntu                                                                   | DEB          | 22.04      | 2.7, 3.0, 3.1, 3.2            |
-| Ubuntu                                                                   | DEB          | 24.04      | 2.7, 3.0, 3.1, 3.2            |
-| Alpine Linux                                                             | APK          | 3.22       | 2.6, 2.7, 3.0, 3.1, 3.2       |
+| Operating Systems                                                       | Package Type | OS Version          | Ruby versions                               |
+| :---------------------------------------------------------------------: | :----------: | :-----------------: | :-----------------------------------------: |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x                 | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0 |
+| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                 | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0 |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x                 | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0 |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0 |
+| Ubuntu                                                                  | DEB          | 16.04, 18.04, 20.04 | 3.2, 3.3, 3.4, 3.5, 4.0                     |
+| Ubuntu                                                                  | DEB          | 22.04, 24.04        | 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0      |
+| Debian                                                                  | DEB          | 10                  | 3.2, 3.3, 3.4, 3.5, 4.0                     |
+| Debian                                                                  | DEB          | 11                  | 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0      |
+| Debian                                                                  | DEB          | 12, 13              | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0 |
+| Alpine Linux                                                            | APK          | 3.23, 3.24          | 2.7, 3.0, 3.1                               |
 
 **Supported architectures:**
 
 * x86_64 — all supported OSes
-* aarch64/arm64 — Debian 12 and 13, Alpine Linux
+* aarch64/arm64 — Debian 12 and 13, Alpine Linux 3.23 and later
 
 <ContactSales text="Other distros and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
@@ -119,6 +120,6 @@ alt-ruby provides a more flexible and convenient environment for working with di
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Ruby) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Ruby) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Ruby) — Full list of product parts covered by ELS
-* ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — CSAF advisories and RSS feeds for Ruby ELS
+* ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — Common Security Advisory Framework (CSAF) advisories and RSS feeds for Ruby ELS
 
 </WhatsNext>

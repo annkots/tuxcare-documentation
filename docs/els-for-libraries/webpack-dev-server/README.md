@@ -2,13 +2,17 @@
 
 Endless Lifecycle Support (ELS) for webpack-dev-server from TuxCare provides security fixes for webpack-dev-server versions that have reached their end of life. This allows you to continue running webpack-dev-server applications without vulnerability concerns, even after official support has ended.
 
-## Supported webpack-dev-server Versions
+## Supported Versions
 
-* webpack-dev-server 2.11.5, 3.1.14, 3.11.0, 3.11.2, 3.11.3, 4.7.3, 4.11.0, 4.15.1
+* webpack-dev-server 2.7.1, 2.11.5, 3.1.14, 3.11.0, 3.11.2, 3.11.3, 4.7.3, 4.11.0, 4.11.1, 4.15.1, 4.15.2, 5.2.2
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
+
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
 
 <ELSPrerequisites>
 
@@ -162,7 +166,7 @@ Endless Lifecycle Support (ELS) for webpack-dev-server from TuxCare provides sec
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=webpack-dev-server) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=webpack-dev-server) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/webpack-dev-server/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:webpack-dev-server) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

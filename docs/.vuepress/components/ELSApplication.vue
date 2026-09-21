@@ -46,7 +46,7 @@ const applications = [
   },
   {
     name: "Apache Tomcat®",
-    versions: "8.5.100 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
+    versions: "7.0.70 | 7.0.109 | 8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
     link: "./apache-tomcat/",
     icon: "/images/tomcat.webp",
   },
@@ -76,7 +76,7 @@ const applications = [
   },
   {
     name: "Maven",
-    versions: "3.8.1",
+    versions: "3.0.5 | 3.2.5 | 3.8.1",
     link: "./maven/",
     icon: "/images/maven.webp",
   },
@@ -89,8 +89,20 @@ const applications = [
   {
     name: "MySQL",
     versions: "8.0",
-    link: "./mysql-and-percona-server/",
+    link: "./mysql/",
     icon: "/images/mysql.webp",
+  },
+  {
+    name: "Percona Server",
+    versions: "8.0",
+    link: "./percona-server/",
+    icon: "/images/percona_server.webp",
+  },
+  {
+    name: "PostgreSQL",
+    versions: "9.6 | 11 | 14",
+    link: "./postgresql/",
+    icon: "/images/TuxCare_color_icon.webp",
   },
   {
     name: "WildFly®",

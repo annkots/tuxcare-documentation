@@ -22,22 +22,27 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 
 ## Supported OS and Node.js versions
 
-| Operating Systems                                            | Package Type | OS Version                        | Node.js versions                  |
-| :----------------------------------------------------------: | :----------: | :-------------------------------: | :-------------------------------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                               | 12, 14, 16, 18, 20                |
-| EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                               | 12, 14, 16, 18, 20                |
-| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                               | 12, 14, 16, 18, 20                |
-| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                              | 14, 16, 18, 20                    |
-| Ubuntu                                                       | DEB          | 18.04, 20.04, 22.04, 24.04        | 12, 14, 16, 18, 20                |
-| Debian                                                       | DEB          | 10, 11                            | 12, 14, 16, 18, 20                |
-| Debian                                                       | DEB          | 12                                | 12, 14, 16, 18, 20, 23            |
-| Debian                                                       | DEB          | 13                                | 12, 14, 16, 18, 20, 22, 23, 24    |
-| Alpine Linux                                                 | APK          | 3.22, 3.23                        | 12, 14, 16, 18, 20, 22, 23, 24    |
+| Operating Systems                                                       | Package Type | OS Version | Node.js versions                   |
+| :---------------------------------------------------------------------: | :----------: | :--------: | :--------------------------------: |
+| EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 6.x        | 12, 14                             |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x        | 12, 14, 16, 18, 20                 |
+| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x        | 12, 14, 16, 18, 20, 22, 24, 26     |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x        | 12, 14, 16, 18, 20, 22, 24, 26     |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x       | 12, 14, 16, 18, 20, 22, 24, 26     |
+| Ubuntu                                                                  | DEB          | 18.04      | 12, 14, 16, 18, 20                 |
+| Ubuntu                                                                  | DEB          | 20.04      | 12, 14, 16, 18, 20, 22             |
+| Ubuntu                                                                  | DEB          | 22.04      | 12, 14, 16, 18, 20, 22, 24         |
+| Ubuntu                                                                  | DEB          | 24.04      | 12, 14, 16, 18, 20, 22, 24, 26     |
+| Debian                                                                  | DEB          | 10         | 12, 14, 16, 18, 20                 |
+| Debian                                                                  | DEB          | 11         | 12, 14, 16, 18, 20, 22             |
+| Debian                                                                  | DEB          | 12         | 12, 14, 16, 18, 20, 22, 23, 24     |
+| Debian                                                                  | DEB          | 13         | 12, 14, 16, 18, 20, 22, 23, 24, 26 |
+| Alpine Linux                                                            | APK          | 3.23, 3.24 | 14, 16, 18, 23                     |
 
 **Supported architectures:**
 
 * x86_64 — all supported OSes
-* arm64 — Debian 12 and 13
+* aarch64/arm64 — Debian 12 and 13, Alpine Linux 3.23 and later
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
@@ -122,6 +127,6 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Node.js) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Node.js) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Node.js) — Full list of product parts covered by ELS
-* ![](/images/shield.webp) [Machine-readable security data](/els-for-runtimes/machine-readable-security-data/#node.js) — CSAF advisories and RSS feeds for Node.js ELS
+* ![](/images/shield.webp) [Machine-readable security data](/els-for-runtimes/machine-readable-security-data/#node.js) — Common Security Advisory Framework (CSAF) advisories and RSS feeds for Node.js ELS
 
 </WhatsNext>

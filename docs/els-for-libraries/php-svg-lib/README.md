@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for php-svg-lib from TuxCare provides security f
 
 ## Supported Versions
 
-* **php-svg-lib** 0.3.4
+* **php-svg-lib** 0.3.4, 0.4.1
 
 Other versions upon request.
 
@@ -59,10 +59,27 @@ Other versions upon request.
 
    Install the TuxCare-maintained php-svg-lib release that matches your project:
 
+   <TableTabs label="Choose version: ">
+
+   <template #php-svg-lib_0.3>
+
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require phenx/php-svg-lib:0.3.4-p1+tuxcare` },
      { title: 'composer.json', content: pkgjson }
    ]" />
+
+   </template>
+
+   <template #php-svg-lib_0.4>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phenx/php-svg-lib:0.4.1-p1+tuxcare` },
+     { title: 'composer.json', content: pkgjson041 }
+   ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -104,23 +121,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in php-svg-lib
-
-Fixes for the following vulnerabilities are available in ELS for php-svg-lib from TuxCare:
-
-| CVE ID              | Severity | Library      | Vulnerable Versions | Safe Version        |
-| :-----------------: | :------: | :----------: | :-----------------: | :-----------------: |
-| CVE-2024-25117      | Medium   | php-svg-lib  | < 0.5.2              | 0.3.4-p1+tuxcare   |
-| CVE-2023-50251      | High     | php-svg-lib  | < 0.5.1           | 0.3.4-p1+tuxcare   |
-| GHSA-97m3-52wr-xvv2 | Critical | php-svg-lib  | < 0.5.2          | 0.3.4-p1+tuxcare   |
-
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=phenx%2Fphp-svg-lib) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=phenx%2Fphp-svg-lib) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/phenx/php-svg-lib/) — Vulnerability Exploitability eXchange feed
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Update an installed package to a newer TuxCare release
+* ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
 
@@ -158,6 +166,13 @@ const pkgjson =
 `{
     "require": {
         "phenx/php-svg-lib": "0.3.4-p1+tuxcare"
+    }
+}`
+
+const pkgjson041 =
+`{
+    "require": {
+        "phenx/php-svg-lib": "0.4.1-p1+tuxcare"
     }
 }`
 
