@@ -4,14 +4,14 @@ Endless Lifecycle Support (ELS) for MySQL2 from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* MySQL2 2.3.3
+* MySQL2 2.3.3, 3.15.3, 3.20.0, 3.22.1, 3.22.2, 3.22.3, 3.22.4, 3.22.6
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
 
 :::tip Have a SecureChain token?
-Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+Follow the [SecureChain installation instructions](https://sc.tuxcare.cloud/guide/developer) instead — the steps below are for username & password access.
 :::
 
 <ELSPrerequisites>
@@ -132,7 +132,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=mysql2) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=mysql2) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/mysql2/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

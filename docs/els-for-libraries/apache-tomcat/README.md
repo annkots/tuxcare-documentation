@@ -8,7 +8,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security 
 Our ELS for Apache Tomcat® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
 
 :::tip
-Apache Tomcat® is also available for installation as a standalone server. You can find the corresponding instructions [here](/els-for-applications/apache-tomcat/).
+Apache Tomcat® is also available for installation as a standalone server. See [ELS for Apache Tomcat® as a standalone server](/els-for-applications/apache-tomcat/).
 :::
 
 ## Supported Versions
@@ -26,7 +26,7 @@ Apache Tomcat® is also available for installation as a standalone server. You c
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. You can find the corresponding instructions [here](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>
@@ -113,10 +113,10 @@ Optionally, ELS can be consumed through your own repository manager instead of c
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Apache+Tomcat) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Apache+Tomcat) — Patched versions and changelogs
-* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Apache+Tomcat) — Full list of product parts covered by ELS
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=Apache+Tomcat) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [Source code](/els-for-libraries/managing-els-repository/#javaSources) — Access source JARs in Nexus
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#java) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

@@ -4,7 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Protobuf provides security patches
 
 ## Supported Versions
 
-* Protobuf 2.5.0, 2.6.1, 3.19.6, 3.21.1, 3.21.9
+* Protobuf 2.5.0, 2.6.1, 3.6.1, 3.7.1, 3.12.0, 3.16.1, 3.19.2, 3.19.6, 3.21.1, 3.21.7, 3.21.9, 3.21.12
 
 ## Installation
 
@@ -17,7 +17,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Protobuf provides security patches
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. You can find the corresponding instructions [here](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>
@@ -104,10 +104,10 @@ Optionally, ELS can be consumed through your own repository manager instead of c
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Protocol+Buffers) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Protocol+Buffers) — Patched versions and changelogs
-* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Protocol+Buffers) — Full list of product parts covered by ELS
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=Protocol+Buffers) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/com.google.protobuf/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [Source code](/els-for-libraries/managing-els-repository/#javaSources) — Access source JARs in Nexus
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#java) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

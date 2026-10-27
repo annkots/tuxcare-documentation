@@ -2,9 +2,9 @@
 
 Endless Lifecycle Support (ELS) for Grafana from TuxCare provides security fixes for Grafana versions that have reached their end of life. This allows you to continue running Grafana without vulnerability concerns, even after official support has ended.
 
-## Supported Grafana Versions
+## Supported Versions
 
-* Grafana 10.4.1, 11.2.0, 11.3.0, 11.4.0, 11.5.0
+* Grafana 8.0.0, 10.4.1, 11.2.0, 11.3.0, 11.4.0, 11.5.0
 
 ## Supported Operating Systems
 

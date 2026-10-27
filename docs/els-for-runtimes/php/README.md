@@ -12,15 +12,15 @@ Here are the key features and characteristics of alt-php:
 
 * **User Segmentation** - alt-php allows hosting providers and web server administrators to provide different PHP versions for different users. Each user can choose the PHP version that suits their website.
 
-* **Enhanced Compatibility** - alt-php is designed to ensure maximum compatibility with various web applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of PHP applications.
+* **Enhanced Compatibility** - alt-php works with a wide range of web applications and frameworks. It includes optimizations and changes that make it compatible with many PHP applications.
 
-* **Updates and Support** - CloudLinux provides regular updates for alt-php, including bug fixes, performance improvements, and updates for new PHP versions. This helps ensure the security and currency of PHP usage.
+* **Updates and Support** - TuxCare provides regular updates for alt-php, including bug fixes, performance improvements, and updates for new PHP versions. This helps ensure the security and currency of PHP usage.
 
 * **Management Tools** - alt-php usually comes with a set of management tools, such as PHP Selector, allowing users to manage PHP versions and enable/disable various PHP extensions.
 
 alt-php provides a more flexible and convenient environment for working with different PHP versions on a single server, which is particularly useful in a web hosting environment where multiple users have varying requirements for PHP versions for their web applications.
 
-## Supported OS and PHP versions
+## Supported OS and PHP Versions
 
 <TableTabs>
 
@@ -59,7 +59,7 @@ TuxCare provides additional security support for PHP versions after the end of s
 
 *EOL — end of life, SST — security support time*
 
-| Version |  Released  | EOL by vendor | SST by vendor (years) |    EOL by CloudLinux    | SST by CloudLinux after vendor's EOL (years) |
+| Version |  Released  | EOL by vendor | SST by vendor (years) |    EOL by TuxCare    | SST by TuxCare after vendor's EOL (years) |
 |:-------:|:----------:|:-------------:|:---------------------:|:-----------------------:|:--------------------------------------------:|
 |   4.4   | 07.11.2005 |  08.07.2008   |          2.7          | [01.07.2023](https://blog.cloudlinux.com/php-4.4-end-of-life-0) | 14.9 |
 |   5.1   | 23.11.2005 |  24.08.2006   |          0.8          | [01.04.2024](https://blog.cloudlinux.com/php-5.1-end-of-life)   | 17.6 |
@@ -157,13 +157,13 @@ TuxCare provides additional security support for PHP versions after the end of s
 
 ### Useful Commands and Usage
 
-When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt), the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
+When you deploy an updated version of PHP through PHP ELS with your system's regular update tool (yum, dnf, apt), the tool installs the new version under `/opt/alt/php[version]/`. This path contains all modules, configurations and additional files of this version. Each PHP version has its own path, so different versions can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
 
 <TableTabs>
 
   <template #Check_current_version_of_alt-php_packages>
 
-To check whether the package is installed and see its current version, use the following command based on your OS:
+To check whether your system has the package and see its current version, use the following command based on your OS:
 
   <CodeTabs :tabs="[
     { title: 'RPM', content: `sudo yum list installed | grep php` },
@@ -299,68 +299,2483 @@ Replace `alt-package-name` with the specific name of the package you are looking
 
 </TableTabs>
 
+### PHP Extensions List
+
+The following lists cover the Linux (alt-php) builds of ELS PHP. For ELS PHP for Windows, see [PHP Extensions List](#php-extensions-list-1) in the Windows section.
+
+PHP extensions are modules that extend the functionality of the PHP programming language. These extensions provide additional capabilities for working with various types of data, performing specific tasks, interacting with external resources and supporting various protocols.
+
+The PHP core includes many built-in extensions that provide basic functionality, such as working with databases, string processing, working with images, and others. However, to support more specific tasks and third-party libraries, you can use additional PHP extensions.
+
+<TableTabs>
+
+  <template #PHP_5.2_extensions>
+
+   <div class="notranslate">
+
+   <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+   <li>Reflection</li>
+   <li>SPL</li>
+   <li>SimpleXML</li>
+   <li>apc</li>
+   <li>apm</li>
+   <li>ares</li>
+   <li>bcmath</li>
+   <li>bcompiler</li>
+   <li>big_int</li>
+   <li>bitset</li>
+   <li>bloomy</li>
+   <li>bz2</li>
+   <li>bz2_filter</li>
+   <li>calendar</li>
+   <li>coin_acceptor</li>
+   <li>crack</li>
+   <li>ctype</li>
+   <li>curl</li>
+   <li>date</li>
+   <li>dba</li>
+   <li>dbase</li>
+   <li>dbx</li>
+   <li>dom</li>
+   <li>doublemetaphone</li>
+   <li>eaccelerator</li>
+   <li>enchant</li>
+   <li>exif</li>
+   <li>ffmpeg*</li>
+   <li>fileinfo</li>
+   <li>filter</li>
+   <li>ftp</li>
+   <li>gd</li>
+   <li>gender</li>
+   <li>geoip</li>
+   <li>geos</li>
+   <li>gettext</li>
+   <li>gmagick</li>
+   <li>gmp</li>
+   <li>gnupg</li>
+   <li>haru</li>
+   <li>hash</li>
+   <li>hidef</li>
+   <li>htscanner</li>
+   <li>http</li>
+   <li>huffman</li>
+   <li>iconv</li>
+   <li>idn</li>
+   <li>igbinary</li>
+   <li>imagick</li>
+   <li>imap</li>
+   <li>inclued</li>
+   <li>inotify</li>
+   <li>interbase</li>
+   <li>intl</li>
+   <li>ioncube_loader</li>
+   <li>json</li>
+   <li>ldap</li>
+   <li>libxml</li>
+   <li>lzf</li>
+   <li>mailparse</li>
+   <li>mbstring</li>
+   <li>mcrypt</li>
+   <li>memcache</li>
+   <li>memcached</li>
+   <li>mhash</li>
+   <li>mongo</li>
+   <li>msgpack</li>
+   <li>mssql</li>
+   <li>mysql</li>
+   <li>mysqli</li>
+   <li>ncurses</li>
+   <li>oauth</li>
+   <li>odbc</li>
+   <li>opcache</li>
+   <li>openssl</li>
+   <li>pcntl</li>
+   <li>pcre</li>
+   <li>pdf</li>
+   <li>pdo</li>
+   <li>pdo_dblib</li>
+   <li>pdo_firebird</li>
+   <li>pdo_mysql</li>
+   <li>pdo_oci*</li>
+   <li>pdo_odbc</li>
+   <li>pdo_pgsql</li>
+   <li>pdo_sqlite</li>
+   <li>pgsql</li>
+   <li>phar</li>
+   <li>posix</li>
+   <li>pspell</li>
+   <li>quickhash</li>
+   <li>radius</li>
+   <li>rar</li>
+   <li>readline</li>
+   <li>recode</li>
+   <li>redis</li>
+   <li>rsync</li>
+   <li>session</li>
+   <li>shmop</li>
+   <li>snmp</li>
+   <li>soap</li>
+   <li>sockets</li>
+   <li>sourceguardian</li>
+   <li>spl_types</li>
+   <li>sqlite</li>
+   <li>ssh2</li>
+   <li>standard</li>
+   <li>stats</li>
+   <li>stem</li>
+   <li>stomp</li>
+   <li>suhosin</li>
+   <li>sybase_ct</li>
+   <li>sysvmsg</li>
+   <li>sysvsem</li>
+   <li>sysvshm</li>
+   <li>tidy</li>
+   <li>timezonedb</li>
+   <li>tokenizer</li>
+   <li>translit</li>
+   <li>uploadprogress</li>
+   <li>uuid</li>
+   <li>wddx</li>
+   <li>xcache</li>
+   <li>xcache_3</li>
+   <li>xdebug</li>
+   <li>xhprof</li>
+   <li>xml</li>
+   <li>xmlreader</li>
+   <li>xmlrpc</li>
+   <li>xmlwriter</li>
+   <li>xrange</li>
+   <li>xsl</li>
+   <li>yaf</li>
+   <li>yaz</li>
+   <li>zend_optimizer</li>
+   <li>zip</li>
+   <li>zlib</li>
+   </ul>
+   </div>
+
+   <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  </template>
+
+  <template #PHP_5.3_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>amqp</li>
+  <li>apc</li>
+  <li>apcu</li>
+  <li>apm</li>
+  <li>ares</li>
+  <li>bcmath</li>
+  <li>bcompiler</li>
+  <li>big_int</li>
+  <li>bitset</li>
+  <li>bloomy</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>bz2_filter</li>
+  <li>calendar</li>
+  <li>clamav*</li>
+  <li>coin_acceptor</li>
+  <li>core</li>
+  <li>crack</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dbx</li>
+  <li>dom</li>
+  <li>doublemetaphone</li>
+  <li>eaccelerator</li>
+  <li>eio</li>
+  <li>enchant</li>
+  <li>ereg</li>
+  <li>exif</li>
+  <li>ffmpeg*</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>functional</li>
+  <li>gd</li>
+  <li>gender</li>
+  <li>geoip</li>
+  <li>geos</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>haru</li>
+  <li>hash</li>
+  <li>hidef</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>huffman</li>
+  <li>iconv</li>
+  <li>idn</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inclued</li>
+  <li>inotify</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libevent</li>
+  <li>libxml</li>
+  <li>lzf</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>memcached</li>
+  <li>mhash</li>
+  <li>mongo</li>
+  <li>msgpack</li>
+  <li>mssql</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>ncurses</li>
+  <li>nd_mysql</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>oauth</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_oci*</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pgsql</li>
+  <li>phalcon*</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>propro</li>
+  <li>pspell</li>
+  <li>quickhash</li>
+  <li>radius</li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>recode</li>
+  <li>redis</li>
+  <li>reflection</li>
+  <li>rsync</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sourceguardian</li>
+  <li>solr</li>
+  <li>spl</li>
+  <li>spl_types</li>
+  <li>sqlite</li>
+  <li>sqlite3</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>stem</li>
+  <li>stomp</li>
+  <li>suhosin</li>
+  <li>sybase_ct</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>tideways</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>translit</li>
+  <li>uploadprogress</li>
+  <li>uri_template</li>
+  <li>uuid</li>
+  <li>wddx</li>
+  <li>weakref</li>
+  <li>xcache*</li>
+  <li>xcache_3</li>
+  <li>xdebug</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xrange</li>
+  <li>xsl</li>
+  <li>xhprof</li>
+  <li>yaf</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>zend_guard_loader</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  </template>
+
+  <template #PHP_5.4_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>aapm**</li>
+  <li>amqp</li>
+  <li>apc</li>
+  <li>apcu</li>
+  <li>apm</li>
+  <li>ares</li>
+  <li>bcmath</li>
+  <li>big_int</li>
+  <li>bitset</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>bz2_filter</li>
+  <li>calendar</li>
+  <li>core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>clos_ssa</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dbx</li>
+  <li>dom</li>
+  <li>doublemetaphone</li>
+  <li>eaccelerator</li>
+  <li>eio</li>
+  <li>enchant</li>
+  <li>ereg</li>
+  <li>exif</li>
+  <li>ffmpeg*</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>functional</li>
+  <li>gd</li>
+  <li>gender</li>
+  <li>geoip</li>
+  <li>geos</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>haru</li>
+  <li>hash</li>
+  <li>hidef</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inclued</li>
+  <li>inotify</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libevent</li>
+  <li>libsodium</li>
+  <li>libxml</li>
+  <li>lzf</li>
+  <li>luasandbox*</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>memcached</li>
+  <li>mhash</li>
+  <li>mongo</li>
+  <li>mongodb</li>
+  <li>msgpack</li>
+  <li>mssql</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>ncurses</li>
+  <li>nd_mysql</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>oauth</li>
+  <li>oci8*</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_oci*</li>
+  <li>pgsql</li>
+  <li>phalcon*</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>propro</li>
+  <li>pspell</li>
+  <li>quickhash</li>
+  <li>radius</li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>recode</li>
+  <li>redis</li>
+  <li>reflection</li>
+  <li>rsync</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>solr</li>
+  <li>sourceguardian</li>
+  <li>spl</li>
+  <li>spl_types</li>
+  <li>sqlite3</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>stem</li>
+  <li>stomp</li>
+  <li>suhosin</li>
+  <li>sybase_ct</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>tideways</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>translit</li>
+  <li>uploadprogress</li>
+  <li>uri_template</li>
+  <li>uuid</li>
+  <li>wddx</li>
+  <li>weakref</li>
+  <li>xcache*</li>
+  <li>xcache_3</li>
+  <li>xdebug</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xrange</li>
+  <li>xray**</li>
+  <li>xsl</li>
+  <li>xhprof</li>
+  <li>jsmin</li>
+  <li>yaf</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>zend_guard_loader</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+
+  </template>
+
+  <template #PHP_5.5_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>aapm*</li>
+  <li>amqp</li>
+  <li>apcu</li>
+  <li>apm</li>
+  <li>ares</li>
+  <li>bcmath</li>
+  <li>big_int</li>
+  <li>bitset</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>bz2_filter</li>
+  <li>calendar</li>
+  <li>clamav*</li>
+  <li>core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>clos_ssa</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dbx</li>
+  <li>dom</li>
+  <li>doublemetaphone</li>
+  <li>diseval</li>
+  <li>eio</li>
+  <li>enchant</li>
+  <li>ereg</li>
+  <li>exif</li>
+  <li>ffmpeg*</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gender</li>
+  <li>geoip</li>
+  <li>geos</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>gRPC</li>
+  <li>haru</li>
+  <li>hash</li>
+  <li>hidef</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libevent</li>
+  <li>libsodium</li>
+  <li>libxml</li>
+  <li>lzf</li>
+  <li>luasandbox*</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>memcached</li>
+  <li>mhash</li>
+  <li>mongo</li>
+  <li>mongodb</li>
+  <li>msgpack</li>
+  <li>mssql</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>ncurses</li>
+  <li>nd_mysql</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>oauth</li>
+  <li>oci8*</li>
+  <li>odbc</li>
+  <li>opcache*</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_oci*</li>
+  <li>pgsql</li>
+  <li>phalcon*</li>
+  <li>phalcon3</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>postal*</li>
+  <li>propro</li>
+  <li>pspell</li>
+  <li>quickhash</li>
+  <li>radius</li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>recode</li>
+  <li>redis</li>
+  <li>reflection</li>
+  <li>rsync</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sourceguardian</li>
+  <li>solr</li>
+  <li>spl</li>
+  <li>spl_types</li>
+  <li>sqlite3</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>stem</li>
+  <li>stomp</li>
+  <li>suhosin</li>
+  <li>sybase_ct</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>tideways</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>translit</li>
+  <li>uploadprogress</li>
+  <li>uri_template</li>
+  <li>uuid</li>
+  <li>wddx</li>
+  <li>weakref</li>
+  <li>xcache_3</li>
+  <li>xdebug</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xrange</li>
+  <li>xray</li>
+  <li>xsl</li>
+  <li>xhprof</li>
+  <li>yaf</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>zend_guard_loader</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  </template>
+
+  <template #PHP_5.6_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>aapm*</li>
+  <li>amqp</li>
+  <li>apcu</li>
+  <li>apm</li>
+  <li>ares</li>
+  <li>bcmath</li>
+  <li>big_int</li>
+  <li>bitset</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>bz2_filter</li>
+  <li>calendar</li>
+  <li>core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>clos_ssa*</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dbx</li>
+  <li>dom</li>
+  <li>doublemetaphone</li>
+  <li>diseval</li>
+  <li>eio</li>
+  <li>enchant</li>
+  <li>ereg</li>
+  <li>exif</li>
+  <li>ffmpeg*</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gender</li>
+  <li>geoip</li>
+  <li>gettext</li>
+  <li>geos</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>gRPC</li>
+  <li>haru</li>
+  <li>hash</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libevent</li>
+  <li>libsodium</li>
+  <li>libxml</li>
+  <li>lzf</li>
+  <li>luasandbox*</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>memcached</li>
+  <li>mhash</li>
+  <li>mongo</li>
+  <li>mongodb</li>
+  <li>msgpack</li>
+  <li>mssql</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>ncurses</li>
+  <li>nd_mysql</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>oauth</li>
+  <li>oci8</li>
+  <li>odbc</li>
+  <li>opcache*</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_oci*</li>
+  <li>pgsql</li>
+  <li>phalcon*</li>
+  <li>phalcon3</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>postal*</li>
+  <li>propro</li>
+  <li>pspell</li>
+  <li>quickhash</li>
+  <li>radius</li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>recode</li>
+  <li>redis</li>
+  <li>reflection</li>
+  <li>rsync</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sourceguardian</li>
+  <li>spl</li>
+  <li>spl_types</li>
+  <li>sqlite3</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>stem</li>
+  <li>stomp</li>
+  <li>solr</li>
+  <li>suhosin</li>
+  <li>sybase_ct</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>translit</li>
+  <li>tideways</li>
+  <li>uploadprogress</li>
+  <li>uri_template</li>
+  <li>uuid</li>
+  <li>wddx</li>
+  <li>xcache_3</li>
+  <li>xdebug</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xrange</li>
+  <li>xray</li>
+  <li>xsl</li>
+  <li>xhprof</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>zend_guard_loader</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  </template>
+
+  <template #PHP_7.0_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>aapm*</li>
+  <li>amqp</li>
+  <li>apcu</li>
+  <li>bcmath</li>
+  <li>bitset</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>clos_ssa*</li>
+  <li>calendar</li>
+  <li>core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dom</li>
+  <li>diseval</li>
+  <li>eio</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>ffmpeg*</li>
+  <li>gd</li>
+  <li>gearman</li>
+  <li>gender</li>
+  <li>geos</li>
+  <li>geoip</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>gRPC</li>
+  <li>hash</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libsodium</li>
+  <li>libxml</li>
+  <li>lzf</li>
+  <li>luasandbox*</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcached</li>
+  <li>memcache</li>
+  <li>mongodb</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>_newrelic_</li>
+  <li>oauth</li>
+  <li>oci8*</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>psr</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pdo_oci</li>
+  <li>pgsql</li>
+  <li>phalcon3</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>postal*</li>
+  <li>propro</li>
+  <li>pspell</li>
+  <li>phalcon4</li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>rrd</li>
+  <li>redis</li>
+  <li>reflection</li>
+  <li>recode</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>snmp</li>
+  <li>snuffleupagus</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sourceguardian</li>
+  <li>sodium</li>
+  <li>solr</li>
+  <li>spl</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>suhosin7</li>
+  <li>sysvmsg</li>
+  <li>swoole</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>tideways_xhprof</li>
+  <li>uploadprogress</li>
+  <li>uuid</li>
+  <li>vips*</li>
+  <li>vld*</li>
+  <li>wddx</li>
+  <li>xdebug</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xray</li>
+  <li>xsl</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>yaf</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  ::: tip Note
+  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
+  Please find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
+  :::
+
+  </template>
+
+  <template #PHP_7.1_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>aapm*</li>
+  <li>amqp</li>
+  <li>snuffleupagus</li>
+  <li>vld</li>
+  <li>apcu</li>
+  <li>bcmath</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>clos_ssa*</li>
+  <li>calendar</li>
+  <li>core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dom</li>
+  <li>diseval</li>
+  <li>eio</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>ffmpeg*</li>
+  <li>gd</li>
+  <li>gearman</li>
+  <li>gender</li>
+  <li>geoip</li>
+  <li>gettext</li>
+  <li>geos</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>gRPC</li>
+  <li>hash</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libsodium</li>
+  <li>libxml</li>
+  <li>lzf</li>
+  <li>luasandbox*</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcached</li>
+  <li>memcache</li>
+  <li>mongodb</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>_newrelic_</li>
+  <li>oauth</li>
+  <li>oci8</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql psr</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phalcon3</li>
+  <li>phar</li>
+  <li>pdf</li>
+  <li>pdo_oci</li>
+  <li>phalcon4</li>
+  <li>posix</li>
+  <li>propro</li>
+  <li>pspell</li>
+  <li>psr*</li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>redis</li>
+  <li>reflection</li>
+  <li>rrd</li>
+  <li>recode</li>
+  <li>solr</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sourceguardian</li>
+  <li>spl</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>suhosin7</li>
+  <li>sysvmsg</li>
+  <li>swoole</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>tideways_xhprof</li>
+  <li>uploadprogress</li>
+  <li>uuid</li>
+  <li>vips*</li>
+  <li>wddx</li>
+  <li>xdebug</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>xray</li>
+  <li>yaz</li>
+  <li>yaml</li>
+  <li>yaf</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  ::: tip Note
+  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
+  Please find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
+  :::
+
+  </template>
+
+  <template #PHP_7.2_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>aapm*</li>
+  <li>jsmin</li>
+  <li>psr</li>
+  <li>rrd</li>
+  <li>yaz</li>
+  <li>amqp</li>
+  <li>snuffleupagus</li>
+  <li>vld</li>
+  <li>apcu</li>
+  <li>bcmath</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>clos_ssa*</li>
+  <li>core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dom</li>
+  <li>dbase</li>
+  <li>diseval</li>
+  <li>eio</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>ffmpeg*</li>
+  <li>gd</li>
+  <li>gender</li>
+  <li>geoip</li>
+  <li>gettext</li>
+  <li>gearman</li>
+  <li>geos</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>gRPC</li>
+  <li>hash</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libxml</li>
+  <li>lzf</li>
+  <li>luasandbox*</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>memcached</li>
+  <li>mongodb</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>_newrelic_</li>
+  <li>oauth</li>
+  <li>oci8</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdf</li>
+  <li>pdo_oci</li>
+  <li>phalcon4</li>
+  <li>pdo_mysql</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phalcon3</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>propro</li>
+  <li>pspell</li>
+  <li>raphf</li>
+  <li>readline</li>
+  <li>redis</li>
+  <li>reflection</li>
+  <li>recode</li>
+  <li>sodium</li>
+  <li>sourceguardian</li>
+  <li>swoole</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>spl</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>tideways_xhprof</li>
+  <li>uploadprogress</li>
+  <li>uuid</li>
+  <li>vips*</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>xdebug</li>
+  <li>yaf</li>
+  <li>yaml</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  <li>xray</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  ::: tip Note 
+  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
+  You can find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
+  :::
+
+  </template>
+
+  <template #PHP_7.3_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>ffmpeg*</li>
+  <li>aapm*</li>
+  <li>amqp</li>
+  <li>clos_ssa*</li>
+  <li>gearman</li>
+  <li>jsmin</li>
+  <li>mailparse</li>
+  <li>memcache</li>
+  <li>psr</li>
+  <li>rrd</li>
+  <li>solr</li>
+  <li>tideways_xhprof</li>
+  <li>zmq</li>
+  <li>snuffleupagus</li>
+  <li>vld</li>
+  <li>apcu</li>
+  <li>bz2</li>
+  <li>brotli</li>
+  <li>calendar</li>
+  <li>core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>exif</li>
+  <li>enchant</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>interbase</li>
+  <li>luasandbox*</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdo_pgsql</li>
+  <li>phar</li>
+  <li>readline</li>
+  <li>reflection</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>sourceguardian</li>
+  <li>spl</li>
+  <li>sqlite3</li>
+  <li>standard</li>
+  <li>snmp</li>
+  <li>stats</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>xmlreader</li>
+  <li>bcmath</li>
+  <li>fileinfo</li>
+  <li>grpc</li>
+  <li>intl</li>
+  <li>lzf</li>
+  <li>nd_mysqli</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>posix</li>
+  <li>swoole</li>
+  <li>uploadprogress</li>
+  <li>xmlrpc</li>
+  <li>gd</li>
+  <li>http</li>
+  <li>ioncube_loader</li>
+  <li>mbstring</li>
+  <li>nd_pdo_mysql</li>
+  <li>pdo_dblib</li>
+  <li>pdo_sqlite</li>
+  <li>propro</li>
+  <li>soap</li>
+  <li>sysvmsg</li>
+  <li>uuid</li>
+  <li>xmlwriter</li>
+  <li>dbase</li>
+  <li>gender</li>
+  <li>igbinary</li>
+  <li>mcrypt</li>
+  <li>newrelic</li>
+  <li>pdo_firebird</li>
+  <li>pdo_sqlsrv</li>
+  <li>pspell</li>
+  <li>sockets</li>
+  <li>sysvsem</li>
+  <li>vips*</li>
+  <li>xsl</li>
+  <li>dba</li>
+  <li>geoip</li>
+  <li>imagick</li>
+  <li>json</li>
+  <li>memcached</li>
+  <li>oauth</li>
+  <li>pdo_mysql</li>
+  <li>pgsql</li>
+  <li>raphf</li>
+  <li>sodium</li>
+  <li>sysvshm</li>
+  <li>yaml</li>
+  <li>dom</li>
+  <li>geos</li>
+  <li>imap</li>
+  <li>ldap</li>
+  <li>mongodb</li>
+  <li>oci8</li>
+  <li>pdo_oci</li>
+  <li>phalcon3</li>
+  <li>recode</li>
+  <li>sqlsrv</li>
+  <li>tidy</li>
+  <li>wddx</li>
+  <li>yaz</li>
+  <li>eio</li>
+  <li>gmagick</li>
+  <li>inotify</li>
+  <li>leveldb</li>
+  <li>mysqli</li>
+  <li>odbc</li>
+  <li>pdo_odbc</li>
+  <li>phalcon4</li>
+  <li>redis</li>
+  <li>ssh2</li>
+  <li>timezonedb</li>
+  <li>xdebug</li>
+  <li>zip</li>
+  <li>xml</li>
+  <li>zlib</li>
+  <li>xray</li>
+  <li>yaf</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  :::tip Note
+  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
+  You can find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
+  :::
+
+  </template>
+
+  <template #PHP_7.4_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>leveldb</li>
+  <li>sourceguardian</li>
+  <li>ffmpeg*</li>
+  <li>amqp</li>
+  <li>clos_ssa*</li>
+  <li>gearman</li>
+  <li>ioncube_loader</li>
+  <li>jsmin</li>
+  <li>mailparse</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>psr</li>
+  <li>rrd</li>
+  <li>solr</li>
+  <li>ssh2</li>
+  <li>tideways_xhprof</li>
+  <li>yaz</li>
+  <li>zmq</li>
+  <li>apcu</li>
+  <li>bcmath</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dom</li>
+  <li>eio</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gender</li>
+  <li>geoip</li>
+  <li>geos</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>grpc</li>
+  <li>hash</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>intl</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libxml</li>
+  <li>luasandbox*</li>
+  <li>lzf</li>
+  <li>mbstring</li>
+  <li>memcached</li>
+  <li>mongodb</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>newrelic</li>
+  <li>snuffleupagus</li>
+  <li>oauth</li>
+  <li>oci8</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>vld</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phalcon4</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>propro</li>
+  <li>pspell</li>
+  <li>raphf</li>
+  <li>readline</li>
+  <li>redis</li>
+  <li>reflection</li>
+  <li>phalcon5</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>spl</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>swoole</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>xray</li>
+  <li>uploadprogress</li>
+  <li>uuid</li>
+  <li>vips*</li>
+  <li>xdebug</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaml</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  </template>
+
+  <template #PHP_8.0_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>brotli</li>
+  <li>amqp</li>
+  <li>clos_ssa*</li>
+  <li>core</li>
+  <li>date</li>
+  <li>filter</li>
+  <li>gearman</li>
+  <li>geoip</li>
+  <li>gmagick</li>
+  <li>gnupg*</li>
+  <li>grpc</li>
+  <li>apcu</li>
+  <li>bcmath</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dom</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi**</li>
+  <li>fileinfo</li>
+  <li>hash</li>
+  <li>igbinary</li>
+  <li>inotify</li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mcrypt</li>
+  <li>memcache ftp</li>
+  <li>gd</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>iconv</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>intl</li>
+  <li>ldap</li>
+  <li>lzf</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mongodb</li>
+  <li>newrelic</li>
+  <li>oauth</li>
+  <li>oci8</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdo_oci</li>
+  <li>pdo_sqlsrv</li>
+  <li>readline</li>
+  <li>redis</li>
+  <li>reflection</li>
+  <li>rrd</li>
+  <li>session memcached</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_odbc</li>
+  <li>snuffleupagus</li>
+  <li>solr</li>
+  <li>SPL</li>
+  <li>sqlsrv</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>swoole</li>
+  <li>tideways_xhprof</li>
+  <li>trader pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pgsql</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>pspell</li>
+  <li>psr</li>
+  <li>raphf</li>
+  <li>shmop</li>
+  <li>simplexml</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>uploadprogress</li>
+  <li>uuid</li>
+  <li>vips*</li>
+  <li>vld</li>
+  <li>xdebug</li>
+  <li>xmlrpc**</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>zip</li>
+  <li>zlib sodium</li>
+  <li>sqlite3</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>zmq</li>
+  <li>sourceguardian</li>
+  <li>phalcon5</li>
+  <li>xray</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+
+  </template>
+
+  <template #PHP_8.1_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>amqp</li>
+  <li>apcu</li>
+  <li>bcmath</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>clos_ssa***</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dom</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi**</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>geoip</li>
+  <li>gearman</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg**</li>
+  <li>grpc</li>
+  <li>hash</li>
+  <li>ioncube_loader</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>intl</li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libxml</li>
+  <li>lzf</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>memcached</li>
+  <li>mongodb</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>newrelic</li>
+  <li>oauth</li>
+  <li>oci8</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>phalcon5</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_firebird</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>process</li>
+  <li>pspell</li>
+  <li>psr</li>
+  <li>rrd</li>
+  <li>raphf</li>
+  <li>readline</li>
+  <li>redis</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>SimpleXML v snmp</li>
+  <li>solr</li>
+  <li>sourceguardian</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>SPL</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>swoole</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>uploadprogress</li>
+  <li>uuid</li>
+  <li>vips*</li>
+  <li>xdebug</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc**</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaf</li>
+  <li>yaml</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  <li>xray</li>
+  </ul>
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+
+  </template>
+
+  <template #PHP_8.2_extensions>
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>amqp**</li>
+  <li>apcu**</li>
+  <li>bcmath</li>
+  <li>brotli**</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase**</li>
+  <li>dom</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman**</li>
+  <li>geoip**</li>
+  <li>gettext</li>
+  <li>gmagick**</li>
+  <li>gmp</li>
+  <li>gnupg*</li>
+  <li>grpc**</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>igbinary**</li>
+  <li>imagick**</li>
+  <li>imap</li>
+  <li>inotify**</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>jsmin**</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libxml</li>
+  <li>lzf**</li>
+  <li>mailparse**</li>
+  <li>mbstring</li>
+  <li>mcrypt**</li>
+  <li>memcache**</li>
+  <li>memcached**</li>
+  <li>mongodb**</li>
+  <li>mysqlnd</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>oauth**</li>
+  <li>oci8**</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre**</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql*</li>
+  <li>pdo_oci**</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv**</li>
+  <li>pgsql</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>pspell</li>
+  <li>psr**</li>
+  <li>random</li>
+  <li>raphf**</li>
+  <li>readline</li>
+  <li>redis**</li>
+  <li>Reflection</li>
+  <li>rrd**</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>SimpleXML</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>solr**</li>
+  <li>SPL</li>
+  <li>sqlite3</li>
+  <li>sqlsrv**</li>
+  <li>ssh2**</li>
+  <li>standard</li>
+  <li>swoole**</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof**</li>
+  <li>tidy</li>
+  <li>timezonedb**</li>
+  <li>tokenizer</li>
+  <li>trader**</li>
+  <li>uploadprogress**</li>
+  <li>uuid**</li>
+  <li>vips*</li>
+  <li>xdebug**</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc**</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaml**</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq**</li>
+  </ul>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+
+  </template>
+
+  <template #PHP_8.3_extensions>
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>amqp**</li>
+  <li>apcu**</li>
+  <li>bcmath</li>
+  <li>brotli**</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase**</li>
+  <li>dom</li>
+  <li>elastic_apm</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman**</li>
+  <li>geoip**</li>
+  <li>gettext</li>
+  <li>gmagick**</li>
+  <li>gmp</li>
+  <li>gnupg*</li>
+  <li>grpc**</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>igbinary**</li>
+  <li>imagick**</li>
+  <li>imap</li>
+  <li>inotify**</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>jsmin**</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libxml</li>
+  <li>lzf**</li>
+  <li>mailparse**</li>
+  <li>mbstring</li>
+  <li>mcrypt**</li>
+  <li>memcache**</li>
+  <li>memcached**</li>
+  <li>mongodb**</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>oauth**</li>
+  <li>oci8**</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre**</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql*</li>
+  <li>pdo_oci**</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv**</li>
+  <li>pgsql</li>
+  <li>phalcon5</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>pspell</li>
+  <li>psr**</li>
+  <li>random</li>
+  <li>raphf**</li>
+  <li>readline</li>
+  <li>redis**</li>
+  <li>Reflection</li>
+  <li>rrd**</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>SimpleXML</li>
+  <li>snmp</li>
+  <li>snuffleupagus</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>solr**</li>
+  <li>SPL</li>
+  <li>sqlite3</li>
+  <li>sqlsrv**</li>
+  <li>ssh2**</li>
+  <li>standard</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof**</li>
+  <li>tidy</li>
+  <li>timezonedb**</li>
+  <li>tokenizer</li>
+  <li>trader**</li>
+  <li>uploadprogress**</li>
+  <li>uuid**</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc**</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaml**</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq**</li>
+  </ul>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc. 
+
+  </template>
+
+  <template #PHP_8.4_extensions>
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>amqp**</li>
+  <li>apcu**</li>
+  <li>bcmath</li>
+  <li>brotli**</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase**</li>
+  <li>dom</li>
+  <li>elastic_apm</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman**</li>
+  <li>geoip**</li>
+  <li>gettext</li>
+  <li>gmagick**</li>
+  <li>gmp</li>
+  <li>gnupg*</li>
+  <li>grpc**</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>igbinary**</li>
+  <li>imagick**</li>
+  <li>imap</li>
+  <li>inotify**</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>jsmin**</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libxml</li>
+  <li>lzf**</li>
+  <li>mailparse**</li>
+  <li>mbstring</li>
+  <li>mcrypt**</li>
+  <li>memcache**</li>
+  <li>memcached**</li>
+  <li>mongodb**</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>nd_mysqli</li>
+  <li>nd_pdo_mysql</li>
+  <li>oauth**</li>
+  <li>oci8**</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre**</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql*</li>
+  <li>pdo_oci**</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv**</li>
+  <li>pgsql</li>
+  <li>phalcon5</li>
+  <li>phar</li>
+  <li>posix</li>
+  <li>pspell</li>
+  <li>psr**</li>
+  <li>random</li>
+  <li>raphf**</li>
+  <li>readline</li>
+  <li>redis**</li>
+  <li>Reflection</li>
+  <li>rrd**</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>SimpleXML</li>
+  <li>snmp</li>
+  <li>snuffleupagus</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>solr**</li>
+  <li>SPL</li>
+  <li>sqlite3</li>
+  <li>sqlsrv**</li>
+  <li>ssh2**</li>
+  <li>standard</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof**</li>
+  <li>tidy</li>
+  <li>timezonedb**</li>
+  <li>tokenizer</li>
+  <li>trader**</li>
+  <li>uploadprogress**</li>
+  <li>uuid**</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc**</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaml**</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq**</li>
+  </ul>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+
+  </template>
+
+</TableTabs>
+
 ## Installation on Windows
 
-TuxCare provides two ways to install ELS PHP on Windows: **manually** by downloading and configuring PHP from the repository, or using the **TuxCare Installer** — a graphical tool that automates the process.
+TuxCare provides three ways to install ELS PHP on Windows: the **TuxCare Installer** (recommended) — a graphical tool that automates the process, the **PowerShell script** that does the same from the command line, or **manually** by downloading and configuring PHP from the repository.
 
 <ELSPrerequisites id="windows-prerequisites">
 
-* Secure download link (tokenized URL) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one
 * Administrator access to the Windows system
 
 </ELSPrerequisites>
 
+:::tip
+Customers who previously received an authentication token can continue to use it: select **Use previous token** in the TuxCare Installer, or use the tokenized URL for manual installation.
+:::
+
+<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)', PowerShell_Script: 'Manual (via PowerShell script)' }">
+
+<template #TuxCare_Installer>
+
+TuxCare Installer installs and manages ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
+
+<ELSSteps>
+
+1. Download the installer and launch it
+
+   Download the installer from the following link:
+
+   ```text
+   https://windows.tuxcare.com/TuxCare.Installer.exe
+   ```
+
+   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
+
+2. Register with your license key
+
+   * If you registered on this machine before, the installer first shows **Register** and **Use previous token**. Click **Use previous token** to keep the current registration and go straight to the product list (step 3), or **Register** to register again with a license key, which releases the current registration. New customers do not see this screen and start from the next one.
+
+     ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
+
+   * Click **I have a license key**.
+
+     ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
+
+   * Enter your license key and click **Register**. Keep **Save token** ticked to reuse the registration next time.
+
+     ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
+
+   :::tip
+   If you have an authentication token instead of a license key, click **I have a token**.
+   :::
+
+3. Select a PHP version
+
+   Under **PHP**, expand a version (for example, **8.2.29**) and a build (for example, **tuxcare.els1**), and tick the archive you want. **Only 1 version can be installed per installation**.
+
+   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
+
+   :::tip
+   The installer highlights already installed versions in green. To uninstall one, untick it and click **Continue**.
+
+   When you select a version while another PHP is already installed (by TuxCare Installer or found on the **Path**), the installer asks how to proceed:
+
+   * **Replace** — removes the previous installations, then installs the new version.
+   * **Alongside** — keeps them and installs the new version next to them.
+
+   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
+   :::
+
+   If your license does not cover a product, the installer shows it as **PHP (Not Authenticated)** with nothing to select.
+
+4. Choose installation path and load modules
+
+   * By default, the installer uses `C:\Program Files` and extracts the version to its own folder there.
+   * Click **Change** to install to a different location.
+   * Click **Load** to fetch the PHP archive and list its modules.
+   * Select the modules you need and click **Continue**.
+
+   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
+
+   The installer creates `php.ini` from the archive's `php.ini-production` with the selected modules enabled, and adds the PHP folder to the system **Path**. It also removes other PHP folders from the **Path**, so this version becomes the default.
+
+   When the installation finishes, the message **Updating completed successfully** confirms it.
+
+5. Verify the installation
+
+   Open a **new** **Command Prompt**, **PowerShell**, or **Terminal** window, so that it picks up the updated **Path**, and run:
+
+   ```text
+   php -v
+   ```
+
+   You should see output like:
+
+   ```text
+   PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
+   Copyright (c) 1997-2016 The PHP Group
+   Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+   ```
+
+</ELSSteps>
+
+</template>
+
+<template #PowerShell_Script>
+
+The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer from the command line. The script and TuxCare Installer keep the same records, so each sees what the other installed.
+
+<ELSSteps>
+
+1. Open PowerShell as administrator
+
+   Listing and downloading also work without administrator rights.
+
+2. Download the script
+
+   Download the [script](https://windows.tuxcare.com/tuxcare-installer.ps1) to the project folder.
+
+3. Register with your license key
+
+   Register this server once:
+
+   ```text
+   .\tuxcare-installer.ps1 -LicenseKey <license-key>
+   ```
+
+4. List the available PHP builds
+
+   The list shows what your license offers and marks the installed builds:
+
+   ```text
+   .\tuxcare-installer.ps1 -List -Product php
+   ```
+
+5. Install a PHP version
+
+   Use the archive name shown by `-List`. You can use wildcards. `-Modules` lists the extensions to enable in `php.ini`:
+
+   ```text
+   .\tuxcare-installer.ps1 -Install 'php-8.2.29-*.zip' -Modules curl,mbstring,openssl,pdo_mysql
+   ```
+
+   To install to another folder without changing the **Path**, add `-InstallFolder` and `-NoPath`:
+
+   ```text
+   .\tuxcare-installer.ps1 -Install 'php-8.2.29-*.zip' -InstallFolder D:\PHP -NoPath
+   ```
+
+6. Verify the installation
+
+   Open a new terminal and run:
+
+   ```text
+   php -v
+   ```
+
+</ELSSteps>
+
+To only download the archives without installing them (to `%USERPROFILE%\Downloads\TuxCare` by default), run:
+
+```text
+.\tuxcare-installer.ps1 -Download 'php-8.2.*' -Product php -OutputDir C:\Downloads
+```
+
+The script saves the downloads as `<OutputDir>\php\<version>\<build>\<file>` and does not install or record anything. Run `.\tuxcare-installer.ps1 -Help` for all options, for example `-Token`, `-Force`, and `-Delete`.
+
+The script returns these exit codes:
+
+| Code | Meaning |
+| --- | --- |
+| `0` | Success |
+| `1` | Repository or download failure |
+| `2` | Already registered (use `-Force` to register again) |
+| `3` | Registration failed or no token |
+| `4` | None of the given names matched |
+| `5` | Install failed |
+| `6` | Uninstall failed |
+| `12` | Releasing the registration failed |
+| `14` | Administrator rights needed |
+| `15` | `-Delete` needs `-UninstallProducts` or `-KeepProducts` |
+
+</template>
+
+<template #Manual>
+
+Manual installation requires a tokenized URL (obtain via [sales@tuxcare.com](mailto:sales@tuxcare.com)) that gives access to the TuxCare PHP for Windows repository. The token goes right after the domain:
+
+```text
+https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+```
+
 :::warning Troubleshooting: browser credential prompts
-Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://TOKEN@windows.tuxcare.com/php/`). Without it, the server issues a redirect that strips the authentication token, causing the browser to prompt for credentials on every page. With the trailing slash, credentials are cached and subfolder navigation works as expected.
+Always include a **trailing slash** at the end of your tokenized URL (for example, `https://windows.tuxcare.com/TOKEN/php/`). Without it, the server may issue a redirect that drops the token, causing the browser to prompt for credentials. With the trailing slash, subfolder navigation works as expected.
 
 <details>
 <summary>How to use a tokenized URL</summary>
 
-Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL:
+Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL path:
 
 ```text
-https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+https://windows.tuxcare.com/<YOUR-TOKEN>/php/
 ```
 
 **Always include the trailing slash.** This applies to all directory URLs, including version subfolders:
 
-- ✅ `https://TOKEN@windows.tuxcare.com/php/` — works correctly
-- ❌ `https://TOKEN@windows.tuxcare.com/php` — may prompt for credentials
+- ✅ `https://windows.tuxcare.com/TOKEN/php/` — works correctly
+- ❌ `https://windows.tuxcare.com/TOKEN/php` — may prompt for credentials
 
 **Use a private browsing window.** We recommend opening the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
 
 - **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
 - **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)
 
-**Browsing subdirectories.** Once you open the URL with a trailing slash in a private window, the browser caches your credentials for the session. If you are still prompted when entering a subdirectory, manually insert the token into the URL — prepend `<YOUR-TOKEN>@` before `windows.tuxcare.com` in the address bar.
+**Browsing subdirectories.** If the browser asks for credentials when you open a subdirectory, manually insert the token into the URL — add `<YOUR-TOKEN>/` right after `windows.tuxcare.com/` in the address bar.
 
 **Example walkthrough:**
 
 1. Open the repository root:
    ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
    ```
 2. Click on `7.4.33/`. If the browser navigates to `https://windows.tuxcare.com/php/7.4.33/` and prompts for a password, edit the address bar and add the token:
    ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/7.4.33/
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/
    ```
 3. Click on `tuxcare.els8/`. If prompted again, add the token to the URL:
    ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/7.4.33/tuxcare.els8/
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/tuxcare.els8/
    ```
 4. You see the ZIP files listed. Click on the file to download it directly.
 
 **Downloading files directly.** If you already know which file you need, skip browsing and build the full URL from the repository root, version, release folder, and file name:
 
 ```text
-https://<YOUR-TOKEN>@windows.tuxcare.com
+https://windows.tuxcare.com/<YOUR-TOKEN>
   /php/<version>/tuxcare.els<N>/<filename>.zip
 ```
 
 PowerShell:
 
 ```text
-$base = "https://<YOUR-TOKEN>@windows.tuxcare.com"
+$base = "https://windows.tuxcare.com/<YOUR-TOKEN>"
 $file = "/php/7.4.33/tuxcare.els8/" +
   "php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
 Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
@@ -369,7 +2784,7 @@ Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
 curl:
 
 ```text
-BASE="https://<YOUR-TOKEN>@windows.tuxcare.com"
+BASE="https://windows.tuxcare.com/<YOUR-TOKEN>"
 FILE="/php/7.4.33/tuxcare.els8/\
 php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
 curl -O "${BASE}${FILE}"
@@ -379,21 +2794,17 @@ curl -O "${BASE}${FILE}"
 <br>
 :::
 
-<TableTabs>
-
-<template #Manual>
-
 <ELSSteps>
 
 1. Open the repository in your browser
 
-   Navigate to your tokenized URL (see [Prerequisites](#windows-prerequisites) above):
+   Navigate to your tokenized URL:
 
    ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
    ```
 
-   You will see a directory listing of all available PHP versions (e.g. `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
+   You will see a directory listing of all available PHP versions (for example, `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
 
 2. Choose the correct archive
 
@@ -415,7 +2826,7 @@ curl -O "${BASE}${FILE}"
 
 3. Extract the archive
 
-   Create a destination folder (e.g. `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
+   Create a destination folder (for example, `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
 
    Alternatively, use PowerShell:
 
@@ -475,75 +2886,9 @@ curl -O "${BASE}${FILE}"
    Zend Engine v3.4.0, Copyright (c) Zend Technologies
    ```
 
-   To verify that the required extensions are loaded, run `php -m`.
+   To list the loaded extensions and check that the ones you need are there, run `php -m`.
 
 </ELSSteps>
-
-</template>
-
-<template #TuxCare_Installer>
-
-TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
-
-<ELSSteps>
-
-1. Download the installer and launch it
-
-   Download the installer using your tokenized URL (see [Prerequisites](#windows-prerequisites) above):
-
-   ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/installer/TuxCare.Installer.exe
-   ```
-
-   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
-
-2. Register with your license key or authentication token
-
-   ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
-
-   :::tip
-   If you've already registered on this machine and saved your credentials, the installer detects and uses the saved token automatically.
-   :::
-
-3. Select a PHP version
-
-   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
-
-   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
-
-   :::tip
-   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
-
-   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
-   :::
-
-4. Choose installation path and load modules
-
-   By default, the installer uses `C:\Program Files`. Click **Change** to install to a different location.
-
-   Click **Load** to fetch the required PHP archive. Select the modules you need and click **Continue**.
-
-   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
-
-5. Verify the installation
-
-   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
-
-   ```text
-   php -v
-   ```
-
-   You should see output like:
-
-   ```text
-   PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
-   Copyright (c) 1997-2016 The PHP Group
-   Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
-   ```
-
-</ELSSteps>
-
-During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
 
 </template>
 
@@ -570,27 +2915,904 @@ During installation, the installer creates a folder with PHP configuration and s
     ![Windows Edit environment variable dialog showing the PHP installation directory added to Path](/images/php-windows-add-path-2.webp)
 </details>
 
-### Additional configurations
+### Additional Configurations
 
-Depending on your ELS PHP usage purpose, additional configurations may be required. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
+Depending on how you use ELS PHP, you may need additional configuration. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
 
-#### Change default PHP version
+#### Change Default PHP Version
 
-If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path** and click **Edit**. Move the desired PHP version's path to the top, and remove or move down other PHP paths. Click OK, restart your terminal, and verify with `php -v`.
+If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable:
 
-#### Extensions
+1. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**.
+2. Under *System variables*, find **Path** and click **Edit**.
+3. Move the desired PHP version's folder to the top, and remove or move down the other PHP folders.
+4. Click **OK**, open a new terminal, and verify with `php -v`.
 
-Extensions are managed through the `php.ini` file located in your PHP installation directory (e.g. `C:\PHP`). Open it in a text editor and find the extensions section. Remove the semicolon `;` at the beginning of a line to enable an extension, or add `;` to disable it.
+Installing a version with TuxCare Installer, or with the PowerShell script without `-NoPath`, makes it the default automatically.
 
-```text
-;extension=curl
-extension=gd2
-;extension=mbstring
-extension=mysqli
-extension=pdo_mysql
-```
+#### PHP Extensions List
 
-#### Increase upload/memory limits
+ELS PHP for Windows comes with two kinds of extensions. **Built-in** extensions are part of the PHP build and always available. **Loadable** extensions are DLLs in the `ext` folder that you enable in one of two ways:
+
+* **TuxCare Installer** — select the modules you need at the **Choose installation path and load modules** step.
+* **Manually** — open `php.ini` in your PHP installation directory (for example, `C:\PHP`) and remove the semicolon `;` at the start of the `extension=` line. Add `;` to disable an extension.
+
+Extensions marked *TS only* or *NTS only* are available only in the Thread Safe or Non-Thread Safe build.
+
+<TableTabs>
+
+  <template #PHP_5.2_Windows_extensions>
+
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>com_dotnet</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>odbc</li>
+  <li>pcre</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zlib</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>adt</li>
+  <li>amf</li>
+  <li>bcompiler</li>
+  <li>bitset</li>
+  <li>blenc</li>
+  <li>bz2</li>
+  <li>bz2_filter</li>
+  <li>classkit</li>
+  <li>cpdf</li>
+  <li>crack</li>
+  <li>curl</li>
+  <li>cvsclient</li>
+  <li>db</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dbx</li>
+  <li>dio</li>
+  <li>docblock</li>
+  <li>domxml</li>
+  <li>doublemetaphone</li>
+  <li>event</li>
+  <li>exif</li>
+  <li>fdf</li>
+  <li>fileinfo</li>
+  <li>filepro</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>gopher</li>
+  <li>haru</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>hyperwave</li>
+  <li>ibm_db2</li>
+  <li>id3</li>
+  <li>ifx</li>
+  <li>iisfunc (TS only)</li>
+  <li>imap</li>
+  <li>ingres2</li>
+  <li>interbase</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>lzf</li>
+  <li>mailparse</li>
+  <li>maxdb</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>mcrypt_filter</li>
+  <li>mcve</li>
+  <li>memcache</li>
+  <li>mhash</li>
+  <li>mime_magic</li>
+  <li>ming</li>
+  <li>msql</li>
+  <li>mssql</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>netools</li>
+  <li>ntuser</li>
+  <li>oci8</li>
+  <li>oggvorbis</li>
+  <li>openssl</li>
+  <li>operator</li>
+  <li>oracle</li>
+  <li>params</li>
+  <li>parsekit</li>
+  <li>pdflib</li>
+  <li>pdo</li>
+  <li>pdo_firebird</li>
+  <li>pdo_ibm</li>
+  <li>pdo_informix</li>
+  <li>pdo_mssql</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_oci8</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlite_external</li>
+  <li>pdo_user</li>
+  <li>pgsql</li>
+  <li>phar</li>
+  <li>phk</li>
+  <li>php5activescript (TS only)</li>
+  <li>phpdoc</li>
+  <li>pop3</li>
+  <li>printer</li>
+  <li>pspell</li>
+  <li>radius</li>
+  <li>rar</li>
+  <li>runkit</li>
+  <li>sam</li>
+  <li>sdo</li>
+  <li>shmop</li>
+  <li>smtp</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>spl_types</li>
+  <li>sqlite</li>
+  <li>ssh2</li>
+  <li>stats</li>
+  <li>stem</li>
+  <li>sybase_ct</li>
+  <li>threads (TS only)</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>translit</li>
+  <li>uploadprogress</li>
+  <li>win32ps</li>
+  <li>win32scheduler</li>
+  <li>win32service</li>
+  <li>win32std</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  <li>yami</li>
+  <li>zip</li>
+  <li>zlib_filter</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
+
+  </template>
+
+  <template #PHP_5.4_Windows_extensions>
+
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>ereg</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mcrypt</li>
+  <li>mhash</li>
+  <li>mysqlnd</li>
+  <li>odbc</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dbx</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>oci8</li>
+  <li>oci8_11g</li>
+  <li>openssl</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sybase_ct</li>
+  <li>tidy</li>
+  <li>wincache (NTS only)</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  <li>ZendLoader (NTS only)</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
+
+  </template>
+
+  <template #PHP_5.6_Windows_extensions>
+
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>ereg</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mcrypt</li>
+  <li>mhash</li>
+  <li>mysqlnd</li>
+  <li>odbc</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>oci8_12c</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sybase_ct</li>
+  <li>tidy</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
+
+  </template>
+
+  <template #PHP_7.2_Windows_extensions>
+
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_12c</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phpdbg_webhelper</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
+
+  </template>
+
+  <template #PHP_7.3_Windows_extensions>
+
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_12c</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phpdbg_webhelper</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
+
+  </template>
+
+  <template #PHP_7.4_Windows_extensions>
+
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_12c</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phpdbg_webhelper</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
+
+  </template>
+
+  <template #PHP_8.0_Windows_extensions>
+
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>intl</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_19</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phpdbg_webhelper</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
+
+  </template>
+
+  <template #PHP_8.1_Windows_extensions>
+
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>intl</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_19</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
+
+  </template>
+
+</TableTabs>
+
+#### Increase Upload/Memory Limits
 
 If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits. Open the `php.ini` file and set the values as needed:
 
@@ -602,9 +3824,55 @@ memory_limit=256M
 
 #### Uninstallation
 
-To **uninstall a PHP version manually**, delete the PHP installation directory (e.g. `C:\PHP`) and remove the corresponding path from **System Path**.
+To **uninstall a PHP version via TuxCare Installer**, run the installer, untick the installed (green) version, and click **Continue**. The installer moves the PHP folder to `%APPDATA%\TuxCareInstaller\Backups\<folder>_<date>_<time>` instead of deleting it, so you can recover your `php.ini` and files, and removes the folder from the **Path**.
 
-To **uninstall via TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
+To **remove everything installed by TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer*, and click **Uninstall**. Then choose **Uninstall products** to remove all products installed by TuxCare Installer, or **Keep products** to remove only the installer.
+
+A silent removal of TuxCare Installer, as deployment tools run it, cannot ask this question and keeps the products:
+
+```text
+TuxCare.Installer.exe /uninstall /quiet
+```
+
+To uninstall the products too and release the registration, add `UninstallProducts=1`:
+
+```text
+TuxCare.Installer.exe /uninstall /quiet UninstallProducts=1
+```
+
+To **uninstall a PHP version with the PowerShell script**, run it with the archive name shown by `-List`:
+
+```text
+.\tuxcare-installer.ps1 -Uninstall 'php-8.2.29-*.zip'
+```
+
+To remove everything installed with the script or TuxCare Installer and release the registration, run:
+
+```text
+.\tuxcare-installer.ps1 -Delete
+```
+
+The script asks whether to uninstall or keep the installed products. Add `-UninstallProducts` to uninstall them or `-KeepProducts` to keep them, and the script does not ask.
+
+To **uninstall a PHP version manually**, delete the PHP installation directory (for example, `C:\PHP`) and remove the corresponding path from **System Path**.
+
+### Frequent Issues
+
+* **PHP shows "(Not Authenticated)" in TuxCare Installer.**
+
+  Your license or token does not cover PHP. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
+* **`php -v` still shows the old version, or "php is not recognized".**
+
+  Open a new terminal: a terminal that was already open keeps the old **Path**. If the problem persists, check the order of PHP folders in the **System Path** (see [Change Default PHP Version](#change-default-php-version)).
+
+* **An extension does not load.**
+
+  Check that its line in `php.ini` has no leading `;` and that `php.ini` contains `extension_dir="ext"`. TuxCare Installer writes `extension_dir` when at least one module is available.
+
+* **I uninstalled a version by mistake.**
+
+  TuxCare Installer keeps its folder in `%APPDATA%\TuxCareInstaller\Backups`. Move the folder back to its original place and add it to the **Path** again, or install the version again.
 
 ## SaxonC Use Case
 
@@ -614,7 +3882,7 @@ Although this guide uses **alt-php82** in its examples, the same installation st
 
 This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names and paths to match the version you downloaded.
 
-<ELSPrerequisites>
+<ELSPrerequisites id="saxonc-prerequisites">
 
 * Saxon 12+ (required for PHP 8.2+ compatibility) — download from [saxonica.com](https://www.saxonica.com/download/c.xml)
 * `httpd` (or `apache2`), `gcc-c++` (or `g++`) with minimum C++14 support
@@ -628,7 +3896,7 @@ This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names a
 
 </ELSPrerequisites>
 
-### Set up SaxonC
+### Set Up SaxonC
 
 <ELSSteps>
 
@@ -690,7 +3958,7 @@ This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names a
 
 </ELSSteps>
 
-### Build the PHP extension
+### Build the PHP Extension
 
 <ELSSteps>
 
@@ -799,234 +4067,6 @@ This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names a
    If you are using php-fpm or Apache, restart the services.
 
 </ELSSteps>
-
-## PHP extensions list
-
-PHP extensions are modules that extend the functionality of the PHP programming language. These extensions provide additional capabilities for working with various types of data, performing specific tasks, interacting with external resources and supporting various protocols.
-
-The PHP core includes many built-in extensions that provide basic functionality, such as working with databases, string processing, working with images, and others. However, to support more specific tasks and third-party libraries, you can use additional PHP extensions.
-
-<TableTabs>
-
-  <template #PHP_5.2_extensions>
-
-   <div class="notranslate">
-
-   | |  |  |  | |
-   |-|-|-|-|-|
-   |Reflection <br>SPL <br>SimpleXML <br>apc <br>apm <br>ares <br>bcmath <br>bcompiler <br>big_int <br>bitset <br>bloomy <br>bz2 <br>bz2_filter <br>calendar <br>coin_acceptor <br>crack <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br>eaccelerator <br>enchant <br>exif <br>ffmpeg* | fileinfo <br>filter <br>ftp <br>gd <br>gender <br>geoip <br>geos <br>gettext <br>gmagick <br>gmp <br>gnupg <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>huffman <br>iconv <br>idn <br>igbinary <br>imagick <br>imap <br>inclued <br>inotify <br>interbase <br>intl <br>ioncube_loader| json <br>ldap <br>libxml <br>lzf <br>mailparse <br>mbstring <br>mcrypt <br>memcache <br>memcached <br>mhash <br>mongo <br>msgpack <br>mssql <br>mysql <br>mysqli <br>ncurses <br>oauth <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird |  <br>pdo_mysql <br>pdo_oci* <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br>pgsql <br>phar <br>posix <br>pspell <br>quickhash <br>radius <br>rar <br>readline <br>recode <br>redis <br>rsync <br>session <br>shmop <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl_types <br>sqlite <br>ssh2 <br>standard <br>stats <br>stem | stomp <br>suhosin <br>sybase_ct <br>sysvmsg <br>sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>translit <br>uploadprogress <br>uuid <br>wddx <br>xcache <br>xcache_3 <br>xdebug <br>xhprof <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xsl <br>yaf <br>yaz <br>zend_optimizer <br>zip <br>zlib|
-   </div>
-
-   <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_5.3_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |amqp<br> apc <br>apcu <br>apm <br>ares <br>bcmath <br>bcompiler <br>big_int <br>bitset <br>bloomy <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>clamav* <br>coin_acceptor <br>core <br>crack <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br>eaccelerator <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br> filter <br>ftp | functional <br> gd <br>gender <br>geoip <br> geos <br> gettext <br>gmagick <br>gmp <br>gnupg <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>huffman <br>iconv <br>idn <br>igbinary <br>imagick <br>imap <br>inclued <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br>json <br>ldap <br>libevent <br>libxml <br>lzf | mailparse <br>mbstring <br>mcrypt <br>memcache <br>memcached <br>mhash <br>mongo <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br> pdo_oci* <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pgsql | phalcon* <br>phar <br> posix <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br> solr <br>spl <br>spl_types <br>sqlite <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br>suhosin | sybase_ct <br>sysvmsg <br> sysvsem <br> sysvshm <br>tidy <br> tideways <br>timezonedb <br>tokenizer <br>trader <br>translit <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>weakref <br>xcache* <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xsl <br> xhprof <br>yaf <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_5.4_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm** <br>amqp <br> apc <br>apcu <br>apm <br>ares <br>bcmath <br>big_int <br>bitset <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>core <br>ctype <br>curl <br>clos_ssa <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br>eaccelerator <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br>filter <br>ftp <br>functional <br>gd <br> gender | geoip <br> geos <br>gettext <br>gmagick <br>gmp <br>gnupg <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inclued <br>inotify <br>interbase <br>intl <br>ioncube_loader <br>json <br>ldap <br>libevent <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring| mcrypt <br>memcache <br>memcached <br>mhash <br>mongo <br>mongodb <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>oci8* <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pdo_oci* <br>pgsql <br>phalcon* <br>phar  | posix <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br> solr <br>sourceguardian <br>spl <br>spl_types <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br>suhosin <br>sybase_ct <br>sysvmsg | sysvsem <br>sysvshm <br>tidy <br> tideways <br> timezonedb <br>tokenizer <br>trader <br>translit <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>weakref <br>xcache* <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xray** <br>xsl <br> xhprof <br> jsmin <br> yaf <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_5.5_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br>amqp <br> apcu <br>apm <br>ares <br>bcmath <br>big_int <br>bitset <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>clamav* <br>core <br>ctype <br>curl <br> clos_ssa <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br> diseval <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br>filter <br>ftp <br>gd <br>gender <br>geoip | geos <br> gettext <br>gmagick <br>gmp <br>gnupg <br>gRPC <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br>jsmin <br>json <br>ldap <br>libevent <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt | memcache <br>memcached <br>mhash <br>mongo <br>mongodb <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>oci8* <br>odbc <br>opcache* <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pdo_oci* <br>pgsql | phalcon* <br>phalcon3 <br>phar <br>posix <br>postal* <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br> solr <br>spl <br>spl_types <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br>suhosin | sybase_ct <br>sysvmsg <br>sysvsem <br>sysvshm <br>tidy <br> tideways <br>timezonedb <br>tokenizer <br>trader <br>translit <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>weakref <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xray <br>xsl <br> xhprof <br>yaf <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq |
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_5.6_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br> amqp <br> apcu <br>apm <br>ares <br>bcmath <br>big_int <br>bitset <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>core <br>ctype <br>curl <br> clos_ssa* <br>date <br>dba <br> dbase <br>dbx <br>dom <br>doublemetaphone <br> diseval <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br>filter <br>ftp <br>gd <br>gender <br>geoip <br>gettext | geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>haru <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br>json <br>ldap <br>libevent <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt <br>memcache <br>memcached <br>mhash | mongo <br>mongodb <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>oci8 <br>odbc <br>opcache* <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pdo_oci* <br>pgsql <br>phalcon* <br>phalcon3 | phar <br>posix <br> postal* <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl <br>spl_types <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br> solr | suhosin <br>sybase_ct <br>sysvmsg <br>sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br>translit <br> tideways <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xray <br>xsl <br> xhprof <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_7.0_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br>amqp <br> apcu <br>bcmath <br>bitset <br>brotli <br>bz2 <br>clos_ssa* <br> calendar <br>core <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dom <br> diseval <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br> gearman <br> gender <br> geos | geoip <br>gettext <br>gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br>json <br>ldap <br>libsodium <br>libxml <br>lzf <br> luasandbox*  <br>mailparse <br>mbstring <br>mcrypt | memcached <br> memcache <br>mongodb <br>mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8* <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br> psr <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br>pdo_sqlsrv <br> pdo_oci  <br>pgsql <br>phalcon3 <br>phar | posix <br> postal* <br>propro <br>pspell <br> phalcon4 <br>raphf <br>rar <br>readline <br> rrd <br>redis <br>reflection <br> recode <br>session <br>shmop <br>simplexml <br>snmp<br>snuffleupagus <br>soap <br>sockets <br>sourceguardian <br> sodium <br> solr <br>spl <br>sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>suhosin7 <br>sysvmsg | swoole <br> sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>vld* <br>wddx <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br> xray <br>xsl <br>yaml <br>yaz <br> yaf <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  ::: tip Note
-  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
-  Please find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
-  :::
-
-  </template>
-
-  <template #PHP_7.1_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br>amqp <br> snuffleupagus <br> vld <br> apcu <br>bcmath <br>brotli <br>bz2 <br> clos_ssa* <br> calendar <br>core <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dom <br> diseval <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br>gearman <br>gender <br>geoip <br>gettext | geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br> json <br>ldap <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt <br>memcached | memcache <br> mongodb <br>mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8 <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql psr <br> <br>pdo_sqlite <br>pdo_sqlsrv <br>pgsql <br>phalcon3 <br>phar <br> pdf | pdo_oci <br> phalcon4 <br> posix <br>propro <br>pspell <br>psr* <br>raphf <br>rar <br>readline <br>redis <br>reflection <br>rrd <br> recode <br> solr <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl <br> sodium <br> sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>suhosin7 <br>sysvmsg | swoole <br> sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>wddx <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xsl <br>xray <br> yaz <br> yaml <br> yaf <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  ::: tip Note
-  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
-  Please find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
-  :::
-
-  </template>
-
-  <template #PHP_7.2_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br> jsmin <br> psr <br> rrd <br> yaz <br> amqp <br> snuffleupagus <br> vld <br> apcu <br>bcmath <br>brotli <br>bz2 <br>calendar <br> clos_ssa* <br> core <br>ctype <br>curl <br>date <br>dba <br>dom <br> dbase <br> diseval  <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br>gender <br>geoip <br>gettext | gearman <br> geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br>json <br>ldap <br>libxml <br>lzf <br> luasandbox* <br> mcrypt <br> memcache <br> mailparse <br>mbstring <br>memcached <br>mongodb | mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8 <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdo <br>pdo_dblib <br>pdo_firebird <br> pdf <br> pdo_oci <br> phalcon4  <br> pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br>pdo_sqlsrv <br>pgsql <br>phalcon3 <br>phar | posix <br>propro <br>pspell <br>raphf <br>readline <br>redis <br>reflection <br> recode <br> sodium <br> sourceguardian <br> swoole  <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>spl <br>sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>sysvmsg <br>sysvsem | sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>wddx <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xsl <br> xdebug <br> yaf <br>yaml <br>zip <br>zlib <br>zmq <br> xray|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  ::: tip Note 
-  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
-  You can find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
-  :::
-
-  </template>
-
-  <template #PHP_7.3_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | | |
-  |-|-|-|-|-|-|
-  |ffmpeg* <br> aapm* <br>amqp <br> clos_ssa* <br> gearman <br> jsmin <br> mailparse <br> memcache <br> psr <br> rrd <br> solr <br> tideways_xhprof <br> zmq <br> snuffleupagus <br> vld <br> apcu <br> bz2 <br> brotli <br> calendar <br> core <br> ctype <br> curl <br> date <br> exif <br>enchant <br> filter <br> ftp <br> gettext <br> gmp <br>gnupg <br> hash <br> iconv <br> interbase <br> luasandbox* | libxml <br>mysqlnd <br>opcache <br> openssl <br> pcntl <br> pcre <br>pdo_pgsql <br> phar <br> readline <br> reflection <br> session <br> shmop <br> simplexml <br> sourceguardian <br> spl <br> sqlite3 <br>standard <br> snmp <br> stats <br> tokenizer | trader <br>xmlreader <br>bcmath <br>fileinfo <br> grpc <br>intl <br>lzf <br>nd_mysqli <br>pdf <br>pdo <br>posix <br>swoole <br>uploadprogress <br>xmlrpc <br>gd <br>http <br>ioncube_loader <br> mbstring | nd_pdo_mysql <br>pdo_dblib <br>pdo_sqlite <br>propro <br>soap <br>sysvmsg <br>uuid <br>xmlwriter <br>dbase <br>gender <br>igbinary <br>mcrypt <br>newrelic <br> pdo_firebird <br>pdo_sqlsrv <br>pspell <br>sockets <br>sysvsem <br>vips* <br>xsl | dba <br>geoip <br>imagick <br>json <br>memcached <br>oauth <br>pdo_mysql <br>pgsql <br> raphf <br>sodium <br>sysvshm <br>yaml <br>dom <br>geos <br>imap <br>ldap <br>mongodb <br>oci8 <br>pdo_oci | phalcon3 <br>recode <br>sqlsrv <br> tidy <br>wddx <br>yaz <br>eio <br>gmagick <br>inotify <br>leveldb <br>mysqli <br>odbc <br>pdo_odbc <br>phalcon4 <br>redis <br>ssh2 <br>timezonedb <br>xdebug <br>zip <br> xml <br> zlib <br> xray <br> yaf| 
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  :::tip Note
-  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
-  You can find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
-  :::
-
-  </template>
-
-  <template #PHP_7.4_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |leveldb <br> sourceguardian <br> ffmpeg* <br> amqp <br> clos_ssa* <br> gearman <br> ioncube_loader <br> jsmin <br> mailparse <br> mcrypt <br> memcache <br> psr <br> rrd <br> solr <br> ssh2 <br> tideways_xhprof <br> yaz <br> zmq <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> eio <br> enchant <br> exif <br> fileinfo <br> filter <br> ftp <br> gd <br> gender <br> geoip <br> geos | gettext <br> gmagick <br> gmp <br> gnupg <br> grpc <br> hash <br> http <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> json <br> ldap <br> libxml <br> luasandbox* <br> lzf <br> mbstring <br> memcached <br> mongodb | mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> snuffleupagus <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> pdo_pgsql <br> vld <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phalcon4 <br> phar <br> posix <br> propro <br> pspell <br> raphf <br> readline <br> redis <br> reflection <br>phalcon5 <br> session <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets <br> sodium <br> spl <br> sqlite3 <br> sqlsrv <br> standard | stats <br> swoole <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> xray <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc <br> xmlwriter <br> xsl <br> yaml <br> zip <br> zlib |
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_8.0_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |brotli <br> amqp <br> clos_ssa* <br> core <br> date <br> filter <br> gearman <br> geoip <br> gmagick <br> gnupg* <br> grpc <br> apcu <br> bcmath <br> bz2 <br> calendar <br> ctype <br> curl <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo | hash <br> igbinary <br> inotify <br> jsmin <br> json <br> libxml <br> mcrypt <br> memcache ftp <br> gd <br> gettext <br> gmp <br> iconv <br> imagick <br> imap <br> intl <br> ldap <br> lzf <br> mailparse <br> mbstring | mongodb <br> newrelic <br> oauth <br> oci8 <br> openssl <br> pcntl <br> pcre <br> pdo_oci <br> pdo_sqlsrv <br> readline <br> redis <br> reflection <br> rrd <br> session memcached <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> odbc <br> opcache <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_odbc | snuffleupagus <br> solr <br> SPL <br> sqlsrv <br> ssh2 <br> standard <br> swoole <br> tideways_xhprof <br> trader pdo_pgsql <br> pdo_sqlite <br> pgsql <br> phar <br> posix <br> pspell <br> psr <br> raphf <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets | uploadprogress <br> uuid <br> vips* <br> vld <br> xdebug <br> xmlrpc** <br> yaml <br> yaz <br> zip <br> zlib sodium <br> sqlite3 <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> xml <br> xmlreader <br> xmlwriter <br> xsl <br> zmq <br>sourceguardian <br> phalcon5 <br> xray |
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_8.1_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |amqp <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> clos_ssa*** <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo <br> filter <br> ftp | gd <br> geoip <br> gearman <br> gettext <br> gmagick <br> gmp <br> gnupg** <br> grpc <br> hash <br> ioncube_loader <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> jsmin <br> json <br> ldap <br> libxml <br> lzf <br> mailparse <br> mbstring <br> mcrypt | memcache <br> memcached <br> mongodb <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> phalcon5 <br> pdo_pgsql <br> pdo_firebird <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phar <br> posix <br> process <br> pspell <br> psr <br> rrd <br> raphf <br> readline <br> redis <br> Reflection <br> session <br> shmop <br> SimpleXML v snmp <br> solr <br> sourceguardian <br> soap <br> sockets <br> sodium <br> SPL <br> sqlite3 <br> sqlsrv <br> ssh2 <br> standard <br> swoole | sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaf <br> yaml <br> zip <br> zlib <br> zmq <br> xray |
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_8.2_extensions>
-
-  | | | | | |
-  |-|-|-|-|-|
-  |amqp** <br> apcu** <br> bcmath <br> brotli** <br> bz2 <br> calendar <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase** <br> dom <br> enchant <br> exif <br> ffi <br> fileinfo <br> filter <br> ftp <br> gd <br> gearman** <br> geoip** | gettext <br> gmagick** <br> gmp <br> gnupg* <br> grpc** <br> hash <br> iconv <br> igbinary** <br> imagick** <br> imap <br> inotify** <br> intl <br> ioncube_loader <br> jsmin** <br> json <br> ldap <br> libxml <br> lzf** <br> mailparse** <br> mbstring <br> mcrypt** <br> memcache** <br> memcached** | mongodb** <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> oauth** <br> oci8** <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre** <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql* <br> pdo_oci** <br> pdo_odbc <br> pdo_pgsql <br> pdo_sqlite <br> pdo_sqlsrv** <br> pgsql | phar <br> posix <br> pspell <br> psr** <br> random <br> raphf** <br> readline <br> redis** <br> Reflection <br> rrd** <br> session <br> shmop <br> SimpleXML <br> snmp <br> soap <br> sockets <br> sodium <br> solr** <br> SPL <br> sqlite3 <br> sqlsrv** <br> ssh2** | standard <br> swoole** <br> sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof** <br> tidy <br> timezonedb** <br> tokenizer <br> trader** <br> uploadprogress** <br> uuid** <br> vips* <br> xdebug** <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaml** <br> zip <br> zlib <br> zmq**|
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_8.3_extensions>
-
-  | | | | | |
-  |-|-|-|-|-|
-  |amqp** <br> apcu** <br> bcmath <br> brotli** <br> bz2 <br> calendar <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase** <br> dom <br> elastic_apm <br> enchant <br> exif <br> ffi <br> fileinfo <br> filter <br> ftp <br> gd <br> gearman** <br> geoip** | gettext <br> gmagick** <br> gmp <br> gnupg* <br> grpc** <br> hash <br> iconv <br> igbinary** <br> imagick** <br> imap <br> inotify** <br> intl <br> ioncube_loader <br> jsmin** <br> json <br> ldap <br> libxml <br> lzf** <br> mailparse** <br> mbstring <br> mcrypt** <br> memcache** <br> memcached** | mongodb** <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> oauth** <br> oci8** <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre** <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql* <br> pdo_oci** <br> pdo_odbc <br> pdo_pgsql <br> pdo_sqlite <br> pdo_sqlsrv** <br> pgsql | phalcon5 <br> phar <br> posix <br> pspell <br> psr** <br> random <br> raphf** <br> readline <br> redis** <br> Reflection <br> rrd** <br> session <br> shmop <br> SimpleXML <br> snmp <br> snuffleupagus <br> soap <br> sockets <br> sodium <br> solr** <br> SPL <br> sqlite3 <br> sqlsrv** <br> ssh2** | standard <br> sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof** <br> tidy <br> timezonedb** <br> tokenizer <br> trader** <br> uploadprogress** <br> uuid** <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaml** <br> zip <br> zlib <br> zmq**|
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc. 
-
-  </template>
-
-  <template #PHP_8.4_extensions>
-
-  | | | | | |
-  |-|-|-|-|-|
-  |amqp** <br> apcu** <br> bcmath <br> brotli** <br> bz2 <br> calendar <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase** <br> dom <br> elastic_apm <br> enchant <br> exif <br> ffi <br> fileinfo <br> filter <br> ftp <br> gd <br> gearman** <br> geoip** | gettext <br> gmagick** <br> gmp <br> gnupg* <br> grpc** <br> hash <br> iconv <br> igbinary** <br> imagick** <br> imap <br> inotify** <br> intl <br> ioncube_loader <br> jsmin** <br> json <br> ldap <br> libxml <br> lzf** <br> mailparse** <br> mbstring <br> mcrypt** <br> memcache** <br> memcached** | mongodb** <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> oauth** <br> oci8** <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre** <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql* <br> pdo_oci** <br> pdo_odbc <br> pdo_pgsql <br> pdo_sqlite <br> pdo_sqlsrv** <br> pgsql | phalcon5 <br> phar <br> posix <br> pspell <br> psr** <br> random <br> raphf** <br> readline <br> redis** <br> Reflection <br> rrd** <br> session <br> shmop <br> SimpleXML <br> snmp <br> snuffleupagus <br> soap <br> sockets <br> sodium <br> solr** <br> SPL <br> sqlite3 <br> sqlsrv** <br> ssh2** | standard <br> sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof** <br> tidy <br> timezonedb** <br> tokenizer <br> trader** <br> uploadprogress** <br> uuid** <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaml** <br> zip <br> zlib <br> zmq**|
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-</TableTabs>
 
 ## What's Next?
 
